@@ -46,6 +46,23 @@ tarjetas hijas:
 - Cada caso (`> **Caso ...**`) es su propia tarjeta.
 - Un subtema hoja titulado "Concepto" o "Definición" se funde con su padre, cuya definición es.
 
+**Reglas contra duplicados.** Dentro de un mismo padre no puede haber dos tarjetas para la misma
+idea:
+
+- Hijos con el mismo título son una sola tarjeta. Si uno es subtema (encabezado), sobrevive él,
+  con su número, y el texto del otro pasa a ser su definición. Ej: "**Clasificación:** -
+  **Modos absolutos:** ..." y "15.1 Modos absolutos".
+- Un ítem que nombra a un subtema hermano también se funde con él: "**Dos partes** ..." con
+  "29.1 Primer requisito: dos partes". Un ítem de una sola palabra solo se funde si el subtema
+  es exactamente "X: esa palabra".
+- Un hijo con el mismo título que su padre se funde en el padre.
+- Una etiqueta que queda sola porque su lista pasó a tarjetas hijas ("**Clasificación:**") se
+  elimina, salvo que sea una cita ("**Art. 2312:**").
+
+**Formato por nivel.** Todo encabezado de los apuntes (unidad, parte, tema, subtema) usa la
+misma tarjeta, con bloque de color y número, tenga o no definición. Todo lo que depende de un
+encabezado (bloques etiquetados, ítems, casos) usa la tarjeta de término con la "D".
+
 Ejemplo: "Singulares" muestra su concepto y de ella cuelgan Simples, Complejas y Universales.
 Lo que sigue siendo largo son tablas y párrafos de prosa, que no se cortan para no alterar el texto.
 
@@ -79,8 +96,12 @@ seis partes tiene su color y lo heredan sus temas y tarjetas) y una grilla tenue
 
 ## Interacción
 
-- Clic en un tema, o en el título o el pie "N ramas" de una tarjeta con definición: abre o
-  cierra sus ramas a la derecha. Cada apertura guarda la vista actual
+- Clic en un tema, o en el título o el pie "N ramas" de una tarjeta de término: abre o
+  cierra sus ramas a la derecha.
+- Doble tap en una tarjeta: zoom hasta encuadrarla. Si el primer tap abrió o cerró ramas, se
+  deshace.
+- Barra superior: "Plegar última capa" cierra el nivel abierto más profundo (o los artículos
+  abiertos, si hay); "Plegar todo" vuelve a las seis partes; "Encuadrar" muestra todo lo abierto. Cada apertura guarda la vista actual
   en una pila; cerrar la recupera.
 - Término enlazado (subrayado): abre la ruta hasta esa tarjeta, mueve la cámara y la hace destellar.
 - Artículo enlazado (resaltado en amarillo): crea una tarjeta efímera con el texto del artículo, unida por un

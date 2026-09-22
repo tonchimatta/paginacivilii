@@ -1,24 +1,27 @@
 import { memo } from 'react';
-import { motion } from 'framer-motion';
 import Card from './Card.jsx';
+import Body from './Body.jsx';
+import Chevron from './Chevron.jsx';
 import { useMapActions } from '../graph/actions.js';
 
-const KIND_LABEL = { unidad: 'Unidad', parte: 'Parte', tema: 'Tema', subtema: 'Subtema', apartado: 'Apartado', caso: 'Caso' };
+const KIND_LABEL = { unidad: 'Unidad', parte: 'Parte', tema: 'Tema', subtema: 'Subtema' };
 
+// Every heading of the notes (unidad, parte, tema, subtema) uses this card, with or without
+// a definition: pastel header with its number, title, definition, branch count.
 function TopicNode({ id, data }) {
-  const { node, expanded, exiting, pulse, tint, active } = data;
+  const { node, expanded, exiting, pulse, tint, active, openArticles } = data;
   const actions = useMapActions();
   const count = node.children.length;
 
   return (
     <Card
       id={id}
-      className={`card--topic card--${node.kind}${expanded ? ' is-open' : ''}`}
+      className={`card--topic card--${node.kind}${node.body ? ' has-body' : ''}${expanded ? ' is-open' : ''}${count ? ' is-expandable' : ''}`}
       tint={tint}
       active={active}
       exiting={exiting}
       pulse={pulse}
-      onClick={() => actions.toggleTopic(node.id)}
+      onClick={count ? () => actions.toggleTopic(node.id) : undefined}
     >
       <div className="topic">
         <div className="topic__thumb">
@@ -26,22 +29,16 @@ function TopicNode({ id, data }) {
           <span className="topic__numeral">{node.number ?? ''}</span>
         </div>
         <div className="topic__title title-font" dangerouslySetInnerHTML={{ __html: node.titleHtml }} />
-        <div className="topic__foot">
-          <span className="topic__count">
-            {count} {count === 1 ? 'rama' : 'ramas'}
-            {node.pending ? <span className="tag">Pendiente</span> : null}
-          </span>
-          <motion.span
-            className="topic__chevron"
-            animate={{ rotate: expanded ? 180 : 0 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-            aria-hidden
-          >
-            <svg viewBox="0 0 16 16" width="12" height="12">
-              <path d="M3 8h9.5M8.5 4 12.5 8l-4 4" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </motion.span>
-        </div>
+        {node.body ? <Body html={node.body} nodeId={node.id} openArticles={openArticles} /> : null}
+        {node.pending && !node.body ? <div className="card__body card__body--empty">Sección pendiente en las notas.</div> : null}
+        {count ? (
+          <div className="card__foot">
+            <span>
+              {count} {count === 1 ? 'rama' : 'ramas'}
+            </span>
+            <Chevron open={expanded} />
+          </div>
+        ) : null}
       </div>
     </Card>
   );

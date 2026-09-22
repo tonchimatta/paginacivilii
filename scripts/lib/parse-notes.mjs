@@ -98,7 +98,9 @@ export function parseNotes(src, { title, code }) {
     const emptyLeaf = !hasText && spec.children.length === 0;
     const node = add({
       id: makeId(titlePlain),
-      type: hasText || emptyLeaf ? 'concept' : 'topic',
+      // Format follows the level: every heading is a topic card (with its definition, if it
+      // has one); every dependent (label, list item, case) is a term card.
+      type: spec.origin === 'heading' ? 'topic' : 'concept',
       kind: spec.origin === 'heading' ? KIND_BY_DEPTH[depth] ?? 'subtema' : KIND_BY_ORIGIN[spec.origin],
       origin: spec.origin,
       depth,
@@ -291,7 +293,92 @@ function sectionToSpec(section) {
     body = first.body;
     lifted.push(...first.children);
   }
-  return { title: text, number, pending, body, origin: 'heading', children: [...lifted, ...demoted, ...frag.children, ...sub] };
+  const spec = { title: text, number, pending, body: dropBareLabel(body), origin: 'heading', children: [...lifted, ...demoted, ...frag.children, ...sub] };
+  return mergeDuplicates(spec);
+}
+
+// Hierarchy rules that keep one card per idea:
+//   - within a parent, children with the same title are one card: "**Clasificación:** -
+//     **Modos absolutos:** ..." and the sub-heading "15.1 Modos absolutos" merge, the
+//     heading survives (it keeps its number) and the list text becomes its definition;
+//   - a child titled like its parent is folded into the parent.
+function mergeDuplicates(spec) {
+  const key = (x) => normalizeKey(plainText(x.title));
+  const own = key(spec);
+  const groups = new Map();
+  for (const child of spec.children) {
+    mergeDuplicates(child);
+    if (key(child) === own) {
+      spec.body = joinBodies(spec.body, child.body);
+      spec.children.push(...child.children.filter((c) => !spec.children.includes(c)));
+      child.folded = true;
+      continue;
+    }
+    if (!groups.has(key(child))) groups.set(key(child), []);
+    groups.get(key(child)).push(child);
+  }
+  // A list item or label that names a sibling sub-heading ("**Dos partes** ..." next to
+  // "29.1 Primer requisito: dos partes") is the same idea: fold it into that heading.
+  const headings = spec.children.filter((c) => c.origin === 'heading' && !c.folded);
+  for (const [k, list] of groups) {
+    if (list.some((c) => c.origin === 'heading')) continue;
+    const words = contentWords(k);
+    if (!words.length) continue;
+    const hits = headings.filter((h) => {
+      // One-word items only match "Segundo requisito: consentimiento"-style headings.
+      if (words.length === 1) return contentWords(key(h).split(':').pop()).join(' ') === words[0];
+      const hw = new Set(contentWords(key(h)));
+      return words.filter((w) => hw.has(w)).length / words.length >= 0.6;
+    });
+    if (hits.length !== 1) continue;
+    const target = hits[0];
+    groups.get(key(target)).unshift(...list);
+    groups.delete(k);
+  }
+
+  const survivors = new Set();
+  for (const list of groups.values()) {
+    const keep = list.find((c) => c.origin === 'heading') ?? list[0];
+    for (const other of list) {
+      if (other === keep) continue;
+      if (process.env.DEBUG_MERGE) console.log(`[merge] ${spec.title} > "${other.title}" -> "${keep.title}"`);
+      // Folded into a sub-heading, the item keeps its full sentence ("**Dos partes** con
+      // facultad..."), unless it was only the term itself ("**La tenencia** (*corpus*).").
+      const intoHeading = keep.origin === 'heading' && other.origin !== 'heading';
+      const text = intoHeading ? (other.body.trim() ? other.full ?? other.body : '') : other.body;
+      keep.body = joinBodies(text, keep.body);
+      if (!intoHeading) keep.note = keep.note ?? other.note;
+      keep.children = [...other.children, ...keep.children];
+    }
+    survivors.add(keep);
+  }
+  spec.children = spec.children.filter((c) => !c.folded && survivors.has(c));
+  return spec;
+}
+
+const STOPWORDS = new Set(['de', 'del', 'la', 'las', 'el', 'los', 'y', 'e', 'o', 'u', 'en', 'a', 'al', 'por', 'para', 'con', 'sin', 'su', 'sus', 'un', 'una', 'que', 'se', 'lo']);
+function contentWords(k) {
+  return k.split(/[^\p{L}\p{N}]+/u).filter((w) => w && !STOPWORDS.has(w));
+}
+
+function joinBodies(a, b) {
+  const x = (a ?? '').trim();
+  const y = (b ?? '').trim();
+  if (!x || x === y) return y;
+  if (!y) return x;
+  return `${x}\n\n${y}`;
+}
+
+// After the lists under "**Clasificación:**" move to child cards, the label alone would
+// dangle as the whole definition. Drop it, unless it is itself a citation ("**Art. 2312:**").
+function dropBareLabel(md) {
+  return md
+    .split(/\n{2,}/)
+    .filter((p) => {
+      const m = p.trim().match(/^\*\*([^*]+?):?\*\*:?$/);
+      return !m || /\[\[/.test(m[1]);
+    })
+    .join('\n\n');
 }
 
 function fragment(md) {
@@ -299,6 +386,7 @@ function fragment(md) {
   const groups = [{ label: null, tokens: [] }];
   let current = groups[0];
   for (const t of marked.lexer(md)) {
+    if (t.type === 'hr') continue;
     if (t.type === 'blockquote') {
       groups.push({ quote: t });
       continue;
@@ -399,18 +487,28 @@ function itemSpec(item, depth, loose) {
   const text = dedentItem(item.raw);
   const m = text.match(/^\*\*(?!\*)(.+?)\*\*([ \t]*[:.])?[ \t]*/s);
   let title, note, bodyMd;
+  let labelled = true;
   if (m) {
     const inner = m[1].trim();
-    const labelled = Boolean(m[2]) || /[:.]$/.test(inner);
+    labelled = Boolean(m[2]) || /[:.]$/.test(inner);
     ({ title, note } = splitNote(inner.replace(/[:.]$/, '').trim()));
-    bodyMd = labelled ? capitalize(text.slice(m[0].length).trim()) : text;
+    let rest = text.slice(m[0].length).trim().replace(/^[,;]\s*/, '');
+    // "**Destrucción de la cosa** (voluntaria o involuntaria). Jurídicamente..." -> the
+    // parenthetical becomes the note, the rest the body; the term is not repeated.
+    const paren = !m[2] && rest.match(/^\(([^()]*)\)[.:,]?\s*/);
+    if (paren) {
+      note = note ?? `(${paren[1].trim()})`;
+      rest = rest.slice(paren[0].length);
+    }
+    bodyMd = capitalize(rest);
   } else {
     if (!loose || plainText(text).length < 3) return null;
     ({ title, bodyMd } = deriveTitle(text));
     note = null;
   }
   const split = depth > 1 ? splitLists(marked.lexer(bodyMd), depth - 1) : { md: bodyMd, children: [] };
-  return { title, note, body: split.md.trim(), origin: 'item', children: split.children };
+  // `full` keeps the term in the sentence, for when the item is folded into a sub-heading.
+  return { title, note, body: split.md.trim(), full: m && !labelled ? text : null, origin: 'item', children: split.children };
 }
 
 // Title for an item that has no bold term: the words before a colon, or the opening clause.

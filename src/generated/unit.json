@@ -64,7 +64,7 @@
   },
   {
    "id": "que-estudia",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -79,7 +79,7 @@
   },
   {
    "id": "cosa-y-bien",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -159,7 +159,7 @@
   },
   {
    "id": "cosas-corporales-e-incorporales",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -235,7 +235,7 @@
   },
   {
    "id": "critica-a-la-distincion",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -290,7 +290,7 @@
   },
   {
    "id": "derechos-reales",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -427,7 +427,7 @@
   },
   {
    "id": "enumeracion",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -473,7 +473,7 @@
   },
   {
    "id": "reserva-legal-numerus-clausus",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -488,7 +488,7 @@
   },
   {
    "id": "derechos-personales",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -583,7 +583,7 @@
   },
   {
    "id": "diferencias-entre-derecho-real-y-derecho-persona",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -598,7 +598,7 @@
   },
   {
    "id": "la-cosificacion-de-los-derechos",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -682,7 +682,7 @@
   },
   {
    "id": "por-que-importa-la-distincion",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -826,7 +826,7 @@
   },
   {
    "id": "bienes-muebles",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -862,7 +862,7 @@
   },
   {
    "id": "muebles-por-naturaleza",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -901,7 +901,7 @@
   },
   {
    "id": "muebles-por-anticipacion",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -947,7 +947,7 @@
   },
   {
    "id": "la-regla-interpretativa-del-art-574",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -999,7 +999,7 @@
   },
   {
    "id": "bienes-inmuebles",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -1025,7 +1025,7 @@
   },
   {
    "id": "inmuebles-por-naturaleza",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -1040,7 +1040,7 @@
   },
   {
    "id": "inmuebles-por-adherencia",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -1095,7 +1095,7 @@
   },
   {
    "id": "inmuebles-por-destinacion",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -1123,7 +1123,7 @@
   },
   {
    "id": "derechos-y-acciones-muebles-e-inmuebles",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -1187,7 +1187,7 @@
   },
   {
    "id": "consumibles-y-no-consumibles",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -1234,7 +1234,7 @@
   },
   {
    "id": "consumibilidad-objetiva",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -1298,7 +1298,7 @@
   },
   {
    "id": "consumibilidad-subjetiva",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -1313,7 +1313,7 @@
   },
   {
    "id": "efectos-de-la-consumibilidad",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -1442,7 +1442,7 @@
   },
   {
    "id": "deteriorables-y-corruptibles",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -1477,7 +1477,7 @@
      "targetNodeId": "no-consumibles"
     }
    ],
-   "body": "<p><strong>Deteriorables</strong> (o gradualmente consumibles): no se destruyen con el primer uso sino paulatinamente. En rigor son <a class=\"ref ref-concept\" data-target=\"no-consumibles\" href=\"#no-consumibles\">no consumibles</a>, porque la consumibilidad exige destrucción por el primer uso.</p>\n<ul>\n<li>Ej: la ropa (fast fashion), un mueble, un vehículo.</li>\n</ul>\n"
+   "body": "<div class=\"term-note\"><p>(o gradualmente consumibles)</p>\n</div><p>No se destruyen con el primer uso sino paulatinamente. En rigor son <a class=\"ref ref-concept\" data-target=\"no-consumibles\" href=\"#no-consumibles\">no consumibles</a>, porque la consumibilidad exige destrucción por el primer uso.</p>\n<ul>\n<li>Ej: la ropa (fast fashion), un mueble, un vehículo.</li>\n</ul>\n"
   },
   {
    "id": "corruptibles",
@@ -1518,7 +1518,7 @@
   },
   {
    "id": "fungibles-y-no-fungibles",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -1538,7 +1538,7 @@
   },
   {
    "id": "fungibilidad-subjetiva",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -1600,7 +1600,7 @@
   },
   {
    "id": "fungibles-y-genericas",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -1707,7 +1707,7 @@
      "sourceConceptId": "mutuo-2"
     }
    ],
-   "body": "<p><strong>Mutuo</strong> solo sobre cosas fungibles (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2196\" href=\"#art-2196\">2196</a></strong></em>); <strong>comodato</strong> solo sobre no fungibles (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2174\" href=\"#art-2174\">2174</a></strong></em>).</p>\n"
+   "body": "<p>Solo sobre cosas fungibles (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2196\" href=\"#art-2196\">2196</a></strong></em>); <strong>comodato</strong> solo sobre no fungibles (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2174\" href=\"#art-2174\">2174</a></strong></em>).</p>\n"
   },
   {
    "id": "compensacion-legal",
@@ -1761,7 +1761,7 @@
      "targetNodeId": "deposito-irregular"
     }
    ],
-   "body": "<p><strong>Cuasiusufructo</strong> (<em><strong>art. <a class=\"ref ref-art\" data-art=\"789\" href=\"#art-789\">789</a></strong></em>), <a class=\"ref ref-concept\" data-target=\"deposito-irregular\" href=\"#deposito-irregular\">depósito irregular</a> y obligaciones de género (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"1508\" href=\"#art-1508\">1508</a> y ss.</strong></em>).</p>\n"
+   "body": "<div class=\"term-note\"><p>(<em><strong>art. <a class=\"ref ref-art\" data-art=\"789\" href=\"#art-789\">789</a></strong></em>)</p>\n</div><p><a class=\"ref ref-concept\" data-target=\"deposito-irregular\" href=\"#deposito-irregular\">Depósito irregular</a> y obligaciones de género (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"1508\" href=\"#art-1508\">1508</a> y ss.</strong></em>).</p>\n"
   },
   {
    "id": "teoria-de-los-riesgos",
@@ -1787,7 +1787,7 @@
   },
   {
    "id": "las-dos-clasificaciones-cruzadas",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -1886,7 +1886,7 @@
   },
   {
    "id": "singulares",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -1950,7 +1950,7 @@
   },
   {
    "id": "universalidades-de-hecho-universitas-facti",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -2054,7 +2054,7 @@
   },
   {
    "id": "universalidades-de-derecho-universitas-iuris",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -2178,7 +2178,7 @@
      "targetNodeId": "tesis-objetiva"
     }
    ],
-   "body": "<p><strong>El Código chileno</strong> no toma partido expreso, pero admite masas separadas dentro de un mismo titular, lo que se ha leído como concesión a la <a class=\"ref ref-concept\" data-target=\"tesis-objetiva\" href=\"#tesis-objetiva\">tesis objetiva</a>.</p>\n<ul>\n<li>Ej: el peculio profesional del hijo; el patrimonio reservado de la mujer (<em><strong>art. <a class=\"ref ref-art\" data-art=\"150\" href=\"#art-150\">150</a></strong></em>).</li>\n</ul>\n"
+   "body": "<p>No toma partido expreso, pero admite masas separadas dentro de un mismo titular, lo que se ha leído como concesión a la <a class=\"ref ref-concept\" data-target=\"tesis-objetiva\" href=\"#tesis-objetiva\">tesis objetiva</a>.</p>\n<ul>\n<li>Ej: el peculio profesional del hijo; el patrimonio reservado de la mujer (<em><strong>art. <a class=\"ref ref-art\" data-art=\"150\" href=\"#art-150\">150</a></strong></em>).</li>\n</ul>\n"
   },
   {
    "id": "puede-haber-universalidades-juridicas-no-legales",
@@ -2218,7 +2218,7 @@
   },
   {
    "id": "presentes-y-futuras",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -2246,7 +2246,7 @@
   },
   {
    "id": "principales-y-accesorias",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -2405,7 +2405,7 @@
   },
   {
    "id": "comerciables-e-incomerciables",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -2548,7 +2548,7 @@
   },
   {
    "id": "bienes-nacionales",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -2578,7 +2578,7 @@
   },
   {
    "id": "bienes-nacionales-de-uso-publico",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -2593,7 +2593,7 @@
   },
   {
    "id": "bienes-fiscales-y-el-art-590",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -2615,7 +2615,7 @@
   },
   {
    "id": "efecto-del-art-590-los-bienes-raices-en-rapa-nui",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -2632,7 +2632,7 @@
     "caso-hotel-hanga-roa"
    ],
    "refs": [],
-   "body": "<p>El 590 fue el fundamento de lo que ocurrió con la propiedad de la isla.</p>\n<hr>\n"
+   "body": "<p>El 590 fue el fundamento de lo que ocurrió con la propiedad de la isla.</p>\n"
   },
   {
    "id": "1933",
@@ -2769,7 +2769,7 @@
   },
   {
    "id": "el-orden-publico-economico",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -2795,7 +2795,7 @@
   },
   {
    "id": "libertad-economica-y-estado-empresario-19-n-21",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -2827,7 +2827,7 @@
   },
   {
    "id": "no-discriminacion-arbitraria-en-materia-economic",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -2842,7 +2842,7 @@
   },
   {
    "id": "libre-adquisicion-de-bienes-19-n-23",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -2857,7 +2857,7 @@
   },
   {
    "id": "el-derecho-de-propiedad-19-n-24",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -2889,7 +2889,7 @@
   },
   {
    "id": "expropiacion-e-indemnizacion",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -2937,7 +2937,7 @@
   },
   {
    "id": "el-borrador-constitucional-de-2022",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -2985,7 +2985,7 @@
   },
   {
    "id": "detalle-de-las-propuestas",
-   "type": "topic",
+   "type": "concept",
    "kind": "apartado",
    "origin": "label",
    "depth": 4,
@@ -3080,7 +3080,7 @@
   },
   {
    "id": "la-discusion-del-justo-precio",
-   "type": "topic",
+   "type": "concept",
    "kind": "apartado",
    "origin": "label",
    "depth": 4,
@@ -3254,7 +3254,7 @@
   },
   {
    "id": "el-dominio-en-el-codigo-civil",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -3340,7 +3340,7 @@
   },
   {
    "id": "dominio-y-propiedad",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -3388,7 +3388,7 @@
   },
   {
    "id": "leyes-especiales-sobre-el-dominio",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -3410,7 +3410,7 @@
   },
   {
    "id": "precisiones-de-clase",
-   "type": "topic",
+   "type": "concept",
    "kind": "apartado",
    "origin": "label",
    "depth": 4,
@@ -3473,7 +3473,7 @@
   },
   {
    "id": "caracteristicas-del-dominio",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -3493,7 +3493,7 @@
   },
   {
    "id": "es-un-derecho-real",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -3527,7 +3527,7 @@
   },
   {
    "id": "es-un-derecho-absoluto",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -3621,7 +3621,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><strong>La ley</strong>, incluida la función social de la propiedad, que tiene rango constitucional.</p>\n"
+   "body": "<p>Incluida la función social de la propiedad, que tiene rango constitucional.</p>\n"
   },
   {
    "id": "el-derecho-ajeno",
@@ -3640,7 +3640,7 @@
   },
   {
    "id": "es-un-derecho-exclusivo",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -3691,7 +3691,7 @@
   },
   {
    "id": "es-un-derecho-perpetuo",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -3713,7 +3713,7 @@
   },
   {
    "id": "atributos-del-dominio",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -3732,7 +3732,7 @@
   },
   {
    "id": "facultad-de-uso",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -3766,7 +3766,7 @@
   },
   {
    "id": "facultad-de-goce",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -3877,7 +3877,7 @@
   },
   {
    "id": "facultad-de-disposicion",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -3963,7 +3963,7 @@
   },
   {
    "id": "la-clausula-de-no-enajenar",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -4013,7 +4013,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><strong>No disponer jurídicamente</strong> (&quot;cláusula de no enajenar&quot;): de habitual aplicación y objeto de arduo debate.</p>\n"
+   "body": "<div class=\"term-note\"><p>(&quot;cláusula de no enajenar&quot;)</p>\n</div><p>De habitual aplicación y objeto de arduo debate.</p>\n"
   },
   {
    "id": "el-problema",
@@ -4090,7 +4090,7 @@
   },
   {
    "id": "tesis-de-la-validez",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -4105,7 +4105,7 @@
   },
   {
    "id": "tesis-de-la-nulidad",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -4173,7 +4173,7 @@
   },
   {
    "id": "posicion-eclectica",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -4212,7 +4212,7 @@
   },
   {
    "id": "efectos-del-incumplimiento",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -4284,7 +4284,7 @@
   },
   {
    "id": "aspectos-pasivos-del-dominio",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -4308,7 +4308,7 @@
   },
   {
    "id": "obligaciones-ambulatorias-o-propter-rem",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -4326,7 +4326,7 @@
   },
   {
    "id": "caracteristicas-3",
-   "type": "topic",
+   "type": "concept",
    "kind": "apartado",
    "origin": "label",
    "depth": 4,
@@ -4378,7 +4378,7 @@
   },
   {
    "id": "ejemplos-del-cc",
-   "type": "topic",
+   "type": "concept",
    "kind": "apartado",
    "origin": "label",
    "depth": 4,
@@ -4557,7 +4557,7 @@
   },
   {
    "id": "cargas-reales",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -4614,7 +4614,7 @@
   },
   {
    "id": "responsabilidad-del-propietario-por-el-hecho-de-",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -4632,7 +4632,7 @@
   },
   {
    "id": "dueno-de-un-animal",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -4678,7 +4678,7 @@
   },
   {
    "id": "dueno-de-un-edificio",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -4748,7 +4748,7 @@
   },
   {
    "id": "extincion-del-dominio",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -4759,46 +4759,13 @@
    "pending": false,
    "children": [
     "modos-absolutos",
-    "modos-relativos",
-    "modos-absolutos-2",
-    "modos-relativos-2"
+    "modos-relativos"
    ],
-   "refs": [],
-   "body": "<p><strong>Clasificación:</strong></p>\n"
+   "refs": []
   },
   {
    "id": "modos-absolutos",
-   "type": "concept",
-   "kind": "apartado",
-   "origin": "item",
-   "depth": 3,
-   "title": "Modos absolutos",
-   "titleHtml": "Modos absolutos",
-   "number": null,
-   "parentId": "extincion-del-dominio",
-   "pending": false,
-   "children": [],
-   "refs": [],
-   "body": "<p>Desaparece el derecho. Si luego alguien adquiere la cosa, la adquisición es originaria.</p>\n"
-  },
-  {
-   "id": "modos-relativos",
-   "type": "concept",
-   "kind": "apartado",
-   "origin": "item",
-   "depth": 3,
-   "title": "Modos relativos",
-   "titleHtml": "Modos relativos",
-   "number": null,
-   "parentId": "extincion-del-dominio",
-   "pending": false,
-   "children": [],
-   "refs": [],
-   "body": "<p>Solo cambia el titular (hay traspaso).</p>\n"
-  },
-  {
-   "id": "modos-absolutos-2",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -4814,7 +4781,7 @@
     "abandono"
    ],
    "refs": [],
-   "body": "<p>No están tratados sistemáticamente en el CC.</p>\n"
+   "body": "<p>Desaparece el derecho. Si luego alguien adquiere la cosa, la adquisición es originaria.</p>\n<p>No están tratados sistemáticamente en el CC.</p>\n"
   },
   {
    "id": "destruccion-de-la-cosa",
@@ -4825,11 +4792,11 @@
    "title": "Destrucción de la cosa",
    "titleHtml": "Destrucción de la cosa",
    "number": null,
-   "parentId": "modos-absolutos-2",
+   "parentId": "modos-absolutos",
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><strong>Destrucción de la cosa</strong> (voluntaria o involuntaria). Jurídicamente importa cuando la cosa pierde su función o rol económico.</p>\n<ul>\n<li>Si se destruye parcialmente o quedan restos, el titular sigue siendo dueño, ahora de la cosa reducida o transformada.</li>\n<li>Ej: se quema la casa; el dueño sigue siéndolo del terreno y los escombros.</li>\n<li><strong>El seguro</strong> (materia menor): si se extinguió el dominio, ¿con qué título cobro el seguro? Opera una subrogación real de fuente legal (ley de seguros): el derecho pasa a recaer sobre la indemnización. El seguro cubre la culpa (dejé la chimenea encendida), pero no el dolo (la dejé encendida para quemar la casa y cobrar).</li>\n</ul>\n"
+   "body": "<div class=\"term-note\"><p>(voluntaria o involuntaria)</p>\n</div><p>Jurídicamente importa cuando la cosa pierde su función o rol económico.</p>\n<ul>\n<li>Si se destruye parcialmente o quedan restos, el titular sigue siendo dueño, ahora de la cosa reducida o transformada.</li>\n<li>Ej: se quema la casa; el dueño sigue siéndolo del terreno y los escombros.</li>\n<li><strong>El seguro</strong> (materia menor): si se extinguió el dominio, ¿con qué título cobro el seguro? Opera una subrogación real de fuente legal (ley de seguros): el derecho pasa a recaer sobre la indemnización. El seguro cubre la culpa (dejé la chimenea encendida), pero no el dolo (la dejé encendida para quemar la casa y cobrar).</li>\n</ul>\n"
   },
   {
    "id": "especies-al-parecer-perdidas",
@@ -4840,7 +4807,7 @@
    "title": "Especies al parecer perdidas",
    "titleHtml": "Especies al parecer perdidas",
    "number": null,
-   "parentId": "modos-absolutos-2",
+   "parentId": "modos-absolutos",
    "pending": false,
    "children": [],
    "refs": [
@@ -4869,7 +4836,7 @@
      "sourceConceptId": "especies-al-parecer-perdidas"
     }
    ],
-   "body": "<p><strong>Especies al parecer perdidas</strong> (sin voluntad). Encontrada la cosa, se subasta, y el subastador adquiere el dominio originariamente (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"632\" href=\"#art-632\">632</a>, <a class=\"ref ref-art\" data-art=\"633\" href=\"#art-633\">633</a>, <a class=\"ref ref-art\" data-art=\"637\" href=\"#art-637\">637</a> y <a class=\"ref ref-art\" data-art=\"642\" href=\"#art-642\">642</a></strong></em>).</p>\n"
+   "body": "<div class=\"term-note\"><p>(sin voluntad)</p>\n</div><p>Encontrada la cosa, se subasta, y el subastador adquiere el dominio originariamente (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"632\" href=\"#art-632\">632</a>, <a class=\"ref ref-art\" data-art=\"633\" href=\"#art-633\">633</a>, <a class=\"ref ref-art\" data-art=\"637\" href=\"#art-637\">637</a> y <a class=\"ref ref-art\" data-art=\"642\" href=\"#art-642\">642</a></strong></em>).</p>\n"
   },
   {
    "id": "incomerciabilidad-sobreviniente",
@@ -4880,11 +4847,11 @@
    "title": "Incomerciabilidad sobreviniente",
    "titleHtml": "Incomerciabilidad sobreviniente",
    "number": null,
-   "parentId": "modos-absolutos-2",
+   "parentId": "modos-absolutos",
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><strong>Incomerciabilidad sobreviniente</strong> (sin voluntad). La hipótesis corriente: la cosa pasa a ser BNUP, generalmente por expropiación.</p>\n<ul>\n<li>Ej discutido en la reforma constitucional: declarar incomerciables los derechos de aprovechamiento de aguas. Como el agua es BNUP, sus titulares habrían perdido el dominio sobre esos derechos.</li>\n</ul>\n"
+   "body": "<div class=\"term-note\"><p>(sin voluntad)</p>\n</div><p>La hipótesis corriente: la cosa pasa a ser BNUP, generalmente por expropiación.</p>\n<ul>\n<li>Ej discutido en la reforma constitucional: declarar incomerciables los derechos de aprovechamiento de aguas. Como el agua es BNUP, sus titulares habrían perdido el dominio sobre esos derechos.</li>\n</ul>\n"
   },
   {
    "id": "abandono",
@@ -4895,7 +4862,7 @@
    "title": "Abandono",
    "titleHtml": "Abandono",
    "number": null,
-   "parentId": "modos-absolutos-2",
+   "parentId": "modos-absolutos",
    "pending": false,
    "children": [
     "inmuebles",
@@ -4915,7 +4882,7 @@
      "sourceConceptId": "abandono"
     }
    ],
-   "body": "<p><strong>Abandono</strong> (por definición, voluntario), admitido por los <em><strong>arts. <a class=\"ref ref-art\" data-art=\"12\" href=\"#art-12\">12</a> y <a class=\"ref ref-art\" data-art=\"624\" href=\"#art-624\">624</a> inc. 2º</strong></em>.</p>\n"
+   "body": "<div class=\"term-note\"><p>(por definición, voluntario)</p>\n</div><p>Admitido por los <em><strong>arts. <a class=\"ref ref-art\" data-art=\"12\" href=\"#art-12\">12</a> y <a class=\"ref ref-art\" data-art=\"624\" href=\"#art-624\">624</a> inc. 2º</strong></em>.</p>\n"
   },
   {
    "id": "inmuebles",
@@ -4955,8 +4922,8 @@
    "body": "<p>El eventual adquirente adquiere originariamente por ocupación.</p>\n"
   },
   {
-   "id": "modos-relativos-2",
-   "type": "concept",
+   "id": "modos-relativos",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -4970,7 +4937,7 @@
     "no-voluntaria"
    ],
    "refs": [],
-   "body": "<p>Se producen con la transferencia del dominio.</p>\n<hr>\n"
+   "body": "<p>Solo cambia el titular (hay traspaso).</p>\n<p>Se producen con la transferencia del dominio.</p>\n"
   },
   {
    "id": "voluntaria",
@@ -4981,7 +4948,7 @@
    "title": "Voluntaria",
    "titleHtml": "Voluntaria",
    "number": null,
-   "parentId": "modos-relativos-2",
+   "parentId": "modos-relativos",
    "pending": false,
    "children": [],
    "refs": [
@@ -5001,7 +4968,7 @@
    "title": "No voluntaria",
    "titleHtml": "No voluntaria",
    "number": null,
-   "parentId": "modos-relativos-2",
+   "parentId": "modos-relativos",
    "pending": false,
    "children": [],
    "refs": [],
@@ -5009,7 +4976,7 @@
   },
   {
    "id": "la-copropiedad",
-   "type": "concept",
+   "type": "topic",
    "kind": "parte",
    "origin": "heading",
    "depth": 1,
@@ -5139,7 +5106,7 @@
   },
   {
    "id": "doctrina-romana",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -5214,7 +5181,7 @@
   },
   {
    "id": "criticas",
-   "type": "topic",
+   "type": "concept",
    "kind": "apartado",
    "origin": "label",
    "depth": 4,
@@ -5266,7 +5233,7 @@
   },
   {
    "id": "doctrina-alemana",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -5344,7 +5311,7 @@
   },
   {
    "id": "el-codigo-civil-chileno",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -5587,7 +5554,7 @@
   },
   {
    "id": "fuentes",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -5729,7 +5696,7 @@
     "se-resuelve-con-los-arts"
    ],
    "refs": [],
-   "body": "<p><strong>Sobre una universalidad jurídica</strong> (activo y pasivo): aquí está la discusión.</p>\n"
+   "body": "<div class=\"term-note\"><p>(activo y pasivo)</p>\n</div><p>Aquí está la discusión.</p>\n"
   },
   {
    "id": "ej-la-sucesion-hereditaria",
@@ -5802,7 +5769,7 @@
   },
   {
    "id": "segun-su-origen-2",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -5898,7 +5865,7 @@
   },
   {
    "id": "el-silencio-del-codigo-y-el-ius-prohibendi",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -5946,7 +5913,7 @@
   },
   {
    "id": "mecanismos-que-atenuan-la-unanimidad",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -6053,11 +6020,11 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><strong>Administrador pro indiviso</strong> (ver §19.3).</p>\n"
+   "body": "<div class=\"term-note\"><p>(ver §19.3)</p>\n</div>"
   },
   {
    "id": "el-administrador-pro-indiviso",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -6182,7 +6149,7 @@
   },
   {
    "id": "la-cuota",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -6248,7 +6215,7 @@
   },
   {
    "id": "que-puede-hacer-el-comunero-con-su-cuota",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -6403,7 +6370,7 @@
   },
   {
    "id": "comunicacion-de-la-cuota-con-los-bienes-comunes",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -6532,7 +6499,7 @@
   },
   {
    "id": "causales",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -6627,7 +6594,7 @@
   },
   {
    "id": "excepciones",
-   "type": "topic",
+   "type": "concept",
    "kind": "apartado",
    "origin": "label",
    "depth": 4,
@@ -6724,7 +6691,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><strong>No se extienden las reglas de partición</strong> a los lagos de dominio privado, a los derechos de servidumbre ni a las cosas que la ley manda mantener indivisas.</p>\n"
+   "body": "<p>A los lagos de dominio privado, a los derechos de servidumbre ni a las cosas que la ley manda mantener indivisas.</p>\n"
   },
   {
    "id": "particion-y-adjudicacion",
@@ -6780,7 +6747,7 @@
   },
   {
    "id": "efecto-atributivo-y-efecto-declarativo",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -6901,7 +6868,7 @@
     "que-se-apliquen-las-reglas-de-la-venta"
    ],
    "refs": [],
-   "body": "<p>Define qué pasa con las enajenaciones y gravámenes constituidos durante la indivisión.</p>\n<p><strong>Venta de una cosa común durante la indivisión</strong> (ejemplo del profesor):</p>\n<hr>\n"
+   "body": "<p>Define qué pasa con las enajenaciones y gravámenes constituidos durante la indivisión.</p>\n<p><strong>Venta de una cosa común durante la indivisión</strong> (ejemplo del profesor):</p>\n"
   },
   {
    "id": "ej-durante-la-indivision",
@@ -6963,15 +6930,9 @@
      "articleNumber": "718",
      "articleKey": "718",
      "sourceConceptId": "importancia-del-art-718"
-    },
-    {
-     "type": "article",
-     "articleNumber": "718",
-     "articleKey": "718",
-     "sourceConceptId": "importancia-del-art-718"
     }
    ],
-   "body": "<p><strong>Importancia del art. <a class=\"ref ref-art\" data-art=\"718\" href=\"#art-718\">718</a></strong> (<em><strong>art. <a class=\"ref ref-art\" data-art=\"718\" href=\"#art-718\">718</a></strong></em>): el adjudicatario puede computar todo el tiempo de la indivisión para la prescripción adquisitiva, y así sanear los actos que realizó sobre la cosa.</p>\n"
+   "body": "<div class=\"term-note\"><p>(<em><strong>art. <a class=\"ref ref-art\" data-art=\"718\" href=\"#art-718\">718</a></strong></em>)</p>\n</div><p>El adjudicatario puede computar todo el tiempo de la indivisión para la prescripción adquisitiva, y así sanear los actos que realizó sobre la cosa.</p>\n"
   },
   {
    "id": "el-comunero-puede-vender-sus-derechos-hereditari",
@@ -7095,7 +7056,7 @@
   },
   {
    "id": "sistema-de-la-dualidad-titulo-modo",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -7143,7 +7104,7 @@
   },
   {
    "id": "sistema-consensual",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -7210,7 +7171,7 @@
   },
   {
    "id": "el-mismo-contrato-en-los-dos-sistemas",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -7276,7 +7237,7 @@
   },
   {
    "id": "la-opcion-del-codigo",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -7365,7 +7326,7 @@
   },
   {
    "id": "titulo-y-modo",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -7441,7 +7402,7 @@
   },
   {
    "id": "concepto-enumeracion-y-reserva-legal",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -7470,7 +7431,7 @@
   },
   {
    "id": "la-ley-como-modo-de-adquirir",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -7515,7 +7476,7 @@
      "targetNodeId": "de-goce"
     }
    ],
-   "body": "<p><strong>Usufructo legal</strong> del padre o madre sobre ciertos bienes del hijo, y del marido como administrador de la <a class=\"ref ref-concept\" data-target=\"sociedad-conyugal\" href=\"#sociedad-conyugal\">sociedad conyugal</a> en los bienes de la mujer (<em><strong>art. <a class=\"ref ref-art\" data-art=\"810\" href=\"#art-810\">810</a></strong></em>). Más propiamente, derecho legal <a class=\"ref ref-concept\" data-target=\"de-goce\" href=\"#de-goce\">de goce</a>.</p>\n"
+   "body": "<p>Del padre o madre sobre ciertos bienes del hijo, y del marido como administrador de la <a class=\"ref ref-concept\" data-target=\"sociedad-conyugal\" href=\"#sociedad-conyugal\">sociedad conyugal</a> en los bienes de la mujer (<em><strong>art. <a class=\"ref ref-art\" data-art=\"810\" href=\"#art-810\">810</a></strong></em>). Más propiamente, derecho legal <a class=\"ref ref-concept\" data-target=\"de-goce\" href=\"#de-goce\">de goce</a>.</p>\n"
   },
   {
    "id": "el-tesoro",
@@ -7537,7 +7498,7 @@
      "sourceConceptId": "el-tesoro"
     }
    ],
-   "body": "<p><strong>El tesoro</strong> encontrado en terreno ajeno se divide por partes iguales entre el dueño del terreno y el descubridor. La mitad del dueño del suelo la atribuye la ley: no hay ocupación de su parte (<em><strong>art. <a class=\"ref ref-art\" data-art=\"626\" href=\"#art-626\">626</a></strong></em>).</p>\n"
+   "body": "<p>Encontrado en terreno ajeno se divide por partes iguales entre el dueño del terreno y el descubridor. La mitad del dueño del suelo la atribuye la ley: no hay ocupación de su parte (<em><strong>art. <a class=\"ref ref-art\" data-art=\"626\" href=\"#art-626\">626</a></strong></em>).</p>\n"
   },
   {
    "id": "la-expropiacion",
@@ -7556,7 +7517,7 @@
   },
   {
    "id": "reserva-legal",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -7598,7 +7559,7 @@
   },
   {
    "id": "cuadro",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -7618,7 +7579,7 @@
   },
   {
    "id": "originarios-y-derivativos",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -7687,7 +7648,7 @@
   },
   {
    "id": "por-que-importa-2",
-   "type": "topic",
+   "type": "concept",
    "kind": "apartado",
    "origin": "label",
    "depth": 4,
@@ -7820,7 +7781,7 @@
   },
   {
    "id": "a-titulo-universal-y-a-titulo-singular",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -7916,7 +7877,7 @@
   },
   {
    "id": "por-acto-entre-vivos-y-por-causa-de-muerte",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -7942,7 +7903,7 @@
   },
   {
    "id": "a-titulo-gratuito-y-a-titulo-oneroso",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -7986,7 +7947,7 @@
   },
   {
    "id": "ambito-de-aplicacion",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -8056,7 +8017,7 @@
   },
   {
    "id": "solo-se-adquiere-por-un-modo",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -8141,7 +8102,7 @@
   },
   {
    "id": "exigen-titulo-todos-los-modos",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -8204,7 +8165,7 @@
   },
   {
    "id": "tesis-que-la-limita-a-la-tradicion",
-   "type": "topic",
+   "type": "concept",
    "kind": "apartado",
    "origin": "label",
    "depth": 4,
@@ -8372,11 +8333,11 @@
      "sourceConceptId": "consecuencia-de-exigir-titulo-valido-en-la-tradi"
     }
    ],
-   "body": "<p>La nulidad del contrato arrastra la de la tradición. Declarada la nulidad, el dominio no se transfirió nunca, y por eso la nulidad da acción reivindicatoria contra terceros poseedores (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"1687\" href=\"#art-1687\">1687</a> y <a class=\"ref ref-art\" data-art=\"1689\" href=\"#art-1689\">1689</a></strong></em>), salvo las excepciones legales.</p>\n<hr>\n"
+   "body": "<p>La nulidad del contrato arrastra la de la tradición. Declarada la nulidad, el dominio no se transfirió nunca, y por eso la nulidad da acción reivindicatoria contra terceros poseedores (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"1687\" href=\"#art-1687\">1687</a> y <a class=\"ref ref-art\" data-art=\"1689\" href=\"#art-1689\">1689</a></strong></em>), salvo las excepciones legales.</p>\n"
   },
   {
    "id": "la-tradicion",
-   "type": "concept",
+   "type": "topic",
    "kind": "parte",
    "origin": "heading",
    "depth": 1,
@@ -8472,7 +8433,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><strong>Gratuita u onerosa</strong>, según el título que la anteceda.</p>\n"
+   "body": "<p>Según el título que la anteceda.</p>\n"
   },
   {
    "id": "a-titulo-singular",
@@ -8487,7 +8448,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><strong>A título singular</strong> por regla general. Excepción: la tradición del derecho real de herencia.</p>\n"
+   "body": "<p>Por regla general. Excepción: la tradición del derecho real de herencia.</p>\n"
   },
   {
    "id": "sirve-para-el-dominio-los-demas-derechos-reales-",
@@ -8509,11 +8470,11 @@
      "sourceConceptId": "sirve-para-el-dominio-los-demas-derechos-reales-"
     }
    ],
-   "body": "<p><strong>Sirve para el dominio, los demás derechos reales y los derechos personales</strong> (<em><strong>art. <a class=\"ref ref-art\" data-art=\"699\" href=\"#art-699\">699</a></strong></em>).</p>\n"
+   "body": "<div class=\"term-note\"><p>(<em><strong>art. <a class=\"ref ref-art\" data-art=\"699\" href=\"#art-699\">699</a></strong></em>)</p>\n</div>"
   },
   {
    "id": "entrega-y-tradicion",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -8535,9 +8496,13 @@
     {
      "type": "concept-ref",
      "targetNodeId": "la-mera-tenencia"
+    },
+    {
+     "type": "concept-ref",
+     "targetNodeId": "la-tenencia-corpus"
     }
    ],
-   "body": "<p><mark>Toda tradición supone una entrega, pero no toda entrega es tradición.</mark> La diferencia está en la intención de las partes, que la fija el título.</p>\n<div class=\"table-wrap\"><table>\n<thead>\n<tr>\n<th></th>\n<th>Tradición</th>\n<th>Simple entrega</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Título</td>\n<td>Traslaticio de dominio</td>\n<td>De <a class=\"ref ref-concept\" data-target=\"la-mera-tenencia\" href=\"#la-mera-tenencia\">mera tenencia</a>: arrendamiento, comodato, depósito, prenda</td>\n</tr>\n<tr>\n<td>Intención</td>\n<td>Transferir y adquirir el dominio</td>\n<td>Transferir solo la tenencia</td>\n</tr>\n<tr>\n<td>Quien recibe queda como</td>\n<td>Poseedor, y dueño si el tradente lo era</td>\n<td>Mero tenedor, reconociendo dominio ajeno (<em><strong>art. <a class=\"ref ref-art\" data-art=\"714\" href=\"#art-714\">714</a></strong></em>)</td>\n</tr>\n</tbody></table></div>\n<ul>\n<li>Ej: Pedro le pasa las llaves del auto a Juana. Si el título era la compraventa, hubo tradición y Juana es poseedora. Si era un comodato, hubo mera entrega y Juana es tenedora, aunque el gesto material haya sido idéntico.</li>\n</ul>\n"
+   "body": "<p><mark>Toda tradición supone una entrega, pero no toda entrega es tradición.</mark> La diferencia está en la intención de las partes, que la fija el título.</p>\n<div class=\"table-wrap\"><table>\n<thead>\n<tr>\n<th></th>\n<th>Tradición</th>\n<th>Simple entrega</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Título</td>\n<td>Traslaticio de dominio</td>\n<td>De <a class=\"ref ref-concept\" data-target=\"la-mera-tenencia\" href=\"#la-mera-tenencia\">mera tenencia</a>: arrendamiento, comodato, depósito, prenda</td>\n</tr>\n<tr>\n<td>Intención</td>\n<td>Transferir y adquirir el dominio</td>\n<td>Transferir solo la <a class=\"ref ref-concept\" data-target=\"la-tenencia-corpus\" href=\"#la-tenencia-corpus\">tenencia</a></td>\n</tr>\n<tr>\n<td>Quien recibe queda como</td>\n<td>Poseedor, y dueño si el tradente lo era</td>\n<td>Mero tenedor, reconociendo dominio ajeno (<em><strong>art. <a class=\"ref ref-art\" data-art=\"714\" href=\"#art-714\">714</a></strong></em>)</td>\n</tr>\n</tbody></table></div>\n<ul>\n<li>Ej: Pedro le pasa las llaves del auto a Juana. Si el título era la compraventa, hubo tradición y Juana es poseedora. Si era un comodato, hubo mera entrega y Juana es tenedora, aunque el gesto material haya sido idéntico.</li>\n</ul>\n"
   },
   {
    "id": "el-codigo-confunde-los-terminos",
@@ -8569,7 +8534,7 @@
   },
   {
    "id": "requisitos-de-la-tradicion",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -8579,10 +8544,6 @@
    "parentId": "la-tradicion",
    "pending": false,
    "children": [
-    "dos-partes",
-    "consentimiento",
-    "titulo-traslaticio-de-dominio",
-    "entrega",
     "primer-requisito-dos-partes",
     "segundo-requisito-consentimiento",
     "tercer-requisito-titulo-traslaticio-valido",
@@ -8599,132 +8560,8 @@
    "body": "<p>El <em><strong>art. <a class=\"ref ref-art\" data-art=\"670\" href=\"#art-670\">670</a></strong></em> los contiene todos, aunque no los enumere:</p>\n<p>Los tres primeros miran a la voluntad y a la causa: quiénes, con qué voluntad y en virtud de qué. El cuarto es el hecho material que ejecuta esa voluntad. <mark>Faltando cualquiera no hay tradición válida y el dominio no se transfiere.</mark></p>\n"
   },
   {
-   "id": "dos-partes",
-   "type": "concept",
-   "kind": "apartado",
-   "origin": "item",
-   "depth": 3,
-   "title": "Dos partes",
-   "titleHtml": "Dos partes",
-   "number": null,
-   "parentId": "requisitos-de-la-tradicion",
-   "pending": false,
-   "children": [],
-   "refs": [
-    {
-     "type": "article",
-     "articleNumber": "671",
-     "articleKey": "671",
-     "sourceConceptId": "dos-partes"
-    }
-   ],
-   "body": "<p><strong>Dos partes</strong> con facultad e intención de transferir (tradente) y capacidad e intención de adquirir (adquirente) (<em><strong>art. <a class=\"ref ref-art\" data-art=\"671\" href=\"#art-671\">671</a></strong></em>).</p>\n"
-  },
-  {
-   "id": "consentimiento",
-   "type": "concept",
-   "kind": "apartado",
-   "origin": "item",
-   "depth": 3,
-   "title": "Consentimiento",
-   "titleHtml": "Consentimiento",
-   "number": null,
-   "parentId": "requisitos-de-la-tradicion",
-   "pending": false,
-   "children": [],
-   "refs": [
-    {
-     "type": "article",
-     "articleNumber": "672",
-     "articleKey": "672",
-     "sourceConceptId": "consentimiento"
-    },
-    {
-     "type": "article",
-     "articleNumber": "673",
-     "articleKey": "673",
-     "sourceConceptId": "consentimiento"
-    },
-    {
-     "type": "article",
-     "articleNumber": "676",
-     "articleKey": "676",
-     "sourceConceptId": "consentimiento"
-    },
-    {
-     "type": "article",
-     "articleNumber": "678",
-     "articleKey": "678",
-     "sourceConceptId": "consentimiento"
-    }
-   ],
-   "body": "<p><strong>Consentimiento</strong> de ambas, exento de vicios (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"672\" href=\"#art-672\">672</a>, <a class=\"ref ref-art\" data-art=\"673\" href=\"#art-673\">673</a> y <a class=\"ref ref-art\" data-art=\"676\" href=\"#art-676\">676</a> a <a class=\"ref ref-art\" data-art=\"678\" href=\"#art-678\">678</a></strong></em>).</p>\n"
-  },
-  {
-   "id": "titulo-traslaticio-de-dominio",
-   "type": "concept",
-   "kind": "apartado",
-   "origin": "item",
-   "depth": 3,
-   "title": "Título traslaticio de dominio",
-   "titleHtml": "Título traslaticio de dominio",
-   "number": null,
-   "parentId": "requisitos-de-la-tradicion",
-   "pending": false,
-   "children": [],
-   "refs": [
-    {
-     "type": "article",
-     "articleNumber": "675",
-     "articleKey": "675",
-     "sourceConceptId": "titulo-traslaticio-de-dominio"
-    }
-   ],
-   "body": "<p><strong>Título traslaticio de dominio</strong> válido, también respecto de las personas que intervienen (<em><strong>art. <a class=\"ref ref-art\" data-art=\"675\" href=\"#art-675\">675</a></strong></em>).</p>\n"
-  },
-  {
-   "id": "entrega",
-   "type": "concept",
-   "kind": "apartado",
-   "origin": "item",
-   "depth": 3,
-   "title": "Entrega",
-   "titleHtml": "Entrega",
-   "number": null,
-   "parentId": "requisitos-de-la-tradicion",
-   "pending": false,
-   "children": [],
-   "refs": [
-    {
-     "type": "article",
-     "articleNumber": "684",
-     "articleKey": "684",
-     "sourceConceptId": "entrega"
-    },
-    {
-     "type": "article",
-     "articleNumber": "686",
-     "articleKey": "686",
-     "sourceConceptId": "entrega"
-    },
-    {
-     "type": "article",
-     "articleNumber": "698",
-     "articleKey": "698",
-     "sourceConceptId": "entrega"
-    },
-    {
-     "type": "article",
-     "articleNumber": "699",
-     "articleKey": "699",
-     "sourceConceptId": "entrega"
-    }
-   ],
-   "body": "<p><strong>Entrega</strong>, cuya forma varía según lo que se transfiera (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"684\" href=\"#art-684\">684</a>, <a class=\"ref ref-art\" data-art=\"686\" href=\"#art-686\">686</a>, <a class=\"ref ref-art\" data-art=\"698\" href=\"#art-698\">698</a> y <a class=\"ref ref-art\" data-art=\"699\" href=\"#art-699\">699</a></strong></em>).</p>\n"
-  },
-  {
    "id": "primer-requisito-dos-partes",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -8747,9 +8584,15 @@
      "articleNumber": "671",
      "articleKey": "671",
      "sourceConceptId": "primer-requisito-dos-partes"
+    },
+    {
+     "type": "article",
+     "articleNumber": "671",
+     "articleKey": "671",
+     "sourceConceptId": "primer-requisito-dos-partes"
     }
    ],
-   "body": "<p><strong>Definiciones (<em>art. <a class=\"ref ref-art\" data-art=\"671\" href=\"#art-671\">671</a> inc. 1º</em>):</strong></p>\n"
+   "body": "<p><strong>Dos partes</strong> con facultad e intención de transferir (tradente) y capacidad e intención de adquirir (adquirente) (<em><strong>art. <a class=\"ref ref-art\" data-art=\"671\" href=\"#art-671\">671</a></strong></em>).</p>\n<p><strong>Definiciones (<em>art. <a class=\"ref ref-art\" data-art=\"671\" href=\"#art-671\">671</a> inc. 1º</em>):</strong></p>\n"
   },
   {
    "id": "tradente",
@@ -8783,7 +8626,7 @@
   },
   {
    "id": "que-se-exige-al-tradente",
-   "type": "topic",
+   "type": "concept",
    "kind": "apartado",
    "origin": "label",
    "depth": 4,
@@ -8917,7 +8760,7 @@
   },
   {
    "id": "segundo-requisito-consentimiento",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -8942,9 +8785,33 @@
      "articleNumber": "673",
      "articleKey": "673",
      "sourceConceptId": "segundo-requisito-consentimiento"
+    },
+    {
+     "type": "article",
+     "articleNumber": "676",
+     "articleKey": "676",
+     "sourceConceptId": "segundo-requisito-consentimiento"
+    },
+    {
+     "type": "article",
+     "articleNumber": "678",
+     "articleKey": "678",
+     "sourceConceptId": "segundo-requisito-consentimiento"
+    },
+    {
+     "type": "article",
+     "articleNumber": "672",
+     "articleKey": "672",
+     "sourceConceptId": "segundo-requisito-consentimiento"
+    },
+    {
+     "type": "article",
+     "articleNumber": "673",
+     "articleKey": "673",
+     "sourceConceptId": "segundo-requisito-consentimiento"
     }
    ],
-   "body": "<p>La tradición es una convención: requiere el consentimiento de ambas partes, referido a la cosa, al título y a las personas.</p>\n<ul>\n<li><em><strong>Art. <a class=\"ref ref-art\" data-art=\"672\" href=\"#art-672\">672</a></strong></em>: la tradición debe hacerla voluntariamente el tradente o su representante. La que al principio fue inválida por hacerse sin su voluntad se valida retroactivamente por la ratificación.</li>\n<li><em><strong>Art. <a class=\"ref ref-art\" data-art=\"673\" href=\"#art-673\">673</a></strong></em>: se requiere también el consentimiento del adquirente o su representante, con la misma regla de ratificación.</li>\n</ul>\n"
+   "body": "<p><strong>Consentimiento</strong> de ambas, exento de vicios (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"672\" href=\"#art-672\">672</a>, <a class=\"ref ref-art\" data-art=\"673\" href=\"#art-673\">673</a> y <a class=\"ref ref-art\" data-art=\"676\" href=\"#art-676\">676</a> a <a class=\"ref ref-art\" data-art=\"678\" href=\"#art-678\">678</a></strong></em>).</p>\n<p>La tradición es una convención: requiere el consentimiento de ambas partes, referido a la cosa, al título y a las personas.</p>\n<ul>\n<li><em><strong>Art. <a class=\"ref ref-art\" data-art=\"672\" href=\"#art-672\">672</a></strong></em>: la tradición debe hacerla voluntariamente el tradente o su representante. La que al principio fue inválida por hacerse sin su voluntad se valida retroactivamente por la ratificación.</li>\n<li><em><strong>Art. <a class=\"ref ref-art\" data-art=\"673\" href=\"#art-673\">673</a></strong></em>: se requiere también el consentimiento del adquirente o su representante, con la misma regla de ratificación.</li>\n</ul>\n"
   },
   {
    "id": "critica-a-se-valida-retroactivamente",
@@ -9098,7 +8965,7 @@
   },
   {
    "id": "tercer-requisito-titulo-traslaticio-valido",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -9117,9 +8984,19 @@
      "articleNumber": "675",
      "articleKey": "675",
      "sourceConceptId": "tercer-requisito-titulo-traslaticio-valido"
+    },
+    {
+     "type": "article",
+     "articleNumber": "675",
+     "articleKey": "675",
+     "sourceConceptId": "tercer-requisito-titulo-traslaticio-valido"
+    },
+    {
+     "type": "concept-ref",
+     "targetNodeId": "titulo-traslaticio"
     }
    ],
-   "body": "<p><em><strong>Art. <a class=\"ref ref-art\" data-art=\"675\" href=\"#art-675\">675</a></strong></em>: <em>&quot;Para que valga la tradición se requiere un título translaticio de dominio, como el de venta, permuta, donación, etc. Se requiere además que el título sea válido respecto de la persona a quien se confiere. Así el título de donación irrevocable no transfiere el dominio entre cónyuges.&quot;</em></p>\n"
+   "body": "<p><strong><a class=\"ref ref-concept\" data-target=\"titulo-traslaticio\" href=\"#titulo-traslaticio\">Título traslaticio</a> de dominio</strong> válido, también respecto de las personas que intervienen (<em><strong>art. <a class=\"ref ref-art\" data-art=\"675\" href=\"#art-675\">675</a></strong></em>).</p>\n<p><em><strong>Art. <a class=\"ref ref-art\" data-art=\"675\" href=\"#art-675\">675</a></strong></em>: <em>&quot;Para que valga la tradición se requiere un título translaticio de dominio, como el de venta, permuta, donación, etc. Se requiere además que el título sea válido respecto de la persona a quien se confiere. Así el título de donación irrevocable no transfiere el dominio entre cónyuges.&quot;</em></p>\n"
   },
   {
    "id": "titulo-traslaticio",
@@ -9171,7 +9048,7 @@
   },
   {
    "id": "cuarto-requisito-la-entrega",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -9209,11 +9086,35 @@
      "sourceConceptId": "cuarto-requisito-la-entrega"
     },
     {
+     "type": "article",
+     "articleNumber": "684",
+     "articleKey": "684",
+     "sourceConceptId": "cuarto-requisito-la-entrega"
+    },
+    {
+     "type": "article",
+     "articleNumber": "686",
+     "articleKey": "686",
+     "sourceConceptId": "cuarto-requisito-la-entrega"
+    },
+    {
+     "type": "article",
+     "articleNumber": "698",
+     "articleKey": "698",
+     "sourceConceptId": "cuarto-requisito-la-entrega"
+    },
+    {
+     "type": "article",
+     "articleNumber": "699",
+     "articleKey": "699",
+     "sourceConceptId": "cuarto-requisito-la-entrega"
+    },
+    {
      "type": "concept-ref",
      "targetNodeId": "la-inscripcion"
     }
    ],
-   "body": "<p>Es el hecho material. Su forma depende de lo que se transfiere:</p>\n<div class=\"table-wrap\"><table>\n<thead>\n<tr>\n<th>Qué se transfiere</th>\n<th>Forma de la tradición</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Muebles</td>\n<td>Alguna de las formas del <em><strong>art. <a class=\"ref ref-art\" data-art=\"684\" href=\"#art-684\">684</a></strong></em>, real o ficta (ver §33)</td>\n</tr>\n<tr>\n<td>Inmuebles y derechos reales sobre ellos</td>\n<td><a class=\"ref ref-concept\" data-target=\"la-inscripcion\" href=\"#la-inscripcion\">Inscripción</a> del título en el CBR (<em><strong>art. <a class=\"ref ref-art\" data-art=\"686\" href=\"#art-686\">686</a></strong></em>)</td>\n</tr>\n<tr>\n<td>Servidumbres</td>\n<td>Escritura pública de constitución y aceptación (<em><strong>art. <a class=\"ref ref-art\" data-art=\"698\" href=\"#art-698\">698</a></strong></em>)</td>\n</tr>\n<tr>\n<td>Derechos personales</td>\n<td>Entrega del título del cedente al cesionario (<em><strong>art. <a class=\"ref ref-art\" data-art=\"699\" href=\"#art-699\">699</a></strong></em>)</td>\n</tr>\n</tbody></table></div>\n"
+   "body": "<p><strong>Entrega</strong>, cuya forma varía según lo que se transfiera (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"684\" href=\"#art-684\">684</a>, <a class=\"ref ref-art\" data-art=\"686\" href=\"#art-686\">686</a>, <a class=\"ref ref-art\" data-art=\"698\" href=\"#art-698\">698</a> y <a class=\"ref ref-art\" data-art=\"699\" href=\"#art-699\">699</a></strong></em>).</p>\n<p>Es el hecho material. Su forma depende de lo que se transfiere:</p>\n<div class=\"table-wrap\"><table>\n<thead>\n<tr>\n<th>Qué se transfiere</th>\n<th>Forma de la tradición</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Muebles</td>\n<td>Alguna de las formas del <em><strong>art. <a class=\"ref ref-art\" data-art=\"684\" href=\"#art-684\">684</a></strong></em>, real o ficta (ver §33)</td>\n</tr>\n<tr>\n<td>Inmuebles y derechos reales sobre ellos</td>\n<td><a class=\"ref ref-concept\" data-target=\"la-inscripcion\" href=\"#la-inscripcion\">Inscripción</a> del título en el CBR (<em><strong>art. <a class=\"ref ref-art\" data-art=\"686\" href=\"#art-686\">686</a></strong></em>)</td>\n</tr>\n<tr>\n<td>Servidumbres</td>\n<td>Escritura pública de constitución y aceptación (<em><strong>art. <a class=\"ref ref-art\" data-art=\"698\" href=\"#art-698\">698</a></strong></em>)</td>\n</tr>\n<tr>\n<td>Derechos personales</td>\n<td>Entrega del título del cedente al cesionario (<em><strong>art. <a class=\"ref ref-art\" data-art=\"699\" href=\"#art-699\">699</a></strong></em>)</td>\n</tr>\n</tbody></table></div>\n"
   },
   {
    "id": "por-que-importa-3",
@@ -9250,7 +9151,7 @@
   },
   {
    "id": "los-tres-escenarios-segun-quien-sea-el-tradente",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -9333,7 +9234,7 @@
   },
   {
    "id": "el-efecto-que-siempre-se-produce-la-posesion",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -9379,7 +9280,7 @@
   },
   {
    "id": "retroactividad",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -9407,7 +9308,7 @@
   },
   {
    "id": "epoca-para-exigir-la-tradicion",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -9501,7 +9402,7 @@
   },
   {
    "id": "condicion-suspensiva-y-resolutoria",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -9583,7 +9484,7 @@
   },
   {
    "id": "la-clausula-de-reserva-de-dominio-680-contra-187",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -9832,8 +9733,13 @@
    "parentId": "la-clausula-de-reserva-de-dominio-680-contra-187",
    "pending": false,
    "children": [],
-   "refs": [],
-   "body": "<p>La cláusula dejó de usarse por la primacía reconocida al 1874. Se la sustituyó por garantías reales, en particular la prenda sin desplazamiento (<em><strong>art. 14 de la Ley Nº 20.190</strong></em>, de 2007), que permite caucionar con muebles conservando el constituyente la tenencia y el uso: la función económica que buscaba la reserva.</p>\n"
+   "refs": [
+    {
+     "type": "concept-ref",
+     "targetNodeId": "la-tenencia-corpus"
+    }
+   ],
+   "body": "<p>La cláusula dejó de usarse por la primacía reconocida al 1874. Se la sustituyó por garantías reales, en particular la prenda sin desplazamiento (<em><strong>art. 14 de la Ley Nº 20.190</strong></em>, de 2007), que permite caucionar con muebles conservando el constituyente la <a class=\"ref ref-concept\" data-target=\"la-tenencia-corpus\" href=\"#la-tenencia-corpus\">tenencia</a> y el uso: la función económica que buscaba la reserva.</p>\n"
   },
   {
    "id": "tradicion-de-muebles",
@@ -9856,7 +9762,7 @@
   },
   {
    "id": "formas-del-art-684",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -9910,7 +9816,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><strong>Mostrándosela</strong> (ficta o simbólica, igual que las siguientes).</p>\n<ul>\n<li>Ej: desde la ventana le muestro a Juana el caballo que le vendo.</li>\n</ul>\n"
+   "body": "<div class=\"term-note\"><p>(ficta o simbólica, igual que las siguientes)</p>\n</div><ul>\n<li>Ej: desde la ventana le muestro a Juana el caballo que le vendo.</li>\n</ul>\n"
   },
   {
    "id": "entregandole-las-llaves",
@@ -9925,7 +9831,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><strong>Entregándole las llaves</strong> del granero, almacén, cofre o lugar en que esté guardada.</p>\n<ul>\n<li>Ej: le entrego las llaves de la bodega donde está el vino.</li>\n</ul>\n"
+   "body": "<p>Del granero, almacén, cofre o lugar en que esté guardada.</p>\n<ul>\n<li>Ej: le entrego las llaves de la bodega donde está el vino.</li>\n</ul>\n"
   },
   {
    "id": "encargandose-uno-de-poner-la-cosa-a-disposicion-",
@@ -9940,7 +9846,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><strong>Encargándose uno de poner la cosa a disposición del otro</strong> en el lugar convenido.</p>\n<ul>\n<li>Ej: el vendedor se compromete a dejar los muebles en la casa del comprador.</li>\n</ul>\n"
+   "body": "<p>En el lugar convenido.</p>\n<ul>\n<li>Ej: el vendedor se compromete a dejar los muebles en la casa del comprador.</li>\n</ul>\n"
   },
   {
    "id": "por-la-venta-donacion-u-otro-titulo-de-enajenaci",
@@ -9955,7 +9861,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><strong>Por la venta, donación u otro título de enajenación</strong> conferido al que ya tiene la cosa como usufructuario, arrendatario, comodatario, depositario o por otro título no traslaticio; y recíprocamente, <strong>por el mero contrato</strong> en que el dueño se constituye usufructuario, comodatario, arrendatario, etc.</p>\n"
+   "body": "<p>Conferido al que ya tiene la cosa como usufructuario, arrendatario, comodatario, depositario o por otro título no traslaticio; y recíprocamente, <strong>por el mero contrato</strong> en que el dueño se constituye usufructuario, comodatario, arrendatario, etc.</p>\n"
   },
   {
    "id": "es-taxativa-la-enumeracion",
@@ -10006,7 +9912,7 @@
   },
   {
    "id": "las-dos-tradiciones-del-n-5",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -10034,7 +9940,7 @@
   },
   {
    "id": "muebles-por-anticipacion-2",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -10076,7 +9982,7 @@
   },
   {
    "id": "la-inscripcion",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -10098,7 +10004,7 @@
   },
   {
    "id": "excepcion-las-servidumbres",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -10176,7 +10082,7 @@
   },
   {
    "id": "tradicion-del-derecho-real-de-herencia",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -10252,7 +10158,7 @@
   },
   {
    "id": "tradicion-de-los-derechos-personales",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -10300,7 +10206,7 @@
   },
   {
    "id": "los-tres-registros-y-sus-certificados",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -10433,7 +10339,7 @@
   },
   {
    "id": "donde-esta-el-titulo-y-donde-el-modo-en-la-escri",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -10531,7 +10437,7 @@
   },
   {
    "id": "la-funcion-calificadora-del-conservador",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -10574,7 +10480,7 @@
   },
   {
    "id": "fines-y-principios-del-registro-titulos-que-debe",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -10643,7 +10549,7 @@
      "sourceConceptId": "tradicion"
     }
    ],
-   "body": "<p><strong>Tradición</strong> del dominio y demás derechos reales sobre inmuebles (<em><strong>art. <a class=\"ref ref-art\" data-art=\"686\" href=\"#art-686\">686</a></strong></em>).</p>\n"
+   "body": "<p>Del dominio y demás derechos reales sobre inmuebles (<em><strong>art. <a class=\"ref ref-art\" data-art=\"686\" href=\"#art-686\">686</a></strong></em>).</p>\n"
   },
   {
    "id": "requisito-prueba-y-garantia-de-la-posesion",
@@ -10689,7 +10595,7 @@
      "sourceConceptId": "requisito-prueba-y-garantia-de-la-posesion"
     }
    ],
-   "body": "<p><strong>Requisito, prueba y garantía de la posesión</strong> de los inmuebles inscritos: la teoría de la posesión inscrita (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"724\" href=\"#art-724\">724</a>, <a class=\"ref ref-art\" data-art=\"728\" href=\"#art-728\">728</a>, <a class=\"ref ref-art\" data-art=\"730\" href=\"#art-730\">730</a>, <a class=\"ref ref-art\" data-art=\"924\" href=\"#art-924\">924</a> y <a class=\"ref ref-art\" data-art=\"2505\" href=\"#art-2505\">2505</a></strong></em>).</p>\n"
+   "body": "<p>De los inmuebles inscritos: la teoría de la posesión inscrita (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"724\" href=\"#art-724\">724</a>, <a class=\"ref ref-art\" data-art=\"728\" href=\"#art-728\">728</a>, <a class=\"ref ref-art\" data-art=\"730\" href=\"#art-730\">730</a>, <a class=\"ref ref-art\" data-art=\"924\" href=\"#art-924\">924</a> y <a class=\"ref ref-art\" data-art=\"2505\" href=\"#art-2505\">2505</a></strong></em>).</p>\n"
   },
   {
    "id": "publicidad",
@@ -10723,7 +10629,7 @@
   },
   {
    "id": "las-inscripciones-hereditarias-del-art-688",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -10812,7 +10718,7 @@
   },
   {
    "id": "la-sancion-por-omitir-las-inscripciones-del-art-",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -10891,7 +10797,7 @@
   },
   {
    "id": "saneamiento-de-la-pequena-propiedad-raiz-dl-n-2-",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -10951,7 +10857,7 @@
   },
   {
    "id": "sanciones",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -11077,7 +10983,7 @@
      "targetNodeId": "la-inscripcion"
     }
    ],
-   "body": "<ol>\n<li>El solicitante debe estar en posesión, no en <a class=\"ref ref-concept\" data-target=\"la-mera-tenencia\" href=\"#la-mera-tenencia\">mera tenencia</a>.</li>\n<li>La posesión inscrita prima sobre la material cuando hay oposición. Cuando el dueño inscrito comparece y se opone, la <a class=\"ref ref-concept\" data-target=\"la-inscripcion\" href=\"#la-inscripcion\">inscripción</a> recupera su fuerza.</li>\n</ol>\n<hr>\n"
+   "body": "<ol>\n<li>El solicitante debe estar en posesión, no en <a class=\"ref ref-concept\" data-target=\"la-mera-tenencia\" href=\"#la-mera-tenencia\">mera tenencia</a>.</li>\n<li>La posesión inscrita prima sobre la material cuando hay oposición. Cuando el dueño inscrito comparece y se opone, la <a class=\"ref ref-concept\" data-target=\"la-inscripcion\" href=\"#la-inscripcion\">inscripción</a> recupera su fuerza.</li>\n</ol>\n"
   },
   {
    "id": "la-posesion",
@@ -11107,7 +11013,7 @@
   },
   {
    "id": "posesion-y-prescripcion",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -11201,12 +11107,17 @@
    "parentId": "posesion-y-prescripcion",
    "pending": false,
    "children": [],
-   "refs": [],
-   "body": "<p>El usufructuario no posee la cosa fructuaria, posee solo el usufructo, que es derecho real y por tanto susceptible de posesión. El arrendatario nada posee: solo tiene una acción personal. El que posee a nombre ajeno es un representante del verdadero poseedor y solo tiene la simple tenencia. La posesión puede ser regular (sin violencia ni clandestinidad, con justo título y buena fe) o irregular. <mark>Toda posesión es amparada por la ley, pero solo la regular pone al poseedor en el camino de la prescripción</mark> (ordinaria, en el sentido del Mensaje).</p>\n"
+   "refs": [
+    {
+     "type": "concept-ref",
+     "targetNodeId": "la-tenencia-corpus"
+    }
+   ],
+   "body": "<p>El usufructuario no posee la cosa fructuaria, posee solo el usufructo, que es derecho real y por tanto susceptible de posesión. El arrendatario nada posee: solo tiene una acción personal. El que posee a nombre ajeno es un representante del verdadero poseedor y solo tiene la simple <a class=\"ref ref-concept\" data-target=\"la-tenencia-corpus\" href=\"#la-tenencia-corpus\">tenencia</a>. La posesión puede ser regular (sin violencia ni clandestinidad, con justo título y buena fe) o irregular. <mark>Toda posesión es amparada por la ley, pero solo la regular pone al poseedor en el camino de la prescripción</mark> (ordinaria, en el sentido del Mensaje).</p>\n"
   },
   {
    "id": "concepto-y-elementos",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -11216,8 +11127,6 @@
    "parentId": "la-posesion",
    "pending": false,
    "children": [
-    "la-tenencia",
-    "el-animo-de-senor-o-dueno",
     "excepcion-la-posesion-de-la-herencia",
     "la-tenencia-corpus",
     "el-animo-de-dueno-animus"
@@ -11231,40 +11140,10 @@
     },
     {
      "type": "concept-ref",
-     "targetNodeId": "el-animo-de-senor-o-dueno"
+     "targetNodeId": "la-tenencia-corpus"
     }
    ],
-   "body": "<p><em><strong>Art. <a class=\"ref ref-art\" data-art=\"700\" href=\"#art-700\">700</a> inc. 1º</strong></em>: <em>&quot;La posesión es la tenencia de una cosa determinada con <a class=\"ref ref-concept\" data-target=\"el-animo-de-senor-o-dueno\" href=\"#el-animo-de-senor-o-dueno\">ánimo de señor o dueño</a>, sea que el dueño o el que se da por tal tenga la cosa por sí mismo, o por otra persona que la tenga en lugar y a nombre de él.&quot;</em></p>\n<p>Es una de las materias más ambiguas y discutidas del derecho civil. Sus dos elementos deben concurrir copulativamente:</p>\n"
-  },
-  {
-   "id": "la-tenencia",
-   "type": "concept",
-   "kind": "apartado",
-   "origin": "item",
-   "depth": 3,
-   "title": "La tenencia",
-   "titleHtml": "La tenencia",
-   "number": null,
-   "parentId": "concepto-y-elementos",
-   "pending": false,
-   "children": [],
-   "refs": [],
-   "body": "<div class=\"term-note\"><p>(<em>corpus</em>)</p>\n</div>"
-  },
-  {
-   "id": "el-animo-de-senor-o-dueno",
-   "type": "concept",
-   "kind": "apartado",
-   "origin": "item",
-   "depth": 3,
-   "title": "El ánimo de señor o dueño",
-   "titleHtml": "El ánimo de señor o dueño",
-   "number": null,
-   "parentId": "concepto-y-elementos",
-   "pending": false,
-   "children": [],
-   "refs": [],
-   "body": "<div class=\"term-note\"><p>(<em>animus</em>)</p>\n</div>"
+   "body": "<p><em><strong>Art. <a class=\"ref ref-art\" data-art=\"700\" href=\"#art-700\">700</a> inc. 1º</strong></em>: <em>&quot;La posesión es la <a class=\"ref ref-concept\" data-target=\"la-tenencia-corpus\" href=\"#la-tenencia-corpus\">tenencia</a> de una cosa determinada con ánimo de señor o dueño, sea que el dueño o el que se da por tal tenga la cosa por sí mismo, o por otra persona que la tenga en lugar y a nombre de él.&quot;</em></p>\n<p>Es una de las materias más ambiguas y discutidas del derecho civil. Sus dos elementos deben concurrir copulativamente:</p>\n"
   },
   {
    "id": "excepcion-la-posesion-de-la-herencia",
@@ -11290,7 +11169,7 @@
   },
   {
    "id": "la-tenencia-corpus",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -11371,7 +11250,7 @@
   },
   {
    "id": "el-animo-de-dueno-animus",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -11452,7 +11331,7 @@
   },
   {
    "id": "naturaleza-juridica-2",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -11467,8 +11346,7 @@
     "el-cc-la-concibe-como-un-hecho",
     "doctrina-actual"
    ],
-   "refs": [],
-   "body": "<p><strong>¿Hecho o derecho?</strong></p>\n"
+   "refs": []
   },
   {
    "id": "savigny",
@@ -11523,9 +11401,13 @@
      "articleNumber": "582",
      "articleKey": "582",
      "sourceConceptId": "el-cc-la-concibe-como-un-hecho"
+    },
+    {
+     "type": "concept-ref",
+     "targetNodeId": "la-tenencia-corpus"
     }
    ],
-   "body": "<p>Cuando define un derecho habla de &quot;derecho&quot; o &quot;facultad&quot; (<em><strong>art. <a class=\"ref ref-art\" data-art=\"582\" href=\"#art-582\">582</a></strong></em>); a la posesión la define como &quot;tenencia&quot;.</p>\n"
+   "body": "<p>Cuando define un derecho habla de &quot;derecho&quot; o &quot;facultad&quot; (<em><strong>art. <a class=\"ref ref-art\" data-art=\"582\" href=\"#art-582\">582</a></strong></em>); a la posesión la define como &quot;<a class=\"ref ref-concept\" data-target=\"la-tenencia-corpus\" href=\"#la-tenencia-corpus\">tenencia</a>&quot;.</p>\n"
   },
   {
    "id": "doctrina-actual",
@@ -11561,7 +11443,7 @@
   },
   {
    "id": "ius-possidendi-y-ius-possessionis",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -11664,7 +11546,7 @@
      "sourceConceptId": "habilita-para-adquirir-el-dominio-por-prescripci"
     }
    ],
-   "body": "<p><strong>Habilita para adquirir el dominio por prescripción</strong> (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"683\" href=\"#art-683\">683</a> y <a class=\"ref ref-art\" data-art=\"2498\" href=\"#art-2498\">2498</a> y ss.</strong></em>). Se ganan por prescripción el dominio de los bienes corporales raíces o muebles que están en el comercio humano y se han poseído con las condiciones legales, y los otros derechos reales no exceptuados.</p>\n"
+   "body": "<div class=\"term-note\"><p>(<em><strong>arts. <a class=\"ref ref-art\" data-art=\"683\" href=\"#art-683\">683</a> y <a class=\"ref ref-art\" data-art=\"2498\" href=\"#art-2498\">2498</a> y ss.</strong></em>)</p>\n</div><p>Se ganan por prescripción el dominio de los bienes corporales raíces o muebles que están en el comercio humano y se han poseído con las condiciones legales, y los otros derechos reales no exceptuados.</p>\n"
   },
   {
    "id": "presuncion-legal-de-dominio",
@@ -11766,7 +11648,7 @@
   },
   {
    "id": "cosas-susceptibles-de-posesion",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -11819,7 +11701,7 @@
   },
   {
    "id": "cosas-no-susceptibles-de-posesion",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -11847,7 +11729,7 @@
   },
   {
    "id": "derechos-reales-2",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -11873,7 +11755,7 @@
   },
   {
    "id": "derechos-personales-2",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -11893,11 +11775,11 @@
      "sourceConceptId": "derechos-personales-2"
     }
    ],
-   "body": "<p><strong>Tesis que la rechaza:</strong></p>\n<ol>\n<li>Los derechos personales no permiten un ejercicio continuado: se agotan al ejercerse (al cobrar, se extinguen el crédito y la obligación).</li>\n<li>El Mensaje solo se refiere a la posesión de derechos reales.</li>\n<li>Cuando el <em><strong>art. <a class=\"ref ref-art\" data-art=\"1576\" href=\"#art-1576\">1576</a></strong></em> habla de la &quot;posesión del crédito&quot; se refiere a un titular aparente, no a un poseedor.</li>\n</ol>\n"
+   "body": "<ol>\n<li>Los derechos personales no permiten un ejercicio continuado: se agotan al ejercerse (al cobrar, se extinguen el crédito y la obligación).</li>\n<li>El Mensaje solo se refiere a la posesión de derechos reales.</li>\n<li>Cuando el <em><strong>art. <a class=\"ref ref-art\" data-art=\"1576\" href=\"#art-1576\">1576</a></strong></em> habla de la &quot;posesión del crédito&quot; se refiere a un titular aparente, no a un poseedor.</li>\n</ol>\n"
   },
   {
    "id": "tesis-que-la-acepta",
-   "type": "topic",
+   "type": "concept",
    "kind": "apartado",
    "origin": "label",
    "depth": 4,
@@ -11987,7 +11869,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><strong>El Mensaje</strong> alude a los derechos reales a modo ilustrativo, sin excluir los personales.</p>\n"
+   "body": "<p>Alude a los derechos reales a modo ilustrativo, sin excluir los personales.</p>\n"
   },
   {
    "id": "tradicion-de-creditos",
@@ -12044,7 +11926,7 @@
   },
   {
    "id": "clases-de-posesion",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -12147,7 +12029,7 @@
   },
   {
    "id": "primer-elemento-justo-titulo",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -12184,7 +12066,7 @@
   },
   {
    "id": "titulos-constitutivos-de-dominio",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -12206,7 +12088,7 @@
   },
   {
    "id": "titulos-traslaticios-de-dominio",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -12260,7 +12142,7 @@
   },
   {
    "id": "titulos-declarativos-de-dominio",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -12300,7 +12182,7 @@
   },
   {
    "id": "los-del-art-703",
-   "type": "topic",
+   "type": "concept",
    "kind": "apartado",
    "origin": "label",
    "depth": 5,
@@ -12392,11 +12274,11 @@
      "sourceConceptId": "la-transaccion-2"
     }
    ],
-   "body": "<p><strong>La transacción</strong> (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2446\" href=\"#art-2446\">2446</a></strong></em>: contrato en que las partes terminan extrajudicialmente un litigio pendiente o precaven uno eventual). Respecto de la cosa disputada, es título declarativo; respecto de las no disputadas, traslaticio.</p>\n<ul>\n<li>Ej declarativo: se pone término al juicio por desistimiento; siempre se entendió que la cosa pertenecía al demandado.</li>\n<li>Ej traslaticio: se incluye otra cosa para lograr el acuerdo; las concesiones recíprocas son de la esencia de la transacción.</li>\n</ul>\n"
+   "body": "<div class=\"term-note\"><p>(<em><strong>art. <a class=\"ref ref-art\" data-art=\"2446\" href=\"#art-2446\">2446</a></strong></em>: contrato en que las partes terminan extrajudicialmente un litigio pendiente o precaven uno eventual)</p>\n</div><p>Respecto de la cosa disputada, es título declarativo; respecto de las no disputadas, traslaticio.</p>\n<ul>\n<li>Ej declarativo: se pone término al juicio por desistimiento; siempre se entendió que la cosa pertenecía al demandado.</li>\n<li>Ej traslaticio: se incluye otra cosa para lograr el acuerdo; las concesiones recíprocas son de la esencia de la transacción.</li>\n</ul>\n"
   },
   {
    "id": "la-sucesion-por-causa-de-muerte-como-titulo",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -12568,7 +12450,7 @@
   },
   {
    "id": "los-titulos-injustos",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -12693,7 +12575,7 @@
   },
   {
    "id": "segundo-elemento-la-buena-fe",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -12709,7 +12591,7 @@
     "prueba"
    ],
    "refs": [],
-   "body": "<p><strong>Subjetiva y objetiva:</strong></p>\n<ul>\n<li><strong>Subjetiva:</strong> convicción íntima de actuar lícitamente; se examina en concreto. Es la que interesa en materia posesoria.</li>\n<li><strong>Objetiva:</strong> comportamiento según la conducta media de un hombre corriente; se aprecia en abstracto. Se aplica sobre todo a contratos y obligaciones.</li>\n<li>Puede sostenerse que el concepto es uno solo y que la distinción es de métodos para establecerla.</li>\n</ul>\n"
+   "body": "<ul>\n<li><strong>Subjetiva:</strong> convicción íntima de actuar lícitamente; se examina en concreto. Es la que interesa en materia posesoria.</li>\n<li><strong>Objetiva:</strong> comportamiento según la conducta media de un hombre corriente; se aprecia en abstracto. Se aplica sobre todo a contratos y obligaciones.</li>\n<li>Puede sostenerse que el concepto es uno solo y que la distinción es de métodos para establecerla.</li>\n</ul>\n"
   },
   {
    "id": "definicion",
@@ -12938,7 +12820,7 @@
      "sourceConceptId": "prescripcion-adquisitiva-ordinaria"
     }
    ],
-   "body": "<p><strong>Prescripción adquisitiva ordinaria</strong>, de plazo más corto (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2507\" href=\"#art-2507\">2507</a></strong></em>): 2 años para muebles y 5 para inmuebles (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2508\" href=\"#art-2508\">2508</a></strong></em>).</p>\n"
+   "body": "<p>De plazo más corto (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2507\" href=\"#art-2507\">2507</a></strong></em>): 2 años para muebles y 5 para inmuebles (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2508\" href=\"#art-2508\">2508</a></strong></em>).</p>\n"
   },
   {
    "id": "accion-publiciana",
@@ -12964,7 +12846,7 @@
   },
   {
    "id": "posesion-irregular",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -13007,10 +12889,14 @@
    "refs": [
     {
      "type": "concept-ref",
+     "targetNodeId": "la-tenencia-corpus"
+    },
+    {
+     "type": "concept-ref",
      "targetNodeId": "con-titulo-traslaticio"
     }
    ],
-   "body": "<p>Además de faltar un requisito de la regular, deben concurrir la tenencia y el ánimo de señor; si no, simplemente no hay posesión. Hay que analizar caso a caso.</p>\n<ul>\n<li>Ej: <a class=\"ref ref-concept\" data-target=\"con-titulo-traslaticio\" href=\"#con-titulo-traslaticio\">con título traslaticio</a>, la tradición es indispensable, porque sin ella no hay tenencia; lo que podría faltar es la buena fe.</li>\n</ul>\n"
+   "body": "<p>Además de faltar un requisito de la regular, deben concurrir la <a class=\"ref ref-concept\" data-target=\"la-tenencia-corpus\" href=\"#la-tenencia-corpus\">tenencia</a> y el ánimo de señor; si no, simplemente no hay posesión. Hay que analizar caso a caso.</p>\n<ul>\n<li>Ej: <a class=\"ref ref-concept\" data-target=\"con-titulo-traslaticio\" href=\"#con-titulo-traslaticio\">con título traslaticio</a>, la tradición es indispensable, porque sin ella no hay tenencia; lo que podría faltar es la buena fe.</li>\n</ul>\n"
   },
   {
    "id": "vial",
@@ -13050,7 +12936,7 @@
   },
   {
    "id": "regular-e-irregular-comparadas",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -13110,7 +12996,7 @@
   },
   {
    "id": "posesiones-viciosas",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -13141,7 +13027,7 @@
   },
   {
    "id": "posesion-violenta",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -13231,7 +13117,7 @@
   },
   {
    "id": "posesion-clandestina",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -13253,7 +13139,7 @@
   },
   {
    "id": "diferencias-entre-ambos-vicios",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -13322,7 +13208,7 @@
   },
   {
    "id": "la-mera-tenencia",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -13347,7 +13233,7 @@
   },
   {
    "id": "dos-situaciones",
-   "type": "topic",
+   "type": "concept",
    "kind": "apartado",
    "origin": "label",
    "depth": 3,
@@ -13390,11 +13276,11 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><strong>En virtud de un título del que emana un derecho personal</strong> contra el dueño.</p>\n<ul>\n<li>Ej: el arrendatario, el comodatario.</li>\n</ul>\n"
+   "body": "<p>Contra el dueño.</p>\n<ul>\n<li>Ej: el arrendatario, el comodatario.</li>\n</ul>\n"
   },
   {
    "id": "caracteristicas-5",
-   "type": "topic",
+   "type": "concept",
    "kind": "apartado",
    "origin": "label",
    "depth": 3,
@@ -13504,7 +13390,7 @@
   },
   {
    "id": "se-transmite-la-posesion",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -13548,7 +13434,7 @@
   },
   {
    "id": "se-transfiere",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -13576,7 +13462,7 @@
   },
   {
    "id": "agregacion-o-accesion-de-posesiones",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -13650,7 +13536,7 @@
   },
   {
    "id": "interversion-de-la-posesion",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 3,
@@ -13673,7 +13559,7 @@
   },
   {
    "id": "de-mera-tenencia-a-posesion",
-   "type": "concept",
+   "type": "topic",
    "kind": "subtema",
    "origin": "heading",
    "depth": 4,
@@ -13814,7 +13700,7 @@
      "sourceConceptId": "constituto-posesorio"
     }
    ],
-   "body": "<p><strong>Constituto posesorio</strong> (<em><strong>art. <a class=\"ref ref-art\" data-art=\"684\" href=\"#art-684\">684</a> Nº 5</strong></em>).</p>\n<ul>\n<li>Ej: el que vende su casa y se queda en ella como arrendatario.</li>\n</ul>\n"
+   "body": "<div class=\"term-note\"><p>(<em><strong>art. <a class=\"ref ref-art\" data-art=\"684\" href=\"#art-684\">684</a> Nº 5</strong></em>)</p>\n</div><ul>\n<li>Ej: el que vende su casa y se queda en ella como arrendatario.</li>\n</ul>\n"
   },
   {
    "id": "reconocimiento-de-dominio-ajeno",
@@ -13836,11 +13722,11 @@
      "sourceConceptId": "reconocimiento-de-dominio-ajeno"
     }
    ],
-   "body": "<p><strong>Reconocimiento de dominio ajeno</strong> (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2494\" href=\"#art-2494\">2494</a></strong></em>), expreso o tácito.</p>\n<ul>\n<li>Ej: el poseedor que toma en arriendo la cosa del verdadero dueño. Opera como interrupción de la prescripción.</li>\n</ul>\n"
+   "body": "<div class=\"term-note\"><p>(<em><strong>art. <a class=\"ref ref-art\" data-art=\"2494\" href=\"#art-2494\">2494</a></strong></em>)</p>\n</div><p>Expreso o tácito.</p>\n<ul>\n<li>Ej: el poseedor que toma en arriendo la cosa del verdadero dueño. Opera como interrupción de la prescripción.</li>\n</ul>\n"
   },
   {
    "id": "prescripcion-adquisitiva",
-   "type": "concept",
+   "type": "topic",
    "kind": "tema",
    "origin": "heading",
    "depth": 2,
@@ -15484,7 +15370,7 @@
  },
  "warnings": [],
  "stats": {
-  "articleRefs": 408,
-  "conceptRefs": 172
+  "articleRefs": 407,
+  "conceptRefs": 178
  }
 }

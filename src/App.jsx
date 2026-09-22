@@ -18,7 +18,7 @@ function readFont() {
 
 export default function App() {
   const [font, setFont] = useState(readFont);
-  const resetRef = useRef(null);
+  const controlsRef = useRef(null);
 
   useEffect(() => {
     document.documentElement.dataset.font = font;
@@ -32,7 +32,7 @@ export default function App() {
   return (
     <ReactFlowProvider>
       <main className="app">
-        <MindMap resetRef={resetRef} />
+        <MindMap controlsRef={controlsRef} />
         <header className="bar">
           <span className="bar__mark" aria-hidden />
           <span className="bar__title title-font">{title}</span>
@@ -53,8 +53,14 @@ export default function App() {
             </span>
             {FONTS[font].label}
           </button>
-          <button type="button" className="pill" onClick={() => resetRef.current?.()}>
-            Encuadrar todo
+          <button type="button" className="pill" onClick={() => controlsRef.current?.collapseLast()}>
+            Plegar última capa
+          </button>
+          <button type="button" className="pill" onClick={() => controlsRef.current?.collapseAll()}>
+            Plegar todo
+          </button>
+          <button type="button" className="pill" onClick={() => controlsRef.current?.fitAll()}>
+            Encuadrar
           </button>
         </header>
       </main>

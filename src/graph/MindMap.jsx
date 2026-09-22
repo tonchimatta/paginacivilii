@@ -22,7 +22,7 @@ const EMPTY = Object.freeze([]);
 
 const articleNodeId = (conceptId, key) => `art:${conceptId}:${key}`;
 
-export default function MindMap({ resetRef }) {
+export default function MindMap({ controlsRef }) {
   const rf = useReactFlow();
   const wrapperRef = useRef(null);
 
@@ -159,6 +159,7 @@ export default function MindMap({ resetRef }) {
 
   // ---- Camera ------------------------------------------------------------------------
   const historyRef = useRef([]); // viewport stack: pushed on open, popped on close
+  const lastToggleRef = useRef(null);
   const cameraAnimRef = useRef(null);
   const cameraIntentRef = useRef({ type: 'fit', ids: null }); // consumed after next layout
 
@@ -192,7 +193,12 @@ export default function MindMap({ resetRef }) {
       if (!ids.length) return;
       const rects = ids.map((id) => ({ ...targets.get(id), ...sizesRef.current.get(id) }));
       const { width, height } = el.getBoundingClientRect();
-      const opts = intent.type === 'focus' ? { padding: 0.35, maxZoom: 1.05 } : { padding: 0.12, maxZoom: 1 };
+      const opts =
+        intent.type === 'frame'
+          ? { padding: 0.06, maxZoom: 1.8 }
+          : intent.type === 'focus'
+            ? { padding: 0.35, maxZoom: 1.05 }
+            : { padding: 0.12, maxZoom: 1 };
       flyTo(viewportForBounds(boundsOf(rects), width, height, opts));
     },
     [flyTo],
@@ -256,9 +262,31 @@ export default function MindMap({ resetRef }) {
         setActiveId(id);
       },
 
+      // Double tap: zoom so the card fills the view. The first tap of the pair may have
+      // opened or closed the card's branches; that is undone.
+      frame(id) {
+        const last = lastToggleRef.current;
+        if (last && last.id === id && performance.now() - last.at < 600) {
+          setExpanded(last.expanded);
+          setOpenArticles(last.openArticles);
+          historyRef.current = last.history;
+        }
+        lastToggleRef.current = null;
+        cameraIntentRef.current = { type: 'frame', ids: [id] };
+        setSizeVersion((v) => v + 1);
+      },
+
       toggleTopic(id) {
         const node = nodesById.get(id);
         if (!node || !node.children.length) return;
+        // Snapshot, so a double tap can undo what its first tap did.
+        lastToggleRef.current = {
+          id,
+          at: performance.now(),
+          expanded,
+          openArticles,
+          history: [...historyRef.current],
+        };
         if (expanded.has(id)) {
           const gone = new Set(descendantsOf(id));
           setExpanded((prev) => new Set([...prev].filter((x) => x !== id && !gone.has(x))));
@@ -329,12 +357,34 @@ export default function MindMap({ resetRef }) {
   // Manual pan/zoom always wins: any user-initiated move cancels a running camera flight.
   const onMoveStart = useCallback((event) => event && stopCamera(), [stopCamera]);
 
-  const resetView = useCallback(() => {
+  const fitAll = useCallback(() => {
     historyRef.current = [];
     cameraIntentRef.current = { type: 'fit', ids: null };
     setSizeVersion((v) => v + 1);
   }, []);
-  if (resetRef) resetRef.current = resetView;
+
+  // Top-bar controls.
+  const collapseAll = useCallback(() => {
+    setExpanded(new Set([rootId]));
+    setOpenArticles([]);
+    fitAll();
+  }, [fitAll]);
+
+  // Closes the deepest open level (open articles count as the deepest level).
+  const collapseLast = useCallback(() => {
+    if (openArticles.length) {
+      setOpenArticles([]);
+    } else {
+      const open = [...expanded].filter((id) => id !== rootId);
+      if (!open.length) return;
+      const depth = Math.max(...open.map((id) => nodesById.get(id).depth));
+      setExpanded(new Set([...expanded].filter((id) => id === rootId || nodesById.get(id).depth < depth)));
+    }
+    historyRef.current = [];
+    cameraIntentRef.current = { type: 'fit', ids: null };
+  }, [expanded, openArticles]);
+
+  if (controlsRef) controlsRef.current = { fitAll, collapseAll, collapseLast };
 
   return (
     <MapActions.Provider value={actions}>
