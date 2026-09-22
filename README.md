@@ -74,8 +74,8 @@ seis partes tiene su color y lo heredan sus temas y tarjetas) y una grilla tenue
 
 - Clic en un tema: abre o cierra sus ramas a la derecha. Cada apertura guarda la vista actual
   en una pila; cerrar la recupera.
-- Término enlazado (verde): abre la ruta hasta esa tarjeta, mueve la cámara y la hace destellar.
-- Artículo enlazado (ámbar): crea una tarjeta efímera con el texto del artículo, unida por un
+- Término enlazado (subrayado): abre la ruta hasta esa tarjeta, mueve la cámara y la hace destellar.
+- Artículo enlazado (resaltado en amarillo): crea una tarjeta efímera con el texto del artículo, unida por un
   cable punteado. Se cierra con la X o volviendo a hacer clic en el mismo enlace.
 - Zoom y arrastre manuales siempre disponibles; cualquier gesto interrumpe un movimiento de cámara.
 
