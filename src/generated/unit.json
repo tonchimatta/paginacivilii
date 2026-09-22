@@ -75,7 +75,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><strong>Concepto:</strong> el Derecho de Bienes (cosas o <em>res</em>) estudia las normas que regulan a los objetos:</p>\n<ol>\n<li>Cómo se determinan.</li>\n<li>Cómo se clasifican.</li>\n<li>Qué especie de poder se puede tener sobre ellos (relación vertical).<ul>\n<li>Ej: los animales, casi seres sintientes, pero protegidos en un estatuto particular.</li>\n</ul>\n</li>\n<li>Cómo se adquiere esa potestad y qué protección confiere la titularidad.</li>\n</ol>\n"
+   "body": "<p><strong>Concepto:</strong> el Derecho de Bienes (cosas o <em>res</em>) estudia las normas que regulan a los objetos:</p>\n<ol>\n<li><strong>Cómo se determinan.</strong></li>\n<li><strong>Cómo se clasifican.</strong></li>\n<li>Qué especie de poder se puede tener sobre ellos (relación vertical).<ul>\n<li>Ej: los animales, casi seres sintientes, pero protegidos en un estatuto particular.</li>\n</ul>\n</li>\n<li>Cómo se adquiere esa potestad y qué protección confiere la titularidad.</li>\n</ol>\n"
   },
   {
    "id": "cosa-y-bien",
@@ -133,7 +133,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p>Todo lo que forma parte del mundo exterior y sensible, o puede percibirse por la inteligencia (cosas materiales o inmateriales).</p>\n<ul>\n<li>Es extraña al sujeto.</li>\n<li>Tiene relevancia jurídica.</li>\n<li>No depende de que un sujeto pueda apropiársela.</li>\n<li>Puede ser presente o futura.</li>\n</ul>\n"
+   "body": "<p>Todo lo que forma parte del mundo exterior y sensible, o puede percibirse por la inteligencia (cosas materiales o inmateriales).</p>\n<ul>\n<li><strong>Es extraña al sujeto.</strong></li>\n<li><strong>Tiene relevancia jurídica.</strong></li>\n<li><strong>No depende de que un sujeto pueda apropiársela.</strong></li>\n<li><strong>Puede ser presente o futura.</strong></li>\n</ul>\n"
   },
   {
    "id": "bien",
@@ -231,7 +231,7 @@
      "targetNodeId": "singulares"
     }
    ],
-   "body": "<ol>\n<li>Corporales e incorporales (derechos reales y personales).</li>\n<li>Muebles e inmuebles (derechos y acciones muebles e inmuebles).</li>\n<li><a class=\"ref ref-concept\" data-target=\"consumibles-y-no-consumibles\" href=\"#consumibles-y-no-consumibles\">Consumibles y no consumibles</a> (usufructo o cuasiusufructo).</li>\n<li><a class=\"ref ref-concept\" data-target=\"fungibles-y-no-fungibles\" href=\"#fungibles-y-no-fungibles\">Fungibles y no fungibles</a> (igual poder liberatorio).</li>\n<li><a class=\"ref ref-concept\" data-target=\"singulares\" href=\"#singulares\">Singulares</a> y universales (de hecho y de derecho).</li>\n<li>Otras clasificaciones.</li>\n</ol>\n"
+   "body": "<ol>\n<li><strong>Corporales e incorporales</strong> (derechos reales y personales).</li>\n<li><strong>Muebles e inmuebles</strong> (derechos y acciones muebles e inmuebles).</li>\n<li><strong><a class=\"ref ref-concept\" data-target=\"consumibles-y-no-consumibles\" href=\"#consumibles-y-no-consumibles\">Consumibles y no consumibles</a></strong> (usufructo o cuasiusufructo).</li>\n<li><strong><a class=\"ref ref-concept\" data-target=\"fungibles-y-no-fungibles\" href=\"#fungibles-y-no-fungibles\">Fungibles y no fungibles</a></strong> (igual poder liberatorio).</li>\n<li><strong><a class=\"ref ref-concept\" data-target=\"singulares\" href=\"#singulares\">Singulares</a> y universales</strong> (de hecho y de derecho).</li>\n<li><strong>Otras clasificaciones.</strong></li>\n</ol>\n"
   },
   {
    "id": "critica-a-la-distincion",
@@ -267,7 +267,7 @@
      "targetNodeId": "cosas-incorporales"
     }
    ],
-   "body": "<ol>\n<li>Las cosas corporales son el objeto de los derechos (relación vertical). No procede tratar después a los derechos como cosas, junto a las primeras (relación horizontal): eso abre la puerta a &quot;derechos sobre derechos&quot;.<ul>\n<li>Pero el CC sí reconoce la propiedad sobre el <a class=\"ref ref-concept\" data-target=\"el-derecho-de-propiedad-19-n-24\" href=\"#el-derecho-de-propiedad-19-n-24\">derecho de propiedad</a>: el <em><strong>art. <a class=\"ref ref-art\" data-art=\"577\" href=\"#art-577\">577</a></strong></em> pone el dominio entre los derechos reales, que son <a class=\"ref ref-concept\" data-target=\"cosas-incorporales\" href=\"#cosas-incorporales\">cosas incorporales</a> según el <em><strong>art. <a class=\"ref ref-art\" data-art=\"576\" href=\"#art-576\">576</a></strong></em>.</li>\n</ul>\n</li>\n<li>Hay cosas no perceptibles por los sentidos que no son derechos y que igual tienen regulación y protección.<ul>\n<li>Ej: el espacio aéreo, las energías, las obras del ingenio.</li>\n</ul>\n</li>\n</ol>\n"
+   "body": "<ol>\n<li>Las cosas corporales son el objeto de los derechos (relación vertical). No procede tratar después a los derechos como cosas, junto a las primeras (relación horizontal): eso abre la puerta a &quot;derechos sobre derechos&quot;.<ul>\n<li><strong>Pero el CC sí reconoce la propiedad sobre el <a class=\"ref ref-concept\" data-target=\"el-derecho-de-propiedad-19-n-24\" href=\"#el-derecho-de-propiedad-19-n-24\">derecho de propiedad</a>:</strong> el <em><strong>art. <a class=\"ref ref-art\" data-art=\"577\" href=\"#art-577\">577</a></strong></em> pone el dominio entre los derechos reales, que son <a class=\"ref ref-concept\" data-target=\"cosas-incorporales\" href=\"#cosas-incorporales\">cosas incorporales</a> según el <em><strong>art. <a class=\"ref ref-art\" data-art=\"576\" href=\"#art-576\">576</a></strong></em>.</li>\n</ul>\n</li>\n<li>Hay cosas no perceptibles por los sentidos que no son derechos y que igual tienen regulación y protección.<ul>\n<li>Ej: el espacio aéreo, las energías, las obras del ingenio.</li>\n</ul>\n</li>\n</ol>\n"
   },
   {
    "id": "derechos-reales-y-derechos-personales",
@@ -447,7 +447,7 @@
      "sourceConceptId": "enumeracion"
     }
    ],
-   "body": "<p>El <em><strong>art. <a class=\"ref ref-art\" data-art=\"577\" href=\"#art-577\">577</a> inc. 2º</strong></em> enumera ocho:</p>\n<ol>\n<li>Dominio.</li>\n<li>Herencia.</li>\n<li>Usufructo.</li>\n<li>Uso.</li>\n<li>Habitación.</li>\n<li>Servidumbres activas.</li>\n<li>Prenda.</li>\n<li>Hipoteca.</li>\n</ol>\n"
+   "body": "<p>El <em><strong>art. <a class=\"ref ref-art\" data-art=\"577\" href=\"#art-577\">577</a> inc. 2º</strong></em> enumera ocho:</p>\n<ol>\n<li><strong>Dominio.</strong></li>\n<li><strong>Herencia.</strong></li>\n<li><strong>Usufructo.</strong></li>\n<li><strong>Uso.</strong></li>\n<li><strong>Habitación.</strong></li>\n<li><strong>Servidumbres activas.</strong></li>\n<li><strong>Prenda.</strong></li>\n<li><strong>Hipoteca.</strong></li>\n</ol>\n"
   },
   {
    "id": "la-enumeracion-no-es-taxativa",
@@ -469,7 +469,7 @@
      "sourceConceptId": "la-enumeracion-no-es-taxativa"
     }
    ],
-   "body": "<ul>\n<li>El <em><strong>art. <a class=\"ref ref-art\" data-art=\"579\" href=\"#art-579\">579</a></strong></em> agrega el censo.</li>\n<li>Los &quot;derechos reales administrativos&quot;: derecho de aprovechamiento de aguas, derecho del concesionario, concesión minera.</li>\n</ul>\n"
+   "body": "<ul>\n<li>El <em><strong>art. <a class=\"ref ref-art\" data-art=\"579\" href=\"#art-579\">579</a></strong></em> agrega el censo.</li>\n<li><strong>Los &quot;derechos reales administrativos&quot;:</strong> derecho de aprovechamiento de aguas, derecho del concesionario, concesión minera.</li>\n</ul>\n"
   },
   {
    "id": "reserva-legal-numerus-clausus",
@@ -484,7 +484,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p><mark>Solo la ley puede crear derechos reales</mark>, porque las normas sobre organización de la propiedad son de orden público, lo que resta aplicación a la voluntad de los particulares.</p>\n<ul>\n<li>Las partes no pueden inventar un derecho real. Sí pueden modular el contenido de los que la ley reconoce, dentro de los límites legales.</li>\n</ul>\n"
+   "body": "<p><mark>Solo la ley puede crear derechos reales</mark>, porque las normas sobre organización de la propiedad son de orden público, lo que resta aplicación a la voluntad de los particulares.</p>\n<ul>\n<li><strong>Las partes no pueden inventar un derecho real.</strong> Sí pueden modular el contenido de los que la ley reconoce, dentro de los límites legales.</li>\n</ul>\n"
   },
   {
    "id": "derechos-personales",
@@ -644,7 +644,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<ol>\n<li>Proteger derechos frente al legislador: la ley que priva de un derecho adquirido afectaría el dominio sobre ese derecho.</li>\n<li>Proteger frente a actos administrativos o materiales ilegales o arbitrarios de la autoridad o de particulares: habilita el recurso de protección (<em><strong>art. 20 CPR</strong></em>), que no cubre los derechos personales.</li>\n</ol>\n"
+   "body": "<ol>\n<li><strong>Proteger derechos frente al legislador:</strong> la ley que priva de un derecho adquirido afectaría el dominio sobre ese derecho.</li>\n<li>Proteger frente a actos administrativos o materiales ilegales o arbitrarios de la autoridad o de particulares: habilita el recurso de protección (<em><strong>art. 20 CPR</strong></em>), que no cubre los derechos personales.</li>\n</ol>\n"
   },
   {
    "id": "critica",
@@ -1069,7 +1069,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<ol>\n<li>Adherencia a un inmueble.</li>\n<li>Que sea permanente.</li>\n</ol>\n"
+   "body": "<ol>\n<li><strong>Adherencia a un inmueble.</strong></li>\n<li><strong>Que sea permanente.</strong></li>\n</ol>\n"
   },
   {
    "id": "plantas",
@@ -1091,7 +1091,7 @@
      "sourceConceptId": "plantas"
     }
    ],
-   "body": "<div class=\"term-note\"><p>(<em>art. <a class=\"ref ref-art\" data-art=\"569\" href=\"#art-569\">569</a></em>)</p>\n</div><p>Son inmuebles mientras adhieren al suelo por sus raíces, salvo que estén en macetas o cajones que puedan transportarse.</p>\n<p><mark>La adherencia debe ser permanente.</mark></p>\n<ul>\n<li>Ej: la carpa de circo adhiere al suelo con cables y estacas, pero no de modo permanente: sigue siendo mueble.</li>\n<li>Ej inverso: los durmientes de un ferrocarril son inmuebles aunque puedan removerse uno a uno, porque están destinados a permanecer.</li>\n<li>Caso de frontera: la minga chilota, donde la casa entera se traslada de un sitio a otro.</li>\n</ul>\n"
+   "body": "<div class=\"term-note\"><p>(<em>art. <a class=\"ref ref-art\" data-art=\"569\" href=\"#art-569\">569</a></em>)</p>\n</div><p>Son inmuebles mientras adhieren al suelo por sus raíces, salvo que estén en macetas o cajones que puedan transportarse.</p>\n<p><mark>La adherencia debe ser permanente.</mark></p>\n<ul>\n<li>Ej: la carpa de circo adhiere al suelo con cables y estacas, pero no de modo permanente: sigue siendo mueble.</li>\n<li>Ej inverso: los durmientes de un ferrocarril son inmuebles aunque puedan removerse uno a uno, porque están destinados a permanecer.</li>\n<li><strong>Caso de frontera:</strong> la minga chilota, donde la casa entera se traslada de un sitio a otro.</li>\n</ul>\n"
   },
   {
    "id": "inmuebles-por-destinacion",
@@ -1549,7 +1549,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p>Dos o más cosas son subjetivamente fungibles cuando el interesado les atribuye igual poder liberatorio. Se manifiesta en la dación en pago, las obligaciones alternativas y la compensación convencional.</p>\n<ul>\n<li>Contraejemplo clásico: el reloj corriente que, por ser un recuerdo familiar, deja de ser fungible para su dueño.</li>\n</ul>\n"
+   "body": "<p>Dos o más cosas son subjetivamente fungibles cuando el interesado les atribuye igual poder liberatorio. Se manifiesta en la dación en pago, las obligaciones alternativas y la compensación convencional.</p>\n<ul>\n<li><strong>Contraejemplo clásico:</strong> el reloj corriente que, por ser un recuerdo familiar, deja de ser fungible para su dueño.</li>\n</ul>\n"
   },
   {
    "id": "infungibilidad-objetiva-y-subjetiva",
@@ -1729,7 +1729,7 @@
      "sourceConceptId": "compensacion-legal"
     }
    ],
-   "body": "<p>Ambas deudas deben ser de dinero o de cosas fungibles o indeterminadas de igual género y calidad (<em><strong>art. <a class=\"ref ref-art\" data-art=\"1656\" href=\"#art-1656\">1656</a> Nº 1</strong></em>).</p>\n<ul>\n<li>Ej: Pedro le debe a Juan 5 millones por un mutuo y Juan le debe a Pedro 5 millones por servicios. Ambas deudas son exigibles y de dinero: se compensan de pleno derecho hasta concurrencia de la menor.</li>\n<li>Contraejemplo: Pedro le debe a Juan un caballo determinado y Juan le debe a Pedro 5 millones. No hay compensación legal, porque las deudas no son de igual género.</li>\n</ul>\n"
+   "body": "<p>Ambas deudas deben ser de dinero o de cosas fungibles o indeterminadas de igual género y calidad (<em><strong>art. <a class=\"ref ref-art\" data-art=\"1656\" href=\"#art-1656\">1656</a> Nº 1</strong></em>).</p>\n<ul>\n<li>Ej: Pedro le debe a Juan 5 millones por un mutuo y Juan le debe a Pedro 5 millones por servicios. Ambas deudas son exigibles y de dinero: se compensan de pleno derecho hasta concurrencia de la menor.</li>\n<li><strong>Contraejemplo:</strong> Pedro le debe a Juan un caballo determinado y Juan le debe a Pedro 5 millones. No hay compensación legal, porque las deudas no son de igual género.</li>\n</ul>\n"
   },
   {
    "id": "cuasiusufructo-2",
@@ -1984,7 +1984,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<ul>\n<li>Pueden ser de la misma naturaleza o de naturaleza distinta.<ul>\n<li>Ej: rebaño, biblioteca (misma naturaleza); establecimiento de comercio (distinta).</li>\n</ul>\n</li>\n<li>Solo cosas muebles.</li>\n<li>Cada bien conserva su individualidad, función y valor.</li>\n<li><mark>El vínculo lo pone el titular con su destinación, no la ley.</mark></li>\n<li>Comprenden solo activo: las deudas quedan fuera.</li>\n</ul>\n"
+   "body": "<ul>\n<li><strong>Pueden ser de la misma naturaleza o de naturaleza distinta.</strong><ul>\n<li>Ej: rebaño, biblioteca (misma naturaleza); establecimiento de comercio (distinta).</li>\n</ul>\n</li>\n<li><strong>Solo cosas muebles.</strong></li>\n<li><strong>Cada bien conserva su individualidad, función y valor.</strong></li>\n<li><mark>El vínculo lo pone el titular con su destinación, no la ley.</mark></li>\n<li><strong>Comprenden solo activo:</strong> las deudas quedan fuera.</li>\n</ul>\n"
   },
   {
    "id": "se-puede-disponer-de-ella-como-tal",
@@ -2088,7 +2088,7 @@
      "targetNodeId": "sociedad-conyugal"
     }
    ],
-   "body": "<ul>\n<li>Comprenden activo y pasivo.</li>\n<li>Opera la subrogación real (un bien reemplaza a otro dentro de la masa).</li>\n<li><mark>Las configura la ley.</mark></li>\n<li>Ej: la herencia, la <a class=\"ref ref-concept\" data-target=\"sociedad-conyugal\" href=\"#sociedad-conyugal\">sociedad conyugal</a>, el patrimonio del fallido, el peculio profesional del hijo.</li>\n</ul>\n"
+   "body": "<ul>\n<li><strong>Comprenden activo y pasivo.</strong></li>\n<li><strong>Opera la subrogación real</strong> (un bien reemplaza a otro dentro de la masa).</li>\n<li><mark>Las configura la ley.</mark></li>\n<li>Ej: la herencia, la <a class=\"ref ref-concept\" data-target=\"sociedad-conyugal\" href=\"#sociedad-conyugal\">sociedad conyugal</a>, el patrimonio del fallido, el peculio profesional del hijo.</li>\n</ul>\n"
   },
   {
    "id": "caso-cesion-de-derechos-hereditarios",
@@ -2287,7 +2287,7 @@
      "sourceConceptId": "criterios-del-codigo-para-distinguirlas-en-la-ad"
     }
    ],
-   "body": "<div class=\"term-note\"><p>(<em>arts. <a class=\"ref ref-art\" data-art=\"659\" href=\"#art-659\">659</a> a <a class=\"ref ref-art\" data-art=\"661\" href=\"#art-661\">661</a></em>)</p>\n</div><ol>\n<li>Mayor estimación.</li>\n<li>En su defecto, la que sirve para el uso, ornato o complemento de la otra.</li>\n<li>En subsidio, el mayor volumen.</li>\n</ol>\n"
+   "body": "<div class=\"term-note\"><p>(<em>arts. <a class=\"ref ref-art\" data-art=\"659\" href=\"#art-659\">659</a> a <a class=\"ref ref-art\" data-art=\"661\" href=\"#art-661\">661</a></em>)</p>\n</div><ol>\n<li><strong>Mayor estimación.</strong></li>\n<li>En su defecto, la que sirve para el uso, ornato o complemento de la otra.</li>\n<li><strong>En subsidio, el mayor volumen.</strong></li>\n</ol>\n"
   },
   {
    "id": "divisibles-e-indivisibles",
@@ -2442,7 +2442,7 @@
      "targetNodeId": "nulidad-absoluta"
     }
    ],
-   "body": "<p>Según puedan o no ser objeto de relaciones jurídicas privadas.</p>\n<p><mark>No confundir incomerciable con inalienable.</mark></p>\n<ul>\n<li>Ej: un vecino quiere comprar el derecho de uso que un tercero tiene sobre una casa.<ul>\n<li>¿Es comerciable? Sí: el derecho de uso está en el comercio humano.</li>\n<li>¿Es alienable? No. Los derechos de uso y habitación son intransmisibles a los herederos y no pueden cederse a ningún título, prestarse ni arrendarse (<em><strong>art. <a class=\"ref ref-art\" data-art=\"819\" href=\"#art-819\">819</a></strong></em>).</li>\n<li>¿Sanción? Objeto ilícito (<em><strong>art. <a class=\"ref ref-art\" data-art=\"1464\" href=\"#art-1464\">1464</a> Nº 2</strong></em>) y <a class=\"ref ref-concept\" data-target=\"nulidad-absoluta\" href=\"#nulidad-absoluta\">nulidad absoluta</a>. La cosa es comerciable y aun así el acto es nulo.</li>\n</ul>\n</li>\n<li>Lo mismo vale para el derecho de alimentos (<em><strong>art. <a class=\"ref ref-art\" data-art=\"334\" href=\"#art-334\">334</a></strong></em>).</li>\n</ul>\n"
+   "body": "<p>Según puedan o no ser objeto de relaciones jurídicas privadas.</p>\n<p><mark>No confundir incomerciable con inalienable.</mark></p>\n<ul>\n<li>Ej: un vecino quiere comprar el derecho de uso que un tercero tiene sobre una casa.<ul>\n<li><strong>¿Es comerciable? Sí:</strong> el derecho de uso está en el comercio humano.</li>\n<li>¿Es alienable? No. Los derechos de uso y habitación son intransmisibles a los herederos y no pueden cederse a ningún título, prestarse ni arrendarse (<em><strong>art. <a class=\"ref ref-art\" data-art=\"819\" href=\"#art-819\">819</a></strong></em>).</li>\n<li><strong>¿Sanción? Objeto ilícito</strong> (<em><strong>art. <a class=\"ref ref-art\" data-art=\"1464\" href=\"#art-1464\">1464</a> Nº 2</strong></em>) y <a class=\"ref ref-concept\" data-target=\"nulidad-absoluta\" href=\"#nulidad-absoluta\">nulidad absoluta</a>. La cosa es comerciable y aun así el acto es nulo.</li>\n</ul>\n</li>\n<li>Lo mismo vale para el derecho de alimentos (<em><strong>art. <a class=\"ref ref-art\" data-art=\"334\" href=\"#art-334\">334</a></strong></em>).</li>\n</ul>\n"
   },
   {
    "id": "incomerciables-por-naturaleza",
@@ -2611,7 +2611,7 @@
      "sourceConceptId": "bienes-fiscales-y-el-art-590"
     }
    ],
-   "body": "<p><em><strong>Art. <a class=\"ref ref-art\" data-art=\"590\" href=\"#art-590\">590</a></strong></em>: <em>&quot;Son bienes del Estado todas las tierras que, estando situadas dentro de los límites territoriales, carecen de otro dueño.&quot;</em></p>\n<ul>\n<li>Consecuencia: <mark>no hay ocupación de inmuebles</mark>.</li>\n</ul>\n"
+   "body": "<p><em><strong>Art. <a class=\"ref ref-art\" data-art=\"590\" href=\"#art-590\">590</a></strong></em>: <em>&quot;Son bienes del Estado todas las tierras que, estando situadas dentro de los límites territoriales, carecen de otro dueño.&quot;</em></p>\n<ul>\n<li><strong>Consecuencia:</strong> <mark>no hay ocupación de inmuebles</mark>.</li>\n</ul>\n"
   },
   {
    "id": "efecto-del-art-590-los-bienes-raices-en-rapa-nui",
@@ -2823,7 +2823,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p>El Estado solo puede desarrollar actividades empresariales o participar en ellas si una ley de quórum calificado lo autoriza, y sometido a la legislación común aplicable a los particulares, salvo excepciones justificadas establecidas también por LQC.</p>\n<ul>\n<li>Finalidad: evitar competencia desleal o subsidios que dejen fuera a los privados.</li>\n</ul>\n"
+   "body": "<p>El Estado solo puede desarrollar actividades empresariales o participar en ellas si una ley de quórum calificado lo autoriza, y sometido a la legislación común aplicable a los particulares, salvo excepciones justificadas establecidas también por LQC.</p>\n<ul>\n<li><strong>Finalidad:</strong> evitar competencia desleal o subsidios que dejen fuera a los privados.</li>\n</ul>\n"
   },
   {
    "id": "no-discriminacion-arbitraria-en-materia-economic",
@@ -2885,7 +2885,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<ol>\n<li>La garantía cubre los bienes incorporales: de ahí la &quot;propiedad sobre los derechos&quot; (ver §3.4).</li>\n<li><mark>Solo la ley crea modos de adquirir y fija las facultades del dominio.</mark> Es materia de orden público, no de autonomía privada.</li>\n<li>La función social es un límite interno del derecho, no una excepción.</li>\n<li>Se protege por el recurso de protección (<em><strong>art. 20 CPR</strong></em>), que no cubre directamente los derechos personales.</li>\n</ol>\n"
+   "body": "<ol>\n<li><strong>La garantía cubre los bienes incorporales:</strong> de ahí la &quot;propiedad sobre los derechos&quot; (ver §3.4).</li>\n<li><mark>Solo la ley crea modos de adquirir y fija las facultades del dominio.</mark> Es materia de orden público, no de autonomía privada.</li>\n<li>La función social es un límite interno del derecho, no una excepción.</li>\n<li><strong>Se protege por el recurso de protección</strong> (<em><strong>art. 20 CPR</strong></em>), que no cubre directamente los derechos personales.</li>\n</ol>\n"
   },
   {
    "id": "expropiacion-e-indemnizacion",
@@ -2918,7 +2918,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<ol>\n<li>Reclamar de la legalidad del acto expropiatorio ante los tribunales ordinarios.</li>\n<li><mark>Indemnización por el daño patrimonial efectivamente causado</mark>, fijada de común acuerdo o por sentencia.</li>\n<li>A falta de acuerdo, pago en dinero efectivo al contado.</li>\n<li>Toma de posesión material solo previo pago total de la indemnización, que a falta de acuerdo se determina provisionalmente por peritos.</li>\n<li>Si se reclama de la procedencia, el juez puede suspender la toma de posesión.</li>\n</ol>\n"
+   "body": "<ol>\n<li>Reclamar de la legalidad del acto expropiatorio ante los tribunales ordinarios.</li>\n<li><mark>Indemnización por el daño patrimonial efectivamente causado</mark>, fijada de común acuerdo o por sentencia.</li>\n<li><strong>A falta de acuerdo, pago en dinero efectivo al contado.</strong></li>\n<li>Toma de posesión material solo previo pago total de la indemnización, que a falta de acuerdo se determina provisionalmente por peritos.</li>\n<li>Si se reclama de la procedencia, el juez puede suspender la toma de posesión.</li>\n</ol>\n"
   },
   {
    "id": "como-se-ha-entendido-el-dano-patrimonial-efectiv",
@@ -2981,7 +2981,7 @@
      "targetNodeId": "estado-empresario"
     }
    ],
-   "body": "<p>Al quedar en la Constitución, las reglas del borrador sobre empresas de menor tamaño, protección del consumidor y prohibición de la colusión podrían habilitar amparo constitucional directo (recurso de protección u otras acciones), según cómo se configurara la acción de tutela.</p>\n<ul>\n<li>Pregunta del profesor sobre el art. 34: ¿el <a class=\"ref ref-concept\" data-target=\"estado-empresario\" href=\"#estado-empresario\">Estado empresario</a> iba a participar igual que un privado?, ¿con subsidios?</li>\n</ul>\n"
+   "body": "<p>Al quedar en la Constitución, las reglas del borrador sobre empresas de menor tamaño, protección del consumidor y prohibición de la colusión podrían habilitar amparo constitucional directo (recurso de protección u otras acciones), según cómo se configurara la acción de tutela.</p>\n<ul>\n<li><strong>Pregunta del profesor sobre el art. 34:</strong> ¿el <a class=\"ref ref-concept\" data-target=\"estado-empresario\" href=\"#estado-empresario\">Estado empresario</a> iba a participar igual que un privado?, ¿con subsidios?</li>\n</ul>\n"
   },
   {
    "id": "detalle-de-las-propuestas",
@@ -3295,7 +3295,7 @@
      "targetNodeId": "accion-publiciana"
     }
    ],
-   "body": "<p><em><strong>Art. <a class=\"ref ref-art\" data-art=\"582\" href=\"#art-582\">582</a> inc. 1º</strong></em>: <em>&quot;El dominio (que se llama también propiedad) es el derecho real en una cosa corporal, para gozar y disponer de ella arbitrariamente; no siendo contra la ley o contra <a class=\"ref ref-concept\" data-target=\"el-derecho-ajeno\" href=\"#el-derecho-ajeno\">derecho ajeno</a>.&quot;</em></p>\n<p><em><strong>Art. <a class=\"ref ref-art\" data-art=\"583\" href=\"#art-583\">583</a></strong></em>: <em>&quot;Sobre las <a class=\"ref ref-concept\" data-target=\"cosas-incorporales\" href=\"#cosas-incorporales\">cosas incorporales</a> hay también una especie de propiedad. Así, el usufructuario tiene la propiedad de su derecho de usufructo.&quot;</em></p>\n<ul>\n<li>Importa porque da acceso a la protección del dominio: acciones posesorias, reivindicatoria, recurso de protección.<ul>\n<li>Los apuntes de clase agregan la acción pauliana y la <a class=\"ref ref-concept\" data-target=\"accion-publiciana\" href=\"#accion-publiciana\">acción publiciana</a>.</li>\n<li>Ej: si el Estado pone término a una concesión sin que el concesionario haya incumplido, vulnera su propiedad sobre ese derecho. El inversionista extranjero puede recurrir al CIADI (se citó el caso de las concesiones pesqueras).</li>\n</ul>\n</li>\n</ul>\n"
+   "body": "<p><em><strong>Art. <a class=\"ref ref-art\" data-art=\"582\" href=\"#art-582\">582</a> inc. 1º</strong></em>: <em>&quot;El dominio (que se llama también propiedad) es el derecho real en una cosa corporal, para gozar y disponer de ella arbitrariamente; no siendo contra la ley o contra <a class=\"ref ref-concept\" data-target=\"el-derecho-ajeno\" href=\"#el-derecho-ajeno\">derecho ajeno</a>.&quot;</em></p>\n<p><em><strong>Art. <a class=\"ref ref-art\" data-art=\"583\" href=\"#art-583\">583</a></strong></em>: <em>&quot;Sobre las <a class=\"ref ref-concept\" data-target=\"cosas-incorporales\" href=\"#cosas-incorporales\">cosas incorporales</a> hay también una especie de propiedad. Así, el usufructuario tiene la propiedad de su derecho de usufructo.&quot;</em></p>\n<ul>\n<li><strong>Importa porque da acceso a la protección del dominio:</strong> acciones posesorias, reivindicatoria, recurso de protección.<ul>\n<li>Los apuntes de clase agregan la acción pauliana y la <a class=\"ref ref-concept\" data-target=\"accion-publiciana\" href=\"#accion-publiciana\">acción publiciana</a>.</li>\n<li>Ej: si el Estado pone término a una concesión sin que el concesionario haya incumplido, vulnera su propiedad sobre ese derecho. El inversionista extranjero puede recurrir al CIADI (se citó el caso de las concesiones pesqueras).</li>\n</ul>\n</li>\n</ul>\n"
   },
   {
    "id": "elementos-de-la-definicion",
@@ -3321,7 +3321,7 @@
      "targetNodeId": "el-derecho-ajeno"
     }
    ],
-   "body": "<ol>\n<li>Es un derecho, y dentro de ellos, un derecho real.</li>\n<li>Enumera sus atributos: uso (implícito en el goce), goce y disposición, con la amplitud de la arbitrariedad.</li>\n<li>Sus restricciones: la ley y el <a class=\"ref ref-concept\" data-target=\"el-derecho-ajeno\" href=\"#el-derecho-ajeno\">derecho ajeno</a>.</li>\n<li>Se restringe a cosas corporales, pero el <em><strong>art. <a class=\"ref ref-art\" data-art=\"583\" href=\"#art-583\">583</a></strong></em> lo extiende a las incorporales (una &quot;especie&quot; de propiedad).</li>\n</ol>\n"
+   "body": "<ol>\n<li><strong>Es un derecho, y dentro de ellos, un derecho real.</strong></li>\n<li><strong>Enumera sus atributos:</strong> uso (implícito en el goce), goce y disposición, con la amplitud de la arbitrariedad.</li>\n<li><strong>Sus restricciones:</strong> la ley y el <a class=\"ref ref-concept\" data-target=\"el-derecho-ajeno\" href=\"#el-derecho-ajeno\">derecho ajeno</a>.</li>\n<li>Se restringe a cosas corporales, pero el <em><strong>art. <a class=\"ref ref-art\" data-art=\"583\" href=\"#art-583\">583</a></strong></em> lo extiende a las incorporales (una &quot;especie&quot; de propiedad).</li>\n</ol>\n"
   },
   {
    "id": "preguntas-abiertas-del-profesor",
@@ -3469,7 +3469,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p>Entran en la concesión, entre otras, las covaderas, las arenas metalíferas, los salares (hoy relevantes por el litio) y los depósitos de carbón y demás sustancias fósiles.</p>\n<ul>\n<li>Excepción: las arcillas superficiales, como las que se extraen con maquinaria a orillas de los ríos. Para explotarlas no se requiere pedimento minero.</li>\n</ul>\n"
+   "body": "<p>Entran en la concesión, entre otras, las covaderas, las arenas metalíferas, los salares (hoy relevantes por el litio) y los depósitos de carbón y demás sustancias fósiles.</p>\n<ul>\n<li><strong>Excepción:</strong> las arcillas superficiales, como las que se extraen con maquinaria a orillas de los ríos. Para explotarlas no se requiere pedimento minero.</li>\n</ul>\n"
   },
   {
    "id": "caracteristicas-del-dominio",
@@ -3523,7 +3523,7 @@
      "sourceConceptId": "es-un-derecho-real"
     }
    ],
-   "body": "<p>Se tiene sobre una cosa sin respecto a determinada persona (<em><strong>art. <a class=\"ref ref-art\" data-art=\"577\" href=\"#art-577\">577</a></strong></em>).</p>\n<ul>\n<li>Diferencia con el derecho personal (<em><strong>art. <a class=\"ref ref-art\" data-art=\"578\" href=\"#art-578\">578</a></strong></em>): en este, la relación pasa por el patrimonio del deudor. No hay acción directa contra el bien, sino el derecho de prenda general de los acreedores (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2465\" href=\"#art-2465\">2465</a></strong></em>).</li>\n</ul>\n"
+   "body": "<p>Se tiene sobre una cosa sin respecto a determinada persona (<em><strong>art. <a class=\"ref ref-art\" data-art=\"577\" href=\"#art-577\">577</a></strong></em>).</p>\n<ul>\n<li><strong>Diferencia con el derecho personal</strong> (<em><strong>art. <a class=\"ref ref-art\" data-art=\"578\" href=\"#art-578\">578</a></strong></em>): en este, la relación pasa por el patrimonio del deudor. No hay acción directa contra el bien, sino el derecho de prenda general de los acreedores (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2465\" href=\"#art-2465\">2465</a></strong></em>).</li>\n</ul>\n"
   },
   {
    "id": "es-un-derecho-absoluto",
@@ -3687,7 +3687,7 @@
      "sourceConceptId": "excepciones-a-la-exclusividad"
     }
    ],
-   "body": "<ol>\n<li>Coexistencia con otros derechos reales sobre la misma cosa.<ul>\n<li>Ej: hipoteca, usufructo, uso y habitación, servidumbres activas.</li>\n</ul>\n</li>\n<li>Uso inocuo: el que no causa daño no atentaría contra el dominio, siempre que el dueño lo tolere o no lo denuncie.</li>\n<li>Ciertos derechos de acceso forzoso (distintos de las servidumbres, que son derechos reales).<ul>\n<li>Ej: el derecho a recoger bienes o frutos caídos en el predio ajeno (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"620\" href=\"#art-620\">620</a> y <a class=\"ref ref-art\" data-art=\"943\" href=\"#art-943\">943</a></strong></em>).</li>\n</ul>\n</li>\n<li>Casos que eliminan la culpa o la antijuridicidad.<ul>\n<li>Ej: el uso de una cosa ajena para evitar un mal mayor (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2178\" href=\"#art-2178\">2178</a></strong></em>, en el comodato).</li>\n</ul>\n</li>\n</ol>\n"
+   "body": "<ol>\n<li><strong>Coexistencia con otros derechos reales sobre la misma cosa.</strong><ul>\n<li>Ej: hipoteca, usufructo, uso y habitación, servidumbres activas.</li>\n</ul>\n</li>\n<li><strong>Uso inocuo:</strong> el que no causa daño no atentaría contra el dominio, siempre que el dueño lo tolere o no lo denuncie.</li>\n<li><strong>Ciertos derechos de acceso forzoso</strong> (distintos de las servidumbres, que son derechos reales).<ul>\n<li>Ej: el derecho a recoger bienes o frutos caídos en el predio ajeno (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"620\" href=\"#art-620\">620</a> y <a class=\"ref ref-art\" data-art=\"943\" href=\"#art-943\">943</a></strong></em>).</li>\n</ul>\n</li>\n<li><strong>Casos que eliminan la culpa o la antijuridicidad.</strong><ul>\n<li>Ej: el uso de una cosa ajena para evitar un mal mayor (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2178\" href=\"#art-2178\">2178</a></strong></em>, en el comodato).</li>\n</ul>\n</li>\n</ol>\n"
   },
   {
    "id": "es-un-derecho-perpetuo",
@@ -3911,7 +3911,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p>Modificarla, destruirla.</p>\n<ul>\n<li>Las exigencias administrativas (permiso municipal de edificación, normas de construcción) no alteran el dominio: lo encauzan.</li>\n</ul>\n"
+   "body": "<p>Modificarla, destruirla.</p>\n<ul>\n<li><strong>Las exigencias administrativas</strong> (permiso municipal de edificación, normas de construcción) no alteran el dominio: lo encauzan.</li>\n</ul>\n"
   },
   {
    "id": "disposicion-juridica",
@@ -4101,7 +4101,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<ol>\n<li>No hay prohibición expresa de carácter general: rige la autonomía de la voluntad.</li>\n<li>Si la ley a veces la prohíbe expresamente, es porque por regla general se puede convenir.</li>\n<li>Si el propietario puede desprenderse del uso, goce y disposición (enajenando la cosa), con mayor razón puede desprenderse solo de la disposición.</li>\n<li><mark>El Reglamento del Registro Conservatorio permite inscribir &quot;todo impedimento o prohibición referente a inmuebles, sea convencional, legal o judicial, que embarace o limite de cualquier modo el libre ejercicio del derecho de enajenar&quot; (<em>art. 53 Nº 3</em>).</mark></li>\n</ol>\n"
+   "body": "<ol>\n<li><strong>No hay prohibición expresa de carácter general:</strong> rige la autonomía de la voluntad.</li>\n<li>Si la ley a veces la prohíbe expresamente, es porque por regla general se puede convenir.</li>\n<li>Si el propietario puede desprenderse del uso, goce y disposición (enajenando la cosa), con mayor razón puede desprenderse solo de la disposición.</li>\n<li><mark>El Reglamento del Registro Conservatorio permite inscribir &quot;todo impedimento o prohibición referente a inmuebles, sea convencional, legal o judicial, que embarace o limite de cualquier modo el libre ejercicio del derecho de enajenar&quot; (<em>art. 53 Nº 3</em>).</mark></li>\n</ol>\n"
   },
   {
    "id": "tesis-de-la-nulidad",
@@ -4304,7 +4304,7 @@
      "targetNodeId": "cargas-reales"
     }
    ],
-   "body": "<p>Son tres:</p>\n<ol>\n<li>Las obligaciones ambulatorias o <em>propter rem</em>.</li>\n<li>Las <a class=\"ref ref-concept\" data-target=\"cargas-reales\" href=\"#cargas-reales\">cargas reales</a>.</li>\n<li>Las responsabilidades del propietario por el hecho de ser tal.</li>\n</ol>\n"
+   "body": "<p>Son tres:</p>\n<ol>\n<li>Las obligaciones ambulatorias o <em>propter rem</em>.</li>\n<li><strong>Las <a class=\"ref ref-concept\" data-target=\"cargas-reales\" href=\"#cargas-reales\">cargas reales</a>.</strong></li>\n<li><strong>Las responsabilidades del propietario por el hecho de ser tal.</strong></li>\n</ol>\n"
   },
   {
    "id": "obligaciones-ambulatorias-o-propter-rem",
@@ -5531,7 +5531,7 @@
      "sourceConceptId": "por-que-el-legislador-no-favorece-la-indivision"
     }
    ],
-   "body": "<ol>\n<li>Es fuente permanente de discordia en el aprovechamiento de la cosa.</li>\n<li>Inhibe inversiones y mejoras, por la incertidumbre sobre la suerte final del objeto.</li>\n<li>Impide la libre circulación de los bienes.</li>\n</ol>\n<p>Por eso la partición &quot;podrá siempre pedirse&quot; (<em><strong>art. <a class=\"ref ref-art\" data-art=\"1317\" href=\"#art-1317\">1317</a></strong></em>), y la acción de partición es imprescriptible (ver §21.1).</p>\n"
+   "body": "<ol>\n<li>Es fuente permanente de discordia en el aprovechamiento de la cosa.</li>\n<li>Inhibe inversiones y mejoras, por la incertidumbre sobre la suerte final del objeto.</li>\n<li><strong>Impide la libre circulación de los bienes.</strong></li>\n</ol>\n<p>Por eso la partición &quot;podrá siempre pedirse&quot; (<em><strong>art. <a class=\"ref ref-art\" data-art=\"1317\" href=\"#art-1317\">1317</a></strong></em>), y la acción de partición es imprescriptible (ver §21.1).</p>\n"
   },
   {
    "id": "fuentes-y-clases-de-indivision",
@@ -5765,7 +5765,7 @@
      "sourceConceptId": "se-resuelve-con-los-arts"
     }
    ],
-   "body": "<p>Se resuelve con los <em><strong>arts. <a class=\"ref ref-art\" data-art=\"1317\" href=\"#art-1317\">1317</a> y <a class=\"ref ref-art\" data-art=\"2304\" href=\"#art-2304\">2304</a></strong></em>; y en cuanto a las deudas, cada comunero responde de las de la cosa común como los herederos en las deudas hereditarias (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2306\" href=\"#art-2306\">2306</a></strong></em>).</p>\n<ul>\n<li>La comunidad también impone obligaciones, como mantener la cosa común. El comunero que pagó puede repetir contra los demás.</li>\n</ul>\n"
+   "body": "<p>Se resuelve con los <em><strong>arts. <a class=\"ref ref-art\" data-art=\"1317\" href=\"#art-1317\">1317</a> y <a class=\"ref ref-art\" data-art=\"2304\" href=\"#art-2304\">2304</a></strong></em>; y en cuanto a las deudas, cada comunero responde de las de la cosa común como los herederos en las deudas hereditarias (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2306\" href=\"#art-2306\">2306</a></strong></em>).</p>\n<ul>\n<li><strong>La comunidad también impone obligaciones, como mantener la cosa común.</strong> El comunero que pagó puede repetir contra los demás.</li>\n</ul>\n"
   },
   {
    "id": "segun-su-origen-2",
@@ -5909,7 +5909,7 @@
      "targetNodeId": "la-cuota"
     }
    ],
-   "body": "<div class=\"term-note\"><p>(derecho a veto)</p>\n</div><p>Aunque no está establecido expresamente, se entiende que rige. Como cada comunero es dueño de su <a class=\"ref ref-concept\" data-target=\"la-cuota\" href=\"#la-cuota\">cuota</a>, ni uno solo ni la mayoría puede decidir sobre la administración (menos aún actos dispositivos): se requiere unanimidad. Cada comunero puede impedir las actuaciones de los otros en la cosa común.</p>\n<ul>\n<li>Base: cualquier socio puede oponerse a los actos administrativos de otro mientras esté pendiente su ejecución o no hayan producido efectos legales (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2081\" href=\"#art-2081\">2081</a> Nº 1</strong></em>).<ul>\n<li>Ej: uno de los tres hermanos quiere arrendar la casa heredada; basta que otro se oponga para que no pueda hacerlo.</li>\n</ul>\n</li>\n</ul>\n"
+   "body": "<div class=\"term-note\"><p>(derecho a veto)</p>\n</div><p>Aunque no está establecido expresamente, se entiende que rige. Como cada comunero es dueño de su <a class=\"ref ref-concept\" data-target=\"la-cuota\" href=\"#la-cuota\">cuota</a>, ni uno solo ni la mayoría puede decidir sobre la administración (menos aún actos dispositivos): se requiere unanimidad. Cada comunero puede impedir las actuaciones de los otros en la cosa común.</p>\n<ul>\n<li><strong>Base:</strong> cualquier socio puede oponerse a los actos administrativos de otro mientras esté pendiente su ejecución o no hayan producido efectos legales (<em><strong>art. <a class=\"ref ref-art\" data-art=\"2081\" href=\"#art-2081\">2081</a> Nº 1</strong></em>).<ul>\n<li>Ej: uno de los tres hermanos quiere arrendar la casa heredada; basta que otro se oponga para que no pueda hacerlo.</li>\n</ul>\n</li>\n</ul>\n"
   },
   {
    "id": "mecanismos-que-atenuan-la-unanimidad",
@@ -6055,7 +6055,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<div class=\"term-note\"><p>(<em>art. 654 CPC</em>)</p>\n</div><p>Se cita a comparendo a todos los interesados y se celebra con los que concurran. Si no están todos, solo pueden acordarse, por mayoría absoluta de los concurrentes que represente al menos la mitad de los derechos, o por el tribunal a falta de mayoría:</p>\n<ol>\n<li>Nombramiento de uno o más administradores, comuneros o extraños.</li>\n<li>Fijación de sus salarios, atribuciones y deberes.</li>\n<li>Determinación del giro de los bienes comunes y del máximo de gastos.</li>\n<li>Épocas de rendición de cuentas, sin perjuicio de exigirlas extraordinariamente con motivo justificado.</li>\n</ol>\n"
+   "body": "<div class=\"term-note\"><p>(<em>art. 654 CPC</em>)</p>\n</div><p>Se cita a comparendo a todos los interesados y se celebra con los que concurran. Si no están todos, solo pueden acordarse, por mayoría absoluta de los concurrentes que represente al menos la mitad de los derechos, o por el tribunal a falta de mayoría:</p>\n<ol>\n<li><strong>Nombramiento de uno o más administradores, comuneros o extraños.</strong></li>\n<li><strong>Fijación de sus salarios, atribuciones y deberes.</strong></li>\n<li>Determinación del giro de los bienes comunes y del máximo de gastos.</li>\n<li>Épocas de rendición de cuentas, sin perjuicio de exigirlas extraordinariamente con motivo justificado.</li>\n</ol>\n"
   },
   {
    "id": "donde-aparece-en-la-practica",
@@ -6401,7 +6401,7 @@
      "targetNodeId": "la-inscripcion"
     }
    ],
-   "body": "<p><strong><a class=\"ref ref-concept\" data-target=\"sobre-una-cosa-singular\" href=\"#sobre-una-cosa-singular\">Sobre una cosa singular</a>:</strong> no hay duda. La cuota se radica en el único objeto y participa de su carácter (<em><strong>art. <a class=\"ref ref-art\" data-art=\"580\" href=\"#art-580\">580</a></strong></em>).</p>\n<ul>\n<li>Si es inmueble: su tradición requiere <a class=\"ref ref-concept\" data-target=\"la-inscripcion\" href=\"#la-inscripcion\">inscripción</a>, la enajenación de la cuota de un incapaz necesita formalidades habilitantes, procede la lesión enorme si se cumplen los demás supuestos, etc.</li>\n</ul>\n"
+   "body": "<p><strong><a class=\"ref ref-concept\" data-target=\"sobre-una-cosa-singular\" href=\"#sobre-una-cosa-singular\">Sobre una cosa singular</a>:</strong> no hay duda. La cuota se radica en el único objeto y participa de su carácter (<em><strong>art. <a class=\"ref ref-art\" data-art=\"580\" href=\"#art-580\">580</a></strong></em>).</p>\n<ul>\n<li><strong>Si es inmueble:</strong> su tradición requiere <a class=\"ref ref-concept\" data-target=\"la-inscripcion\" href=\"#la-inscripcion\">inscripción</a>, la enajenación de la cuota de un incapaz necesita formalidades habilitantes, procede la lesión enorme si se cumplen los demás supuestos, etc.</li>\n</ul>\n"
   },
   {
    "id": "sobre-una-universalidad",
@@ -6416,7 +6416,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p>¿la cuota se comunica a los bienes que la integran? El problema tiene dos caras:</p>\n<ol>\n<li>¿La cuota en la universalidad se aplica a cada bien?<ul>\n<li>Ej: si en la comunidad hay un auto, una casa y un fundo, ¿cada comunero tiene una cuota en cada uno?</li>\n</ul>\n</li>\n<li>¿La naturaleza de los bienes se refleja en la cuota? Si solo hay muebles, la cuota sería mueble; si solo inmuebles, inmueble; si hay ambos, mixta.</li>\n</ol>\n"
+   "body": "<p>¿la cuota se comunica a los bienes que la integran? El problema tiene dos caras:</p>\n<ol>\n<li><strong>¿La cuota en la universalidad se aplica a cada bien?</strong><ul>\n<li>Ej: si en la comunidad hay un auto, una casa y un fundo, ¿cada comunero tiene una cuota en cada uno?</li>\n</ul>\n</li>\n<li>¿La naturaleza de los bienes se refleja en la cuota? Si solo hay muebles, la cuota sería mueble; si solo inmuebles, inmueble; si hay ambos, mixta.</li>\n</ol>\n"
   },
   {
    "id": "tesis-de-la-no-comunicacion",
@@ -6630,7 +6630,7 @@
      "sourceConceptId": "pacto-de-indivision"
     }
    ],
-   "body": "<p>No puede exceder de cinco años, renovable si todos consienten (<em><strong>art. <a class=\"ref ref-art\" data-art=\"1317\" href=\"#art-1317\">1317</a> inc. 2º</strong></em>).</p>\n<ul>\n<li>La renovación debe ser expresa: no hay renovación tácita.</li>\n<li>Mientras esté vigente, el comunero demandado puede enervar la acción de partición invocando el pacto.</li>\n<li>Contraste del profesor: es muy raro que la ley fije la duración de un pacto. En la sociedad no lo hace, y las sociedades son por regla general indefinidas. Que aquí sí lo haga confirma la suspicacia del legislador frente a la comunidad.</li>\n</ul>\n"
+   "body": "<p>No puede exceder de cinco años, renovable si todos consienten (<em><strong>art. <a class=\"ref ref-art\" data-art=\"1317\" href=\"#art-1317\">1317</a> inc. 2º</strong></em>).</p>\n<ul>\n<li><strong>La renovación debe ser expresa:</strong> no hay renovación tácita.</li>\n<li>Mientras esté vigente, el comunero demandado puede enervar la acción de partición invocando el pacto.</li>\n<li><strong>Contraste del profesor:</strong> es muy raro que la ley fije la duración de un pacto. En la sociedad no lo hace, y las sociedades son por regla general indefinidas. Que aquí sí lo haga confirma la suspicacia del legislador frente a la comunidad.</li>\n</ul>\n"
   },
   {
    "id": "indivision-forzada",
@@ -7100,7 +7100,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p>Hecho o acto que produce efectivamente la adquisición.</p>\n<ul>\n<li>Puede ser un hecho (la muerte de una persona) o una convención (la tradición).</li>\n<li>Son hechos jurídicos la ocupación, la accesión y la prescripción. La tradición es una convención, no un contrato.</li>\n</ul>\n"
+   "body": "<p>Hecho o acto que produce efectivamente la adquisición.</p>\n<ul>\n<li><strong>Puede ser un hecho</strong> (la muerte de una persona) o una convención (la tradición).</li>\n<li><strong>Son hechos jurídicos la ocupación, la accesión y la prescripción.</strong> La tradición es una convención, no un contrato.</li>\n</ul>\n"
   },
   {
    "id": "sistema-consensual",
@@ -7341,7 +7341,7 @@
     "el-sistema-no-es-puro"
    ],
    "refs": [],
-   "body": "<p><strong>El título:</strong> antecedente que justifica la adquisición y hace nacer la obligación de transferir. Normalmente un contrato.</p>\n<ul>\n<li>Ej: compraventa, permuta, donación, aporte en sociedad, rendición de cuenta del mandatario.</li>\n<li>Por sí solo no transfiere: requiere entrega. Si el vendedor no entrega, el derecho personal a exigir la entrega puede prescribir.</li>\n</ul>\n"
+   "body": "<p><strong>El título:</strong> antecedente que justifica la adquisición y hace nacer la obligación de transferir. Normalmente un contrato.</p>\n<ul>\n<li>Ej: compraventa, permuta, donación, aporte en sociedad, rendición de cuenta del mandatario.</li>\n<li><strong>Por sí solo no transfiere:</strong> requiere entrega. Si el vendedor no entrega, el derecho personal a exigir la entrega puede prescribir.</li>\n</ul>\n"
   },
   {
    "id": "el-modo",
@@ -7376,7 +7376,7 @@
      "targetNodeId": "la-inscripcion"
     }
    ],
-   "body": "<ul>\n<li>En el supermercado, título y modo ocurren en el mismo minuto y por eso no se ven separados.</li>\n<li>En la compra de un departamento, el título es la escritura y el modo la <a class=\"ref ref-concept\" data-target=\"la-inscripcion\" href=\"#la-inscripcion\">inscripción</a>; entre uno y otro pueden pasar semanas.</li>\n<li>Comentario del profesor: muchas escrituras confunden los dos planos. Conviene hablar siempre en términos jurídicos precisos, sobre todo cuando se actúa por clientes.</li>\n</ul>\n"
+   "body": "<ul>\n<li>En el supermercado, título y modo ocurren en el mismo minuto y por eso no se ven separados.</li>\n<li>En la compra de un departamento, el título es la escritura y el modo la <a class=\"ref ref-concept\" data-target=\"la-inscripcion\" href=\"#la-inscripcion\">inscripción</a>; entre uno y otro pueden pasar semanas.</li>\n<li><strong>Comentario del profesor:</strong> muchas escrituras confunden los dos planos. Conviene hablar siempre en términos jurídicos precisos, sobre todo cuando se actúa por clientes.</li>\n</ul>\n"
   },
   {
    "id": "el-sistema-no-es-puro",
@@ -7609,7 +7609,7 @@
      "sourceConceptId": "originarios-y-derivativos"
     }
    ],
-   "body": "<p><strong>Originarios:</strong> el derecho nace en el adquirente, independiente del derecho de un antecesor. No hay transferencia sino adquisición inicial.</p>\n<ul>\n<li>Ocupación (<em><strong>art. <a class=\"ref ref-art\" data-art=\"606\" href=\"#art-606\">606</a></strong></em>), accesión (<em><strong>art. <a class=\"ref ref-art\" data-art=\"643\" href=\"#art-643\">643</a></strong></em>) y prescripción.</li>\n</ul>\n"
+   "body": "<p><strong>Originarios:</strong> el derecho nace en el adquirente, independiente del derecho de un antecesor. No hay transferencia sino adquisición inicial.</p>\n<ul>\n<li><strong>Ocupación</strong> (<em><strong>art. <a class=\"ref ref-art\" data-art=\"606\" href=\"#art-606\">606</a></strong></em>), accesión (<em><strong>art. <a class=\"ref ref-art\" data-art=\"643\" href=\"#art-643\">643</a></strong></em>) y prescripción.</li>\n</ul>\n"
   },
   {
    "id": "derivativos",
@@ -7629,7 +7629,7 @@
      "targetNodeId": "sucesion-por-causa-de-muerte"
     }
    ],
-   "body": "<p>El derecho se traspasa desde un titular anterior.</p>\n<ul>\n<li>Tradición y <a class=\"ref ref-concept\" data-target=\"sucesion-por-causa-de-muerte\" href=\"#sucesion-por-causa-de-muerte\">sucesión por causa de muerte</a>.</li>\n</ul>\n"
+   "body": "<p>El derecho se traspasa desde un titular anterior.</p>\n<ul>\n<li><strong>Tradición y <a class=\"ref ref-concept\" data-target=\"sucesion-por-causa-de-muerte\" href=\"#sucesion-por-causa-de-muerte\">sucesión por causa de muerte</a>.</strong></li>\n</ul>\n"
   },
   {
    "id": "a-que-atiende",
@@ -7925,7 +7925,7 @@
      "targetNodeId": "sucesion-por-causa-de-muerte"
     }
    ],
-   "body": "<p><strong>A qué atiende:</strong> a si el adquirente hace o no un sacrificio pecuniario (<em><strong>art. <a class=\"ref ref-art\" data-art=\"1440\" href=\"#art-1440\">1440</a></strong></em>).</p>\n<ul>\n<li>Ocupación, accesión, prescripción y <a class=\"ref ref-concept\" data-target=\"sucesion-por-causa-de-muerte\" href=\"#sucesion-por-causa-de-muerte\">sucesión por causa de muerte</a> son siempre gratuitos.</li>\n<li>La tradición depende del título que la antecede.<ul>\n<li>Ej: gratuita si la precede una donación; onerosa si la precede una compraventa.</li>\n</ul>\n</li>\n</ul>\n"
+   "body": "<p><strong>A qué atiende:</strong> a si el adquirente hace o no un sacrificio pecuniario (<em><strong>art. <a class=\"ref ref-art\" data-art=\"1440\" href=\"#art-1440\">1440</a></strong></em>).</p>\n<ul>\n<li>Ocupación, accesión, prescripción y <a class=\"ref ref-concept\" data-target=\"sucesion-por-causa-de-muerte\" href=\"#sucesion-por-causa-de-muerte\">sucesión por causa de muerte</a> son siempre gratuitos.</li>\n<li><strong>La tradición depende del título que la antecede.</strong><ul>\n<li>Ej: gratuita si la precede una donación; onerosa si la precede una compraventa.</li>\n</ul>\n</li>\n</ul>\n"
   },
   {
    "id": "reglas-comunes-a-los-modos-de-adquirir",
@@ -8939,7 +8939,7 @@
      "targetNodeId": "la-mera-tenencia"
     }
    ],
-   "body": "<div class=\"term-note\"><p>(<em>art. <a class=\"ref ref-art\" data-art=\"677\" href=\"#art-677\">677</a></em>)</p>\n</div><p>Invalida la tradición en dos casos:</p>\n<ul>\n<li>Cuando una sola parte supone un <a class=\"ref ref-concept\" data-target=\"titulo-traslaticio\" href=\"#titulo-traslaticio\">título traslaticio</a> y la otra uno de <a class=\"ref ref-concept\" data-target=\"la-mera-tenencia\" href=\"#la-mera-tenencia\">mera tenencia</a>.<ul>\n<li>Ej: uno entrega en comodato y el otro cree recibir en donación.</li>\n</ul>\n</li>\n<li>Cuando ambas suponen títulos traslaticios, pero distintos.<ul>\n<li>Ej: uno cree que es mutuo y el otro, donación.</li>\n</ul>\n</li>\n</ul>\n"
+   "body": "<div class=\"term-note\"><p>(<em>art. <a class=\"ref ref-art\" data-art=\"677\" href=\"#art-677\">677</a></em>)</p>\n</div><p>Invalida la tradición en dos casos:</p>\n<ul>\n<li>Cuando una sola parte supone un <a class=\"ref ref-concept\" data-target=\"titulo-traslaticio\" href=\"#titulo-traslaticio\">título traslaticio</a> y la otra uno de <a class=\"ref ref-concept\" data-target=\"la-mera-tenencia\" href=\"#la-mera-tenencia\">mera tenencia</a>.<ul>\n<li>Ej: uno entrega en comodato y el otro cree recibir en donación.</li>\n</ul>\n</li>\n<li><strong>Cuando ambas suponen títulos traslaticios, pero distintos.</strong><ul>\n<li>Ej: uno cree que es mutuo y el otro, donación.</li>\n</ul>\n</li>\n</ul>\n"
   },
   {
    "id": "error-del-representante",
@@ -9254,7 +9254,7 @@
      "sourceConceptId": "el-efecto-que-siempre-se-produce-la-posesion"
     }
    ],
-   "body": "<p><mark>El efecto constante de la tradición es dejar al adquirente en posesión. El de transferir el dominio solo se agrega si el tradente era dueño.</mark></p>\n<ul>\n<li>Ocurre cualquiera sea la calidad del tradente: dueño, poseedor o incluso mero tenedor. Lo confirma el <em><strong>art. <a class=\"ref ref-art\" data-art=\"730\" href=\"#art-730\">730</a></strong></em>: si el que tiene la cosa a nombre de otro la usurpa dándose por dueño y la enajena a su propio nombre, el adquirente gana la posesión y pone fin a la anterior.</li>\n<li>La tradición del no dueño no es un acto inútil: es el punto de partida de la prescripción adquisitiva.</li>\n</ul>\n"
+   "body": "<p><mark>El efecto constante de la tradición es dejar al adquirente en posesión. El de transferir el dominio solo se agrega si el tradente era dueño.</mark></p>\n<ul>\n<li><strong>Ocurre cualquiera sea la calidad del tradente:</strong> dueño, poseedor o incluso mero tenedor. Lo confirma el <em><strong>art. <a class=\"ref ref-art\" data-art=\"730\" href=\"#art-730\">730</a></strong></em>: si el que tiene la cosa a nombre de otro la usurpa dándose por dueño y la enajena a su propio nombre, el adquirente gana la posesión y pone fin a la anterior.</li>\n<li><strong>La tradición del no dueño no es un acto inútil:</strong> es el punto de partida de la prescripción adquisitiva.</li>\n</ul>\n"
   },
   {
    "id": "excepcion-cuando-falta-el-corpus",
@@ -9349,7 +9349,7 @@
      "targetNodeId": "condicion-suspensiva"
     }
    ],
-   "body": "<ol>\n<li>Cuando el título es condicional y la <a class=\"ref ref-concept\" data-target=\"condicion-suspensiva\" href=\"#condicion-suspensiva\">condición suspensiva</a> está pendiente.</li>\n<li>Cuando hay plazo pendiente para el pago.</li>\n<li>Cuando interviene decreto judicial en contrario: embargo o prohibición de celebrar actos y contratos.</li>\n</ol>\n"
+   "body": "<ol>\n<li>Cuando el título es condicional y la <a class=\"ref ref-concept\" data-target=\"condicion-suspensiva\" href=\"#condicion-suspensiva\">condición suspensiva</a> está pendiente.</li>\n<li><strong>Cuando hay plazo pendiente para el pago.</strong></li>\n<li><strong>Cuando interviene decreto judicial en contrario:</strong> embargo o prohibición de celebrar actos y contratos.</li>\n</ol>\n"
   },
   {
    "id": "si-igual-se-hace-la-tradicion",
@@ -10853,7 +10853,7 @@
      "targetNodeId": "posesion-efectiva"
     }
    ],
-   "body": "<ol>\n<li>Posesión material tranquila, continua, no interrumpida y exclusiva por a lo menos cinco años.</li>\n<li>Carecer de título inscrito, o tenerlo imperfecto.</li>\n<li>Que no haya litigio pendiente sobre el inmueble.</li>\n</ol>\n<ul>\n<li>Ej usual: una casa habitada por una familia durante décadas, sin escritura ni <a class=\"ref ref-concept\" data-target=\"posesion-efectiva\" href=\"#posesion-efectiva\">posesión efectiva</a>, cuyo titular inscrito es un abuelo fallecido hace cuarenta años. El DL resuelve ese caso. El problema aparece cuando se usa contra un dueño inscrito vivo y ausente.</li>\n</ul>\n"
+   "body": "<ol>\n<li>Posesión material tranquila, continua, no interrumpida y exclusiva por a lo menos cinco años.</li>\n<li><strong>Carecer de título inscrito, o tenerlo imperfecto.</strong></li>\n<li><strong>Que no haya litigio pendiente sobre el inmueble.</strong></li>\n</ol>\n<ul>\n<li>Ej usual: una casa habitada por una familia durante décadas, sin escritura ni <a class=\"ref ref-concept\" data-target=\"posesion-efectiva\" href=\"#posesion-efectiva\">posesión efectiva</a>, cuyo titular inscrito es un abuelo fallecido hace cuarenta años. El DL resuelve ese caso. El problema aparece cuando se usa contra un dueño inscrito vivo y ausente.</li>\n</ul>\n"
   },
   {
    "id": "sanciones",
@@ -10983,7 +10983,7 @@
      "targetNodeId": "la-inscripcion"
     }
    ],
-   "body": "<ol>\n<li>El solicitante debe estar en posesión, no en <a class=\"ref ref-concept\" data-target=\"la-mera-tenencia\" href=\"#la-mera-tenencia\">mera tenencia</a>.</li>\n<li>La posesión inscrita prima sobre la material cuando hay oposición. Cuando el dueño inscrito comparece y se opone, la <a class=\"ref ref-concept\" data-target=\"la-inscripcion\" href=\"#la-inscripcion\">inscripción</a> recupera su fuerza.</li>\n</ol>\n"
+   "body": "<ol>\n<li><strong>El solicitante debe estar en posesión, no en <a class=\"ref ref-concept\" data-target=\"la-mera-tenencia\" href=\"#la-mera-tenencia\">mera tenencia</a>.</strong></li>\n<li><strong>La posesión inscrita prima sobre la material cuando hay oposición.</strong> Cuando el dueño inscrito comparece y se opone, la <a class=\"ref ref-concept\" data-target=\"la-inscripcion\" href=\"#la-inscripcion\">inscripción</a> recupera su fuerza.</li>\n</ol>\n"
   },
   {
    "id": "la-posesion",
@@ -11669,7 +11669,7 @@
      "targetNodeId": "la-cuota"
     }
    ],
-   "body": "<p><strong>Regla:</strong> la posesión recae sobre cosas determinadas, como el dominio. No cabe sobre cosas inciertas o indicadas solo por su género (RDJ t. 16, p. 593).</p>\n<ul>\n<li>Dos o más personas pueden poseer en común una cosa singular: cada comunero posee su <a class=\"ref ref-concept\" data-target=\"la-cuota\" href=\"#la-cuota\">cuota</a> (RDJ t. 52, p. 311).<ul>\n<li>Ej: no se puede poseer &quot;un caballo&quot;; sí &quot;el caballo Pegaso&quot;, o una cuota en él.</li>\n</ul>\n</li>\n</ul>\n"
+   "body": "<p><strong>Regla:</strong> la posesión recae sobre cosas determinadas, como el dominio. No cabe sobre cosas inciertas o indicadas solo por su género (RDJ t. 16, p. 593).</p>\n<ul>\n<li><strong>Dos o más personas pueden poseer en común una cosa singular:</strong> cada comunero posee su <a class=\"ref ref-concept\" data-target=\"la-cuota\" href=\"#la-cuota\">cuota</a> (RDJ t. 52, p. 311).<ul>\n<li>Ej: no se puede poseer &quot;un caballo&quot;; sí &quot;el caballo Pegaso&quot;, o una cuota en él.</li>\n</ul>\n</li>\n</ul>\n"
   },
   {
    "id": "cosas-incorporales",
@@ -11725,7 +11725,7 @@
      "sourceConceptId": "cosas-no-susceptibles-de-posesion"
     }
    ],
-   "body": "<p><strong>Cosas corporales inapropiables:</strong> las comunes a todos los hombres y los BNUP.</p>\n<ul>\n<li>Aun así, tienen protección excepcional: la municipalidad y cualquier persona del pueblo tienen, en favor de caminos, plazas y otros lugares de uso público y de la seguridad de quienes transitan, los derechos de los dueños de heredades o edificios privados (<em><strong>art. <a class=\"ref ref-art\" data-art=\"948\" href=\"#art-948\">948</a></strong></em>). Si prospera la acción popular, se recompensa al actor con una suma entre la décima y la tercera parte del costo de la demolición, enmienda o resarcimiento. Estas acciones no perjudican las de los inmediatos interesados (<em><strong>art. <a class=\"ref ref-art\" data-art=\"949\" href=\"#art-949\">949</a></strong></em>).<ul>\n<li>Ej: un vecino demanda la demolición de un muro que amenaza caer sobre la vereda.</li>\n</ul>\n</li>\n</ul>\n"
+   "body": "<p><strong>Cosas corporales inapropiables:</strong> las comunes a todos los hombres y los BNUP.</p>\n<ul>\n<li><strong>Aun así, tienen protección excepcional:</strong> la municipalidad y cualquier persona del pueblo tienen, en favor de caminos, plazas y otros lugares de uso público y de la seguridad de quienes transitan, los derechos de los dueños de heredades o edificios privados (<em><strong>art. <a class=\"ref ref-art\" data-art=\"948\" href=\"#art-948\">948</a></strong></em>). Si prospera la acción popular, se recompensa al actor con una suma entre la décima y la tercera parte del costo de la demolición, enmienda o resarcimiento. Estas acciones no perjudican las de los inmediatos interesados (<em><strong>art. <a class=\"ref ref-art\" data-art=\"949\" href=\"#art-949\">949</a></strong></em>).<ul>\n<li>Ej: un vecino demanda la demolición de un muro que amenaza caer sobre la vereda.</li>\n</ul>\n</li>\n</ul>\n"
   },
   {
    "id": "derechos-reales-2",
@@ -11775,7 +11775,7 @@
      "sourceConceptId": "derechos-personales-2"
     }
    ],
-   "body": "<ol>\n<li>Los derechos personales no permiten un ejercicio continuado: se agotan al ejercerse (al cobrar, se extinguen el crédito y la obligación).</li>\n<li>El Mensaje solo se refiere a la posesión de derechos reales.</li>\n<li>Cuando el <em><strong>art. <a class=\"ref ref-art\" data-art=\"1576\" href=\"#art-1576\">1576</a></strong></em> habla de la &quot;posesión del crédito&quot; se refiere a un titular aparente, no a un poseedor.</li>\n</ol>\n"
+   "body": "<ol>\n<li><strong>Los derechos personales no permiten un ejercicio continuado:</strong> se agotan al ejercerse (al cobrar, se extinguen el crédito y la obligación).</li>\n<li>El Mensaje solo se refiere a la posesión de derechos reales.</li>\n<li>Cuando el <em><strong>art. <a class=\"ref ref-art\" data-art=\"1576\" href=\"#art-1576\">1576</a></strong></em> habla de la &quot;posesión del crédito&quot; se refiere a un titular aparente, no a un poseedor.</li>\n</ol>\n"
   },
   {
    "id": "tesis-que-la-acepta",
@@ -11976,7 +11976,7 @@
      "sourceConceptId": "regular-irregular"
     }
    ],
-   "body": "<ul>\n<li><strong>Regular:</strong> procede de justo título y fue adquirida de buena fe; si el título es traslaticio, requiere además tradición (<em><strong>art. <a class=\"ref ref-art\" data-art=\"702\" href=\"#art-702\">702</a></strong></em>).</li>\n<li><strong>Irregular:</strong> carece de uno o más de esos requisitos (<em><strong>art. <a class=\"ref ref-art\" data-art=\"708\" href=\"#art-708\">708</a></strong></em>).</li>\n<li>Ambas conducen al dominio por prescripción, en distintos tiempos.</li>\n</ul>\n"
+   "body": "<ul>\n<li><strong>Regular:</strong> procede de justo título y fue adquirida de buena fe; si el título es traslaticio, requiere además tradición (<em><strong>art. <a class=\"ref ref-art\" data-art=\"702\" href=\"#art-702\">702</a></strong></em>).</li>\n<li><strong>Irregular:</strong> carece de uno o más de esos requisitos (<em><strong>art. <a class=\"ref ref-art\" data-art=\"708\" href=\"#art-708\">708</a></strong></em>).</li>\n<li><strong>Ambas conducen al dominio por prescripción, en distintos tiempos.</strong></li>\n</ul>\n"
   },
   {
    "id": "viciosa-no-viciosa",
@@ -12010,7 +12010,7 @@
      "sourceConceptId": "viciosa-no-viciosa"
     }
    ],
-   "body": "<ul>\n<li><strong>Viciosas:</strong> la violenta y la clandestina (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"709\" href=\"#art-709\">709</a>, <a class=\"ref ref-art\" data-art=\"710\" href=\"#art-710\">710</a> y <a class=\"ref ref-art\" data-art=\"713\" href=\"#art-713\">713</a></strong></em>).</li>\n<li>Se las ha llamado posesión inútil (viciosa) y útil (no viciosa), para significar que solo la segunda conduce a la prescripción. <mark>Regular/irregular y útil/inútil no son lo mismo.</mark></li>\n</ul>\n"
+   "body": "<ul>\n<li><strong>Viciosas:</strong> la violenta y la clandestina (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"709\" href=\"#art-709\">709</a>, <a class=\"ref ref-art\" data-art=\"710\" href=\"#art-710\">710</a> y <a class=\"ref ref-art\" data-art=\"713\" href=\"#art-713\">713</a></strong></em>).</li>\n<li><strong>Se las ha llamado posesión inútil</strong> (viciosa) y útil (no viciosa), para significar que solo la segunda conduce a la prescripción. <mark>Regular/irregular y útil/inútil no son lo mismo.</mark></li>\n</ul>\n"
   },
   {
    "id": "elementos-3",
@@ -12025,7 +12025,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<ol>\n<li>Justo título.</li>\n<li>Buena fe inicial.</li>\n<li>Tradición, si el título es traslaticio de dominio.</li>\n</ol>\n"
+   "body": "<ol>\n<li><strong>Justo título.</strong></li>\n<li><strong>Buena fe inicial.</strong></li>\n<li><strong>Tradición, si el título es traslaticio de dominio.</strong></li>\n</ol>\n"
   },
   {
    "id": "primer-elemento-justo-titulo",
@@ -12178,7 +12178,7 @@
    "pending": false,
    "children": [],
    "refs": [],
-   "body": "<p>Para saber cuán legítima es la posesión hay que retroceder hasta el hecho o acto con que se entró a poseer. Puede favorecer o perjudicar:</p>\n<ul>\n<li>Si el derecho existía entre quienes celebraron el acto, la antigüedad favorece: nada interrumpe, y se posee todo el tiempo intermedio.</li>\n<li>Pero se posee con la calidad originaria (regular, irregular, viciosa).</li>\n<li>Y si el derecho era de un tercero, el título declarativo no da nada.</li>\n</ul>\n"
+   "body": "<p>Para saber cuán legítima es la posesión hay que retroceder hasta el hecho o acto con que se entró a poseer. Puede favorecer o perjudicar:</p>\n<ul>\n<li>Si el derecho existía entre quienes celebraron el acto, la antigüedad favorece: nada interrumpe, y se posee todo el tiempo intermedio.</li>\n<li><strong>Pero se posee con la calidad originaria</strong> (regular, irregular, viciosa).</li>\n<li>Y si el derecho era de un tercero, el título declarativo no da nada.</li>\n</ul>\n"
   },
   {
    "id": "los-del-art-703",
@@ -12495,7 +12495,7 @@
      "sourceConceptId": "el-falsificado"
     }
    ],
-   "body": "<p>El no otorgado realmente por las personas que se pretende.</p>\n<ul>\n<li>Mira a la autenticidad, no a la veracidad: si el título fue otorgado por quienes aparecen, aunque sus declaraciones sean falsas, es justo.</li>\n<li>La letra limita la falsificación a los sujetos, pero parece natural extenderla al funcionario autorizante, en armonía con el <em><strong>art. <a class=\"ref ref-art\" data-art=\"17\" href=\"#art-17\">17</a></strong></em> (la autenticidad es el hecho de haber sido realmente otorgado y autorizado por las personas y de la manera que se expresa).</li>\n</ul>\n"
+   "body": "<p>El no otorgado realmente por las personas que se pretende.</p>\n<ul>\n<li><strong>Mira a la autenticidad, no a la veracidad:</strong> si el título fue otorgado por quienes aparecen, aunque sus declaraciones sean falsas, es justo.</li>\n<li>La letra limita la falsificación a los sujetos, pero parece natural extenderla al funcionario autorizante, en armonía con el <em><strong>art. <a class=\"ref ref-art\" data-art=\"17\" href=\"#art-17\">17</a></strong></em> (la autenticidad es el hecho de haber sido realmente otorgado y autorizado por las personas y de la manera que se expresa).</li>\n</ul>\n"
   },
   {
    "id": "el-conferido-por-quien-se-dice-mandatario-o-repr",
@@ -12517,7 +12517,7 @@
      "sourceConceptId": "el-conferido-por-quien-se-dice-mandatario-o-repr"
     }
    ],
-   "body": "<ul>\n<li>Para algunos, incluye al representante que se extralimita.</li>\n<li>Da lo mismo que el falso representante esté de buena o mala fe.</li>\n<li>Ej comparado:<ul>\n<li>Vender una cosa ajena como propia, actuando por sí: <strong>título justo</strong> (la venta de cosa ajena vale, <em><strong>art. <a class=\"ref ref-art\" data-art=\"1815\" href=\"#art-1815\">1815</a></strong></em>).</li>\n<li>Vender una cosa ajena diciéndose representante del dueño sin serlo: <strong>título injusto</strong>. El adquirente debió examinar el poder.</li>\n<li>El verdadero representante que vende una cosa que no es del representado: <strong>título justo</strong>; es simple venta de cosa ajena (RDJ t. 27, p. 336).</li>\n</ul>\n</li>\n</ul>\n"
+   "body": "<ul>\n<li><strong>Para algunos, incluye al representante que se extralimita.</strong></li>\n<li>Da lo mismo que el falso representante esté de buena o mala fe.</li>\n<li>Ej comparado:<ul>\n<li><strong>Vender una cosa ajena como propia, actuando por sí:</strong> <strong>título justo</strong> (la venta de cosa ajena vale, <em><strong>art. <a class=\"ref ref-art\" data-art=\"1815\" href=\"#art-1815\">1815</a></strong></em>).</li>\n<li><strong>Vender una cosa ajena diciéndose representante del dueño sin serlo:</strong> <strong>título injusto</strong>. El adquirente debió examinar el poder.</li>\n<li>El verdadero representante que vende una cosa que no es del representado: <strong>título justo</strong>; es simple venta de cosa ajena (RDJ t. 27, p. 336).</li>\n</ul>\n</li>\n</ul>\n"
   },
   {
    "id": "el-que-adolece-de-un-vicio-de-nulidad",
@@ -12571,7 +12571,7 @@
      "targetNodeId": "posesion-efectiva"
     }
    ],
-   "body": "<p>El que se invoca sin existir realmente.</p>\n<ul>\n<li>Ej: el del heredero aparente que no es heredero; el del legatario cuyo legado fue revocado por un testamento posterior.</li>\n<li><strong>Excepción:</strong> al heredero putativo al que se dio la <a class=\"ref ref-concept\" data-target=\"posesion-efectiva\" href=\"#posesion-efectiva\">posesión efectiva</a> le sirve de justo título el decreto o resolución; al legatario putativo, el acto testamentario legalmente ejecutado.</li>\n<li>Muestra la íntima relación entre el título y la buena fe: generalmente el poseedor cree erróneamente que tiene título.</li>\n</ul>\n"
+   "body": "<p>El que se invoca sin existir realmente.</p>\n<ul>\n<li>Ej: el del heredero aparente que no es heredero; el del legatario cuyo legado fue revocado por un testamento posterior.</li>\n<li><strong>Excepción:</strong> al heredero putativo al que se dio la <a class=\"ref ref-concept\" data-target=\"posesion-efectiva\" href=\"#posesion-efectiva\">posesión efectiva</a> le sirve de justo título el decreto o resolución; al legatario putativo, el acto testamentario legalmente ejecutado.</li>\n<li><strong>Muestra la íntima relación entre el título y la buena fe:</strong> generalmente el poseedor cree erróneamente que tiene título.</li>\n</ul>\n"
   },
   {
    "id": "segundo-elemento-la-buena-fe",
@@ -13315,7 +13315,7 @@
      "sourceConceptId": "absoluta"
     }
    ],
-   "body": "<p>Se es mero tenedor frente al dueño y frente a terceros. Por eso, por regla general, no tiene acciones posesorias.</p>\n<ul>\n<li>Excepción: si es despojado violentamente, tiene la querella de restablecimiento, en el plazo de 6 meses (<em><strong>art. <a class=\"ref ref-art\" data-art=\"928\" href=\"#art-928\">928</a></strong></em>).</li>\n</ul>\n"
+   "body": "<p>Se es mero tenedor frente al dueño y frente a terceros. Por eso, por regla general, no tiene acciones posesorias.</p>\n<ul>\n<li><strong>Excepción:</strong> si es despojado violentamente, tiene la querella de restablecimiento, en el plazo de 6 meses (<em><strong>art. <a class=\"ref ref-art\" data-art=\"928\" href=\"#art-928\">928</a></strong></em>).</li>\n</ul>\n"
   },
   {
    "id": "inmutable-o-indeleble",
@@ -13367,7 +13367,7 @@
      "sourceConceptId": "inmutable-o-indeleble"
     }
    ],
-   "body": "<p>No se transforma en posesión, porque nadie puede mejorar su propio título (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"716\" href=\"#art-716\">716</a> y <a class=\"ref ref-art\" data-art=\"719\" href=\"#art-719\">719</a> inc. 2º</strong></em>).</p>\n<ul>\n<li><em><strong>Art. <a class=\"ref ref-art\" data-art=\"716\" href=\"#art-716\">716</a></strong></em>: <em>&quot;El simple lapso de tiempo no muda la mera tenencia en posesión; salvo el caso del artículo <a class=\"ref ref-art\" data-art=\"2510\" href=\"#art-2510\">2510</a>, regla 3.ª&quot;</em></li>\n<li>La expresión &quot;poseer a nombre ajeno&quot; del 719 es incorrecta: siempre se posee a nombre propio.</li>\n<li>Ej: el arrendatario que lleva cuarenta años en la casa sigue siendo mero tenedor.</li>\n<li>Excepciones discutidas: el <em><strong>art. <a class=\"ref ref-art\" data-art=\"2510\" href=\"#art-2510\">2510</a> regla 3ª</strong></em> y el <em><strong>art. <a class=\"ref ref-art\" data-art=\"730\" href=\"#art-730\">730</a></strong></em> (ver §47.4).</li>\n</ul>\n"
+   "body": "<p>No se transforma en posesión, porque nadie puede mejorar su propio título (<em><strong>arts. <a class=\"ref ref-art\" data-art=\"716\" href=\"#art-716\">716</a> y <a class=\"ref ref-art\" data-art=\"719\" href=\"#art-719\">719</a> inc. 2º</strong></em>).</p>\n<ul>\n<li><em><strong>Art. <a class=\"ref ref-art\" data-art=\"716\" href=\"#art-716\">716</a></strong></em>: <em>&quot;El simple lapso de tiempo no muda la mera tenencia en posesión; salvo el caso del artículo <a class=\"ref ref-art\" data-art=\"2510\" href=\"#art-2510\">2510</a>, regla 3.ª&quot;</em></li>\n<li><strong>La expresión &quot;poseer a nombre ajeno&quot; del 719 es incorrecta:</strong> siempre se posee a nombre propio.</li>\n<li>Ej: el arrendatario que lleva cuarenta años en la casa sigue siendo mero tenedor.</li>\n<li><strong>Excepciones discutidas:</strong> el <em><strong>art. <a class=\"ref ref-art\" data-art=\"2510\" href=\"#art-2510\">2510</a> regla 3ª</strong></em> y el <em><strong>art. <a class=\"ref ref-art\" data-art=\"730\" href=\"#art-730\">730</a></strong></em> (ver §47.4).</li>\n</ul>\n"
   },
   {
    "id": "transmision-transferencia-agregacion-e-intervers",
@@ -13458,7 +13458,7 @@
      "sourceConceptId": "se-transfiere"
     }
    ],
-   "body": "<p>Tampoco, por ser un hecho.</p>\n<ul>\n<li>Argumentos de texto: el <em><strong>art. <a class=\"ref ref-art\" data-art=\"717\" href=\"#art-717\">717</a></strong></em> y el <em><strong>art. <a class=\"ref ref-art\" data-art=\"2500\" href=\"#art-2500\">2500</a> inc. 1º</strong></em>: si una cosa fue poseída sucesivamente y sin interrupción por dos o más personas, el tiempo del antecesor puede o no agregarse al del sucesor, según el 717.</li>\n<li><strong>Ventaja:</strong> mejora los títulos. El sucesor no ve su posesión, adquirida legítimamente, enturbiada por los vicios de la de su antecesor; y si quiere aprovechar una buena posesión anterior, puede agregarla.</li>\n</ul>\n"
+   "body": "<p>Tampoco, por ser un hecho.</p>\n<ul>\n<li><strong>Argumentos de texto:</strong> el <em><strong>art. <a class=\"ref ref-art\" data-art=\"717\" href=\"#art-717\">717</a></strong></em> y el <em><strong>art. <a class=\"ref ref-art\" data-art=\"2500\" href=\"#art-2500\">2500</a> inc. 1º</strong></em>: si una cosa fue poseída sucesivamente y sin interrupción por dos o más personas, el tiempo del antecesor puede o no agregarse al del sucesor, según el 717.</li>\n<li><strong>Ventaja:</strong> mejora los títulos. El sucesor no ve su posesión, adquirida legítimamente, enturbiada por los vicios de la de su antecesor; y si quiere aprovechar una buena posesión anterior, puede agregarla.</li>\n</ul>\n"
   },
   {
    "id": "agregacion-o-accesion-de-posesiones",

@@ -64,6 +64,11 @@ misma tarjeta, con bloque de color y número, tenga o no definición. Todo lo qu
 encabezado (bloques etiquetados, ítems, casos) usa la tarjeta de término. Su círculo muestra
 su posición entre sus hermanas (1, 2, 3...); si es la única, no lleva círculo.
 
+**Enumeraciones.** En toda lista, el término con que abre cada ítem va en negrita si no lo
+estaba: lo anterior a los dos puntos ("**Uso inocuo:** ..."), una frase corta antes de un
+paréntesis ("**Ciertos derechos de acceso forzoso** (...)") o la primera oración si es corta
+(hasta 10 palabras). Los ejemplos ("Ej: ..."), citas y oraciones largas no se tocan.
+
 **Tablas.** Una tarjeta con una tabla se ensancha hasta el ancho natural de la tabla: no hay
 scroll horizontal dentro de las tarjetas.
 

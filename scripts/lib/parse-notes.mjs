@@ -145,6 +145,7 @@ export function parseNotes(src, { title, code }) {
   };
 
   const renderMarkdown = (md, node) => {
+    md = boldListLeads(md);
     const stash = [];
     const keep = (html) => `\u0000${stash.push(html) - 1}\u0000`;
 
@@ -545,6 +546,54 @@ function quoteSpec(token) {
     origin: 'case',
     children: [],
   };
+}
+
+// ---- List formatting ---------------------------------------------------------------------
+//
+// In an enumeration (elements, characteristics, requirements...) the term each item opens
+// with is set in bold, as the notes already do in most lists:
+//   "Uso inocuo: el que no causa daño..."             -> "**Uso inocuo:** el que..."
+//   "Ciertos derechos de acceso forzoso (distintos...)" -> "**Ciertos derechos...** (distintos...)"
+//   "Coexistencia con otros derechos reales sobre la misma cosa." -> whole short sentence
+// Items that already open in bold, examples ("Ej: ..."), quotes, citations and long first
+// sentences are left alone.
+
+const LIST_ITEM = /^(\s*(?:\d+[.)]|[-*+])\s+)(.+)$/;
+const LEAD_MAX = 70;
+const SENTENCE_MAX_WORDS = 10;
+
+function boldListLeads(md) {
+  let fenced = false;
+  return md
+    .split('\n')
+    .map((line) => {
+      if (/^\s*(```|~~~)/.test(line)) fenced = !fenced;
+      const m = !fenced && line.match(LIST_ITEM);
+      if (!m) return line;
+      const lead = listLead(m[2]);
+      return lead ? `${m[1]}**${lead.text}**${m[2].slice(lead.text.length)}` : line;
+    })
+    .join('\n');
+}
+
+function listLead(text) {
+  if (/^[*_"“«\[=`>(|]/.test(text) || /^(ej\b|ojo\b|art[íi]?c?u?l?o?s?\.?\s*\d)/i.test(text)) return null;
+  const clean = (lead) => {
+    const t = lead.trimEnd();
+    if (t.length < 2 || plainText(t).length > LEAD_MAX || /\[\[|\*|`|==/.test(t)) return null;
+    return { text: t };
+  };
+  const colon = text.search(/:(\s|$)/);
+  const paren = text.indexOf(' (');
+  if (colon > 0 && (paren < 0 || colon < paren)) return clean(text.slice(0, colon + 1));
+  // Before a parenthesis only a short noun phrase counts, not the start of a long sentence.
+  if (paren > 0) {
+    const before = text.slice(0, paren);
+    return before.split(/\s+/).length <= 7 && !before.includes(',') ? clean(before) : null;
+  }
+  const sentence = text.match(/^[^.;]+[.;]?(?=\s|$)/);
+  if (sentence && sentence[0].trim().split(/\s+/).length <= SENTENCE_MAX_WORDS) return clean(sentence[0]);
+  return null;
 }
 
 // ---- Cross-link matching ----------------------------------------------------------------
