@@ -30,7 +30,7 @@ export default function MindMap({ resetRef }) {
   const [expanded, setExpanded] = useState(() => new Set([rootId]));
   const [openArticles, setOpenArticles] = useState([]); // [{ id, conceptId, key }]
   const [pulse, setPulse] = useState(null); // { id, stamp }
-  const [activeId, setActiveId] = useState(null); // pressed card, gets the moving gradient
+  const [activeId, setActiveId] = useState(null); // pressed card, takes its header colour
 
   // Visible tree: everything reachable from the root through expanded topics, plus the
   // ephemeral article nodes hanging off visible concepts. `parentOf` is the layout parent.

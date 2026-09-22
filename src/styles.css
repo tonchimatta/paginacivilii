@@ -240,18 +240,25 @@ body {
   z-index: 1;
 }
 
-/* Moving shader gradient behind the pressed card. */
-.card__gradient {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  border-radius: calc(var(--radius) - 1.5px);
-  overflow: hidden;
-  pointer-events: none;
+/* Pressed card: a topic takes its header colour; a text card, a softened version of it. */
+.card {
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-.card__gradient canvas {
-  display: block;
+.card--topic.is-active {
+  background: var(--tint);
+}
+
+.card--concept.is-active {
+  background: color-mix(in srgb, var(--tint) 38%, var(--paper));
+}
+
+.card--unidad.is-active {
+  color: var(--paper);
+}
+
+.card--unidad.is-active .topic__foot {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .handle {
@@ -335,11 +342,6 @@ body {
 .card--unidad .topic__thumb {
   height: 96px;
   color: var(--paper);
-}
-
-.is-active .topic__thumb {
-  background: rgba(255, 255, 255, 0.45);
-  color: var(--ink);
 }
 
 .topic__kind {
@@ -628,10 +630,6 @@ body {
   cursor: default;
 }
 
-.card--article.is-active {
-  background: var(--paper);
-}
-
 .article {
   padding: 16px 20px 18px;
 }
@@ -712,4 +710,8 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .wire--article .wire__line { animation: none; }
+}
+
+.card--unidad.is-active .topic__chevron {
+  border-color: var(--paper);
 }

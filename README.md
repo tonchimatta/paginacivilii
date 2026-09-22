@@ -65,10 +65,9 @@ seis partes tiene su color y lo heredan sus temas y tarjetas) y una grilla tenue
 
 - Tipografía por defecto: Inter Light. El botón "Aa" de la barra superior cambia a IBM Plex
   Serif para el texto y Roboto Mono Bold para los títulos; la elección se recuerda en el navegador.
-- Al presionar una tarjeta, su fondo pasa a un gradiente en movimiento
-  ([shadergradient](https://github.com/ruucm/shadergradient)) con la paleta de su parte. Solo una
-  tarjeta a la vez; clic en el fondo lo apaga. three.js se carga recién la primera vez que se
-  presiona una tarjeta, para no pesar en la carga inicial.
+- Al presionar una tarjeta, su fondo toma el color de su encabezado: el pastel completo en los
+  temas y una versión atenuada en las tarjetas de texto. Solo una tarjeta a la vez; clic en el
+  fondo lo apaga.
 
 ## Interacción
 
