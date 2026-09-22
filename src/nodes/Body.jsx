@@ -1,4 +1,4 @@
-import { memo, useEffect, useRef } from 'react';
+import { memo, useEffect, useLayoutEffect, useRef } from 'react';
 import { useMapActions } from '../graph/actions.js';
 
 // The body HTML is produced at build time (scripts/lib/parse-notes.mjs). Links inside it
@@ -14,6 +14,23 @@ function Body({ html, nodeId, openArticles }) {
       a.classList.toggle('is-open', openArticles.includes(a.dataset.art));
     });
   }, [openArticles, html]);
+
+  // A card holding a table grows to the table's natural width instead of cutting it.
+  useLayoutEffect(() => {
+    const el = ref.current;
+    const tables = el ? [...el.querySelectorAll('table')] : [];
+    const card = el?.closest('.card');
+    if (!tables.length || !card) return;
+    const fit = () => {
+      card.style.width = '';
+      const extra = Math.max(...tables.map((t) => t.offsetWidth - t.parentElement.clientWidth));
+      if (extra > 0) card.style.width = `${card.offsetWidth + extra}px`;
+    };
+    fit();
+    const ro = new ResizeObserver(fit);
+    tables.forEach((t) => ro.observe(t));
+    return () => ro.disconnect();
+  }, [html]);
 
   const onClick = (e) => {
     const link = e.target.closest('a.ref');

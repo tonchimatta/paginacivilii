@@ -163,6 +163,7 @@ export default function MindMap({ rootId = unitRootId, controlsRef, onOpenMenu, 
   const historyRef = useRef([]); // viewport stack: pushed on open, popped on close
   const lastToggleRef = useRef(null);
   const cameraAnimRef = useRef(null);
+  const flightStartRef = useRef(0);
   const cameraIntentRef = useRef({ type: 'fit', ids: null }); // consumed after next layout
 
   const stopCamera = useCallback(() => {
@@ -177,6 +178,7 @@ export default function MindMap({ rootId = unitRootId, controlsRef, onOpenMenu, 
       stopCamera();
       const { width, height } = el.getBoundingClientRect();
       const lerp = interpolateViewport(rf.getViewport(), target, width, height);
+      flightStartRef.current = performance.now();
       cameraAnimRef.current = animate(0, 1, {
         ...CAMERA_TWEEN,
         onUpdate: (p) => rf.setViewport(lerp(p)),
@@ -364,7 +366,15 @@ export default function MindMap({ rootId = unitRootId, controlsRef, onOpenMenu, 
   );
 
   // Manual pan/zoom always wins: any user-initiated move cancels a running camera flight.
-  const onMoveStart = useCallback((event) => event && stopCamera(), [stopCamera]);
+  // Only events newer than the flight count: right after a touch, d3-zoom keeps that touch
+  // gesture open for ~500 ms and tags our own programmatic moves with the old touch event,
+  // which used to stop the flight halfway (a double tap then left the card off-centre).
+  const onMoveStart = useCallback(
+    (event) => {
+      if (event && event.timeStamp > flightStartRef.current) stopCamera();
+    },
+    [stopCamera],
+  );
 
   const fitAll = useCallback(() => {
     historyRef.current = [];

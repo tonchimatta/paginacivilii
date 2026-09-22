@@ -1,7 +1,7 @@
 # Civil II · Mapa interactivo
 
 Mapa mental de los apuntes de Derecho Civil II ("Personas y Bienes"), hecho con React + Vite,
-React Flow, Framer Motion y dagre. Sitio estático, sin backend.
+React Flow y Framer Motion, con un layout de árbol propio. Sitio estático, sin backend.
 
 ```bash
 npm install
@@ -61,7 +61,11 @@ idea:
 
 **Formato por nivel.** Todo encabezado de los apuntes (unidad, parte, tema, subtema) usa la
 misma tarjeta, con bloque de color y número, tenga o no definición. Todo lo que depende de un
-encabezado (bloques etiquetados, ítems, casos) usa la tarjeta de término con la "D".
+encabezado (bloques etiquetados, ítems, casos) usa la tarjeta de término. Su círculo muestra
+su posición entre sus hermanas (1, 2, 3...); si es la única, no lleva círculo.
+
+**Tablas.** Una tarjeta con una tabla se ensancha hasta el ancho natural de la tabla: no hay
+scroll horizontal dentro de las tarjetas.
 
 Ejemplo: "Singulares" muestra su concepto y de ella cuelgan Simples, Complejas y Universales.
 Lo que sigue siendo largo son tablas y párrafos de prosa, que no se cortan para no alterar el texto.
@@ -118,4 +122,7 @@ seis partes tiene su color y lo heredan sus temas y tarjetas) y una grilla tenue
 
 Los cables son curvas bezier con los extremos fijos en las tarjetas y los puntos de control en
 un resorte subamortiguado: cuando el layout mueve las tarjetas, el cable se dobla y se asienta.
-Las posiciones las decide siempre dagre; nada flota libre.
+Las posiciones las decide siempre el layout de árbol (`src/graph/layout.js`); nada flota libre.
+Cada rama ocupa su propia franja vertical, así las tarjetas hermanas quedan siempre juntas y el
+padre centrado frente a ellas. Empezó con dagre, pero dagre reordena columnas enteras para
+reducir cruces y podía dejar una hermana lejos de las otras.

@@ -637,7 +637,7 @@ body {
   gap: 10px;
 }
 
-.badge-d {
+.badge-order {
   flex: none;
   display: grid;
   place-items: center;
@@ -747,16 +747,25 @@ body {
 }
 
 .prose .table-wrap {
-  overflow-x: auto;
   border: 1px solid var(--ink);
   border-radius: 10px;
+  overflow: hidden;
 }
 
+/* Tables take the width they need (the card widens to fit, see Body.jsx): no horizontal
+   scroll, which a touch screen cannot use inside a pannable canvas. */
 .prose table {
   border-collapse: collapse;
   font-size: 12px;
   line-height: 1.4;
+  width: max-content;
   min-width: 100%;
+}
+
+.prose th,
+.prose td {
+  min-width: 90px;
+  max-width: 230px;
 }
 
 .prose th,

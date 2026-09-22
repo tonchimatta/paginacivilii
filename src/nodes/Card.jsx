@@ -8,69 +8,84 @@ const LONG_PRESS_MS = 500;
 const MOVE_TOLERANCE = 8;
 
 // Shared shell: enter/exit animation, pressed state (card takes its header colour),
-// double tap to frame the card, pulse highlight and hidden left/right handles.
+// double tap to frame the card, long press / right click menu, pulse highlight and hidden
+// left/right handles.
 export default function Card({ id, className, tint, active, exiting, pulse, children, onClick, onLongPress }) {
   const actions = useMapActions();
-  const lastTap = useRef(0);
+  const pointerType = useRef('mouse');
+  const lastClick = useRef(0);
+  const lastTouchTap = useRef(null); // { at, x, y }
   const press = useRef(null); // { timer, x, y }
   const swallowClick = useRef(false);
 
-  // Long press (touch) or right click (mouse) opens the card's menu. The click that ends a
-  // long press must not also toggle the card.
   const cancelPress = () => {
     clearTimeout(press.current?.timer);
     press.current = null;
   };
-  const pressHandlers = onLongPress
-    ? {
-        onPointerDown: (e) => {
-          if (e.button !== 0 || e.target.closest('a, button')) return;
-          const { clientX: x, clientY: y } = e;
-          cancelPress();
-          press.current = {
-            x,
-            y,
-            timer: setTimeout(() => {
-              press.current = null;
-              swallowClick.current = true;
-              onLongPress(x, y);
-            }, LONG_PRESS_MS),
-          };
-        },
-        onPointerMove: (e) => {
-          const p = press.current;
-          if (p && Math.hypot(e.clientX - p.x, e.clientY - p.y) > MOVE_TOLERANCE) cancelPress();
-        },
-        onPointerUp: cancelPress,
-        onPointerCancel: cancelPress,
-        onPointerLeave: cancelPress,
-        onContextMenu: (e) => {
-          e.preventDefault();
-          cancelPress();
-          onLongPress(e.clientX, e.clientY);
-        },
-      }
-    : {};
 
-  // Double tap is detected by hand: iOS Safari does not fire dblclick reliably. The second
-  // tap is swallowed before it reaches the card's own handlers, so a topic opened by the
-  // first tap is not closed again.
+  // Long press opens the card's menu; the click that ends it must not also toggle the card.
+  const onPointerDown = (e) => {
+    pointerType.current = e.pointerType;
+    if (!onLongPress || e.button !== 0 || e.target.closest('a, button')) return;
+    const { clientX: x, clientY: y } = e;
+    cancelPress();
+    press.current = {
+      x,
+      y,
+      timer: setTimeout(() => {
+        press.current = null;
+        swallowClick.current = true;
+        onLongPress(x, y);
+      }, LONG_PRESS_MS),
+    };
+  };
+
+  const onPointerMove = (e) => {
+    const p = press.current;
+    if (p && Math.hypot(e.clientX - p.x, e.clientY - p.y) > MOVE_TOLERANCE) cancelPress();
+  };
+
+  // Double tap frames the card. On touch the browser may swallow the second tap's click
+  // altogether, so touch taps are read from pointerup; mouse double clicks from clicks.
+  // Whatever the first tap did (open or close branches) is undone by the frame action.
+  const onPointerUp = (e) => {
+    cancelPress();
+    if (e.pointerType === 'mouse' || e.target.closest('a, button')) return;
+    const last = lastTouchTap.current;
+    if (last && e.timeStamp - last.at < DOUBLE_TAP_MS && Math.hypot(e.clientX - last.x, e.clientY - last.y) < 30) {
+      lastTouchTap.current = null;
+      // If the browser does send the second click, it must not toggle again.
+      swallowClick.current = true;
+      setTimeout(() => (swallowClick.current = false), 450);
+      actions.frame(id);
+      return;
+    }
+    lastTouchTap.current = { at: e.timeStamp, x: e.clientX, y: e.clientY };
+  };
+
   const onClickCapture = (e) => {
     if (swallowClick.current) {
       swallowClick.current = false;
       e.stopPropagation();
       return;
     }
-    if (e.target.closest('a, button')) return;
-    const now = e.timeStamp;
-    if (now - lastTap.current < DOUBLE_TAP_MS) {
+    if (pointerType.current !== 'mouse' || e.target.closest('a, button')) return;
+    if (e.timeStamp - lastClick.current < DOUBLE_TAP_MS) {
       e.stopPropagation();
-      lastTap.current = 0;
+      lastClick.current = 0;
       actions.frame(id);
       return;
     }
-    lastTap.current = now;
+    lastClick.current = e.timeStamp;
   };
+
+  const onContextMenu = onLongPress
+    ? (e) => {
+        e.preventDefault();
+        cancelPress();
+        onLongPress(e.clientX, e.clientY);
+      }
+    : undefined;
 
   return (
     <motion.div
@@ -79,8 +94,13 @@ export default function Card({ id, className, tint, active, exiting, pulse, chil
       animate={exiting ? { opacity: 0, scale: 0.9 } : { opacity: 1, scale: 1 }}
       whileTap={{ scale: 0.985 }}
       transition={exiting ? { duration: 0.2 } : { type: 'spring', stiffness: 300, damping: 26 }}
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      onPointerCancel={cancelPress}
+      onPointerLeave={cancelPress}
+      onContextMenu={onContextMenu}
       onClickCapture={onClickCapture}
-      {...pressHandlers}
       onClick={(e) => {
         actions.activate(id);
         onClick?.(e);
