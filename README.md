@@ -107,8 +107,9 @@ seis partes tiene su color y lo heredan sus temas y tarjetas) y una grilla tenue
 
 - Clic en un tema, o en el título o el pie "N ramas" de una tarjeta de término: abre o
   cierra sus ramas a la derecha.
-- Doble tap en una tarjeta: zoom hasta encuadrarla. Si el primer tap abrió o cerró ramas, se
-  deshace.
+- Doble tap en una tarjeta: zoom hasta dejarla centrada. En pantallas táctiles el tap simple
+  espera ~0,3 s antes de abrir o cerrar ramas, para que la tarjeta no se mueva bajo el dedo
+  entre el primer y el segundo toque; con mouse, un doble clic deshace lo que hizo el primero.
 - Mantener presionada una parte o un tema (clic derecho en computador) muestra "Abrir en una
   nueva pestaña": abre, dentro de la misma página, una pestaña con solo esa rama, sin lo que
   está por encima de ella. Cada pestaña guarda su propio estado mientras está abierta y se cierra

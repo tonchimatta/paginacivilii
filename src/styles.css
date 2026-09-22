@@ -813,6 +813,10 @@ body {
   font-weight: 500;
 }
 
+.prose strong .ref-concept {
+  font-weight: inherit;
+}
+
 .ref-concept:hover {
   background: var(--tint);
 }

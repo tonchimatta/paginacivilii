@@ -136,8 +136,10 @@ export default function MindMap({ rootId = unitRootId, controlsRef, onOpenMenu, 
     const t = setTimeout(() => {
       setNodes((prev) => prev.filter((n) => !exitingRef.current.has(n.id)));
       for (const id of [...exitingRef.current.keys()]) {
+        // The measured size is kept on purpose: if the node comes back and React reuses its
+        // DOM element, React Flow will not report its size again, and the layout would wait
+        // for it forever (children left piled up where they were born).
         exitingRef.current.delete(id);
-        sizesRef.current.delete(id);
       }
     }, EXIT_MS + 40);
     return () => clearTimeout(t);
@@ -211,6 +213,11 @@ export default function MindMap({ rootId = unitRootId, controlsRef, onOpenMenu, 
   // ---- Layout: dagre on the visible tree, then spring every node to its slot ----------
   useEffect(() => {
     const ids = visible.ids;
+    for (const id of ids) {
+      if (sizesRef.current.has(id)) continue;
+      const n = rf.getNode(id);
+      if (n?.width && n?.height) sizesRef.current.set(id, { w: n.width, h: n.height });
+    }
     if (!ids.every((id) => sizesRef.current.has(id))) return; // wait for measurement
     const edges = ids.filter((id) => visible.parentOf.has(id)).map((id) => [visible.parentOf.get(id), id]);
     const targets = layoutTree(ids, edges, sizesRef.current);
@@ -222,12 +229,20 @@ export default function MindMap({ rootId = unitRootId, controlsRef, onOpenMenu, 
       if (p) targets.set(id, targets.get(p));
     }
 
-    const unchanged =
+    // Skip the animation only if nothing has to move: either the same layout is already
+    // being animated, or every node already sits on its slot. Comparing with the actual
+    // positions (not just the previous layout) re-moves a node left short of its slot.
+    const sameLayout =
       targets.size === targetsRef.current.size &&
       [...targets].every(([id, t]) => {
         const o = targetsRef.current.get(id);
         return o && Math.abs(o.x - t.x) < 0.5 && Math.abs(o.y - t.y) < 0.5;
       });
+    const inPlace = nodesRef.current.every((n) => {
+      const t = targets.get(n.id);
+      return !t || (Math.abs(n.position.x - t.x) < 0.5 && Math.abs(n.position.y - t.y) < 0.5);
+    });
+    const unchanged = inPlace || (sameLayout && nodeAnimRef.current !== null);
     targetsRef.current = targets;
 
     const intent = cameraIntentRef.current;
@@ -239,6 +254,11 @@ export default function MindMap({ rootId = unitRootId, controlsRef, onOpenMenu, 
     nodeAnimRef.current?.stop();
     nodeAnimRef.current = animate(0, 1, {
       ...NODE_SPRING,
+      onComplete: () => {
+        nodeAnimRef.current = null;
+        // Land exactly on the slots, whatever frames were skipped.
+        setNodes((prev) => prev.map((n) => (targets.has(n.id) ? { ...n, position: targets.get(n.id) } : n)));
+      },
       onUpdate: (p) =>
         setNodes((prev) =>
           prev.map((n) => {
@@ -249,7 +269,7 @@ export default function MindMap({ rootId = unitRootId, controlsRef, onOpenMenu, 
           }),
         ),
     });
-  }, [visible, sizeVersion, runCameraIntent]);
+  }, [visible, sizeVersion, runCameraIntent, rf]);
 
   useEffect(() => () => nodeAnimRef.current?.stop(), []);
 
