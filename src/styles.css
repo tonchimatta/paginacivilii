@@ -76,9 +76,30 @@ body {
   background: var(--bg);
 }
 
+/* One pane per tab, all mounted so each keeps its state; only the active one is shown.
+   Hidden with opacity, not display (inactive maps must stay measurable) nor visibility
+   (React Flow sets visibility: visible on every node, which would show through). */
+.pane {
+  position: absolute;
+  inset: 92px 0 0 0;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pane:not(.is-active) * {
+  pointer-events: none !important;
+}
+
+.pane.is-active {
+  z-index: 1;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .map {
   position: absolute;
-  inset: 52px 0 0 0;
+  inset: 0;
 }
 
 .map .react-flow {
@@ -106,11 +127,151 @@ body {
   font-weight: 400;
 }
 
-.bar__mark {
-  width: 16px;
-  height: 16px;
-  background: var(--ink);
+.bar__home {
+  display: grid;
+  place-items: center;
   flex: none;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  color: var(--paper);
+  background: var(--ink);
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.bar__home:hover {
+  background: var(--ink-2);
+}
+
+/* ---------- Tabs ---------- */
+
+.tabs {
+  position: fixed;
+  top: 52px;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 40px;
+  padding: 0 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  background: var(--bg);
+  border-bottom: var(--stroke) solid var(--ink);
+  font-family: var(--font-label);
+  font-size: 12.5px;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+  max-width: 280px;
+  height: 31px;
+  margin-bottom: -1.5px;
+  padding: 0 8px 0 12px;
+  background: transparent;
+  border: var(--stroke) solid transparent;
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  color: var(--ink-2);
+  cursor: pointer;
+  user-select: none;
+}
+
+.tab:hover {
+  background: rgba(17, 17, 17, 0.04);
+}
+
+.tab.is-active {
+  background: var(--paper);
+  border-color: var(--ink);
+  color: var(--ink);
+  height: 33px;
+}
+
+.tab__dot {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--tint);
+  border: 1px solid var(--ink);
+}
+
+.tab__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tab__close {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  color: inherit;
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tab__close:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* ---------- Long-press menu ---------- */
+
+.menu {
+  position: fixed;
+  z-index: 30;
+  min-width: 230px;
+  padding: 6px;
+  background: var(--paper);
+  border: var(--stroke) solid var(--ink);
+  border-radius: var(--radius-sm);
+  box-shadow: 4px 4px 0 var(--ink);
+  font-family: var(--font-label);
+}
+
+.menu__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 13.5px;
+  color: var(--ink);
+  text-align: left;
+  background: none;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.menu__item:hover {
+  background: var(--bg);
+}
+
+/* Long press must not start the iOS text-selection callout. */
+.card.has-menu {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .bar__title {

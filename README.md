@@ -100,6 +100,12 @@ seis partes tiene su color y lo heredan sus temas y tarjetas) y una grilla tenue
   cierra sus ramas a la derecha.
 - Doble tap en una tarjeta: zoom hasta encuadrarla. Si el primer tap abrió o cerró ramas, se
   deshace.
+- Mantener presionada una parte o un tema (clic derecho en computador) muestra "Abrir en una
+  nueva pestaña": abre, dentro de la misma página, una pestaña con solo esa rama, sin lo que
+  está por encima de ella. Cada pestaña guarda su propio estado mientras está abierta y se cierra
+  con su X. Un término enlazado que apunta fuera de la rama se abre en el esquema general.
+- Ícono de casa (arriba a la izquierda): vuelve al esquema general; si esa pestaña estaba
+  cerrada, la reabre como primera pestaña.
 - Barra superior: "Plegar última capa" cierra el nivel abierto más profundo (o los artículos
   abiertos, si hay); "Plegar todo" vuelve a las seis partes; "Encuadrar" muestra todo lo abierto. Cada apertura guarda la vista actual
   en una pila; cerrar la recupera.

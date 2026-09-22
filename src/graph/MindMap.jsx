@@ -5,7 +5,7 @@ import { animate } from 'framer-motion';
 import { MapActions } from './actions.js';
 import { layoutTree } from './layout.js';
 import { boundsOf, interpolateViewport, viewportForBounds } from './camera.js';
-import { articles, ancestorsOf, descendantsOf, nodesById, rootId, tintOf } from '../data/unit.js';
+import { articles, ancestorsOf, descendantsOf, nodesById, rootId as unitRootId, tintOf } from '../data/unit.js';
 import TopicNode from '../nodes/TopicNode.jsx';
 import ConceptNode from '../nodes/ConceptNode.jsx';
 import ArticleNode from '../nodes/ArticleNode.jsx';
@@ -22,7 +22,9 @@ const EMPTY = Object.freeze([]);
 
 const articleNodeId = (conceptId, key) => `art:${conceptId}:${key}`;
 
-export default function MindMap({ controlsRef }) {
+// `rootId` is the unit root on the home tab, or a parte/tema on a tab opened for that branch:
+// the map then shows only that node and what hangs from it.
+export default function MindMap({ rootId = unitRootId, controlsRef, onOpenMenu, onOutside }) {
   const rf = useReactFlow();
   const wrapperRef = useRef(null);
 
@@ -56,7 +58,7 @@ export default function MindMap({ controlsRef }) {
       parentOf.set(a.id, a.conceptId);
     }
     return { ids, parentOf };
-  }, [expanded, openArticles]);
+  }, [expanded, openArticles, rootId]);
 
   // ---- React Flow nodes (positions are driven by the layout animation) ------------------
   const [nodes, setNodes] = useState([]);
@@ -262,6 +264,10 @@ export default function MindMap({ controlsRef }) {
         setActiveId(id);
       },
 
+      openMenu(id, x, y) {
+        onOpenMenu?.(id, x, y);
+      },
+
       // Double tap: zoom so the card fills the view. The first tap of the pair may have
       // opened or closed the card's branches; that is undone.
       frame(id) {
@@ -301,8 +307,11 @@ export default function MindMap({ controlsRef }) {
 
       focusNode(targetId) {
         if (!nodesById.has(targetId)) return;
+        const ancestors = ancestorsOf(targetId);
+        // A branch tab only holds its own subtree; anything else is shown on the home tab.
+        if (targetId !== rootId && !ancestors.includes(rootId)) return onOutside?.(targetId);
         pushViewport();
-        const path = ancestorsOf(targetId);
+        const path = ancestors.slice(0, ancestors.indexOf(rootId) + 1);
         setExpanded((prev) => {
           const next = new Set(prev);
           path.forEach((p) => next.add(p));
@@ -328,7 +337,7 @@ export default function MindMap({ controlsRef }) {
         cameraIntentRef.current = popViewport();
       },
     }),
-    [expanded, openArticles, pushViewport, popViewport],
+    [expanded, openArticles, pushViewport, popViewport, rootId, onOutside, onOpenMenu],
   );
 
   useEffect(() => {
@@ -368,7 +377,7 @@ export default function MindMap({ controlsRef }) {
     setExpanded(new Set([rootId]));
     setOpenArticles([]);
     fitAll();
-  }, [fitAll]);
+  }, [fitAll, rootId]);
 
   // Closes the deepest open level (open articles count as the deepest level).
   const collapseLast = useCallback(() => {
@@ -382,9 +391,9 @@ export default function MindMap({ controlsRef }) {
     }
     historyRef.current = [];
     cameraIntentRef.current = { type: 'fit', ids: null };
-  }, [expanded, openArticles]);
+  }, [expanded, openArticles, rootId]);
 
-  if (controlsRef) controlsRef.current = { fitAll, collapseAll, collapseLast };
+  if (controlsRef) controlsRef.current = { fitAll, collapseAll, collapseLast, focusNode: (id) => actions.focusNode(id) };
 
   return (
     <MapActions.Provider value={actions}>

@@ -5,6 +5,7 @@ import Chevron from './Chevron.jsx';
 import { useMapActions } from '../graph/actions.js';
 
 const KIND_LABEL = { unidad: 'Unidad', parte: 'Parte', tema: 'Tema', subtema: 'Subtema' };
+const MENU_KINDS = new Set(['parte', 'tema']);
 
 // Every heading of the notes (unidad, parte, tema, subtema) uses this card, with or without
 // a definition: pastel header with its number, title, definition, branch count.
@@ -22,6 +23,8 @@ function TopicNode({ id, data }) {
       exiting={exiting}
       pulse={pulse}
       onClick={count ? () => actions.toggleTopic(node.id) : undefined}
+      // Partes and temas can be opened on their own tab (long press / right click).
+      onLongPress={MENU_KINDS.has(node.kind) && count ? (x, y) => actions.openMenu(node.id, x, y) : undefined}
     >
       <div className="topic">
         <div className="topic__thumb">
