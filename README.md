@@ -30,16 +30,24 @@ node scripts/build-data.mjs --notes data/otra-unidad.md --title "Obligaciones"
 ## Cómo se parsean los apuntes (y en qué se aparta del supuesto inicial)
 
 **Jerarquía.** Los apuntes tienen seis H1 (partes I a VI), H2 = tema, H3 = subtema y a veces H4.
-No hay un H1 único de unidad, así que la raíz es sintética (`--title`). La regla es por posición,
-no por profundidad: un encabezado con subencabezados es un TopicNode; uno sin ellos es un
-ConceptNode (el título es el término y el cuerpo, la definición). Si un tema tiene texto propio
-antes de su primer subencabezado, ese texto se convierte en una tarjeta "Panorama del tema".
+No hay un H1 único de unidad, así que la raíz es sintética (`--title`). Cada encabezado es una
+tarjeta.
 
-**División en varios términos.** Casi todas las etiquetas en negrita de los apuntes estructuran
-un argumento (`**Concepto:**`, `**Crítica:**`, `**Vial:**` para la opinión de un autor), así que
-dividir por cualquier `**X:**` fragmentaba secciones enteras. Una sección hoja se divide solo
-cuando el encabezado nombra los términos: "Cosa y bien" -> Cosa, Bien; "Título y modo";
-"Originarios y derivativos".
+**Una cosa por tarjeta.** Cada tarjeta guarda solo su definición; lo que depende de ella va en
+tarjetas hijas:
+
+- La definición es el texto antes de la primera etiqueta en negrita o, si no hay, el primer
+  párrafo etiquetado. Un `**Concepto:**` o `**Definición:**` posterior también se suma a ella.
+- Cada otro párrafo `**Etiqueta:** texto` (Características, Elementos, Crítica...) abre una
+  tarjeta hija, con las listas, tablas y párrafos que le siguen hasta la próxima etiqueta.
+- Una lista cuyos ítems empiezan todos con un término en negrita (`1. **Simples.**`,
+  `- **De goce:**`) se convierte en una tarjeta por ítem. Si a una tarjeta le queda más de ~650
+  caracteres, también se separan sus listas simples, con el título tomado de las primeras palabras.
+- Cada caso (`> **Caso ...**`) es su propia tarjeta.
+- Un subtema hoja titulado "Concepto" o "Definición" se funde con su padre, cuya definición es.
+
+Ejemplo: "Singulares" muestra su concepto y de ella cuelgan Simples, Complejas y Universales.
+Lo que sigue siendo largo son tablas y párrafos de prosa, que no se cortan para no alterar el texto.
 
 **Citas de artículos.** En los apuntes ya son wiki-links de Obsidian
 (`[[Código Civil#^art-565|565]]`, también con `\|` dentro de tablas y una variante
@@ -71,12 +79,15 @@ seis partes tiene su color y lo heredan sus temas y tarjetas) y una grilla tenue
 
 ## Interacción
 
-- Clic en un tema: abre o cierra sus ramas a la derecha. Cada apertura guarda la vista actual
+- Clic en un tema, o en el título o el pie "N ramas" de una tarjeta con definición: abre o
+  cierra sus ramas a la derecha. Cada apertura guarda la vista actual
   en una pila; cerrar la recupera.
 - Término enlazado (subrayado): abre la ruta hasta esa tarjeta, mueve la cámara y la hace destellar.
 - Artículo enlazado (resaltado en amarillo): crea una tarjeta efímera con el texto del artículo, unida por un
   cable punteado. Se cierra con la X o volviendo a hacer clic en el mismo enlace.
 - Zoom y arrastre manuales siempre disponibles; cualquier gesto interrumpe un movimiento de cámara.
+- Las tarjetas no tienen scroll interno: muestran todo su texto. En pantallas táctiles un scroll
+  dentro de la tarjeta competía con el arrastre del mapa.
 
 Los cables son curvas bezier con los extremos fijos en las tarjetas y los puntos de control en
 un resorte subamortiguado: cuando el layout mueve las tarjetas, el cable se dobla y se asienta.

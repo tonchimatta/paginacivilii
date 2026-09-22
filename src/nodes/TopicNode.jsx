@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Card from './Card.jsx';
 import { useMapActions } from '../graph/actions.js';
 
-const KIND_LABEL = { unidad: 'Unidad', parte: 'Parte', tema: 'Tema', subtema: 'Subtema' };
+const KIND_LABEL = { unidad: 'Unidad', parte: 'Parte', tema: 'Tema', subtema: 'Subtema', apartado: 'Apartado', caso: 'Caso' };
 
 function TopicNode({ id, data }) {
   const { node, expanded, exiting, pulse, tint, active } = data;

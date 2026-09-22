@@ -42,7 +42,7 @@ export default function MindMap({ resetRef }) {
       const id = stack.pop();
       ids.push(id);
       const node = nodesById.get(id);
-      if (node.type === 'topic' && expanded.has(id)) {
+      if (node.children.length && expanded.has(id)) {
         for (let i = node.children.length - 1; i >= 0; i--) {
           parentOf.set(node.children[i], id);
           stack.push(node.children[i]);
@@ -258,7 +258,7 @@ export default function MindMap({ resetRef }) {
 
       toggleTopic(id) {
         const node = nodesById.get(id);
-        if (!node || node.type !== 'topic') return;
+        if (!node || !node.children.length) return;
         if (expanded.has(id)) {
           const gone = new Set(descendantsOf(id));
           setExpanded((prev) => new Set([...prev].filter((x) => x !== id && !gone.has(x))));

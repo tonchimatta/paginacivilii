@@ -5,9 +5,9 @@
 //   H2 "3. Derechos reales ..."      -> tema
 //   H3 "3.1 Derechos reales"         -> subtema
 //   H4 "a) Elementos"                -> sub-subtema (only in some branches)
-// So the rule is by position, not by heading depth: any heading with sub-headings is a
-// TopicNode, any heading without them is a ConceptNode. A topic that also has its own
-// text before its first sub-heading gets that text as a leading "intro" concept child.
+// Every heading becomes a node; its text is split into a definition (kept on the node) and
+// dependent child cards (see "Fragmenting" below). Nodes with text are term cards; nodes
+// with only children are navigation cards.
 //
 // Article citations in the notes are Obsidian wiki-links, e.g.
 //   [[Código Civil#^art-565|565]]   [[Código Civil#^art-684\|684]] (inside tables)
@@ -82,71 +82,39 @@ export function parseNotes(src, { title, code }) {
     titleHtml: escapeHtml(title),
     number: null,
     parentId: null,
+    origin: 'heading',
     children: [],
   });
   usedIds.add('root');
 
   const KIND_BY_DEPTH = ['unidad', 'parte', 'tema', 'subtema', 'subtema'];
+  const KIND_BY_ORIGIN = { label: 'apartado', item: 'apartado', case: 'caso' };
 
-  const walk = (section, parentId, depth) => {
-    const { number, text, pending } = splitTitle(section.title);
-    const titlePlain = plainText(text);
-    const body = section.body.trim();
-    const base = {
+  // A node carries only its definition (`markdown`); everything that depends on it is a child.
+  // Nodes with text render as term cards, nodes without text as navigation (topic) cards.
+  const addSpec = (spec, parentId, depth) => {
+    const titlePlain = plainText(spec.title);
+    const hasText = Boolean(spec.body.trim() || spec.note);
+    const emptyLeaf = !hasText && spec.children.length === 0;
+    const node = add({
+      id: makeId(titlePlain),
+      type: hasText || emptyLeaf ? 'concept' : 'topic',
+      kind: spec.origin === 'heading' ? KIND_BY_DEPTH[depth] ?? 'subtema' : KIND_BY_ORIGIN[spec.origin],
+      origin: spec.origin,
       depth,
       title: titlePlain,
-      titleHtml: inlineHtml(text),
-      number,
+      titleHtml: inlineHtml(spec.title),
+      number: spec.number ?? null,
       parentId,
-    };
-
-    if (section.children.length > 0) {
-      const topic = add({ ...base, id: makeId(titlePlain), type: 'topic', kind: KIND_BY_DEPTH[depth] ?? 'subtema', pending, children: [] });
-      if (body) addIntro(topic, body, depth + 1);
-      for (const child of section.children) walk(child, topic.id, depth + 1);
-      return;
-    }
-
-    const split = splitTerms(body, titlePlain);
-    if (split) {
-      const topic = add({ ...base, id: makeId(titlePlain), type: 'topic', kind: KIND_BY_DEPTH[depth] ?? 'subtema', pending, split: true, children: [] });
-      if (split.preamble) addIntro(topic, split.preamble, depth + 1);
-      for (const term of split.terms) {
-        add({
-          id: makeId(term.title),
-          type: 'concept',
-          kind: 'concepto',
-          depth: depth + 1,
-          title: plainText(term.title),
-          titleHtml: inlineHtml(term.title),
-          number: null,
-          parentId: topic.id,
-          fromSplit: true,
-          note: term.note ? inlineHtml(term.note) : null,
-          markdown: term.body,
-        });
-      }
-      return;
-    }
-
-    add({ ...base, id: makeId(titlePlain), type: 'concept', kind: 'concepto', pending: pending || !body, markdown: body });
+      pending: Boolean(spec.pending || emptyLeaf),
+      markdown: spec.body,
+      note: spec.note ?? null,
+      children: [],
+    });
+    for (const child of spec.children) addSpec(child, node.id, depth + 1);
   };
 
-  const addIntro = (topic, markdown, depth) =>
-    add({
-      id: makeId(`${topic.title} intro`),
-      type: 'concept',
-      kind: 'concepto',
-      intro: true,
-      depth,
-      title: topic.title,
-      titleHtml: topic.titleHtml,
-      number: null,
-      parentId: topic.id,
-      markdown,
-    });
-
-  for (const s of sections) walk(s, root.id, 1);
+  for (const s of sections) addSpec(sectionToSpec(s), root.id, 1);
 
   // ---- Article citations ------------------------------------------------------------
   // Numbers the author explicitly linked somewhere: plain-text "art. N" is only trusted as a
@@ -200,10 +168,10 @@ export function parseNotes(src, { title, code }) {
   };
 
   for (const node of nodes) {
-    if (node.type !== 'concept') continue;
     node.refs = [];
-    const noteHtml = node.note ? `<p class="term-note">${node.note}</p>` : '';
+    const noteHtml = node.note ? `<div class="term-note">${renderMarkdown(node.note, node)}</div>` : '';
     node.body = noteHtml + (node.markdown ? renderMarkdown(node.markdown, node) : '');
+    if (!node.body) delete node.body;
     delete node.note;
   }
   for (const key of missing) warnings.push(`artículo citado que no existe en el Código Civil parseado: ${key}`);
@@ -213,9 +181,8 @@ export function parseNotes(src, { title, code }) {
   let conceptRefs = 0;
   if (matcher) {
     for (const node of nodes) {
-      if (node.type !== 'concept' || !node.body) continue;
+      if (!node.body) continue;
       const blocked = new Set([node.id, ...ancestors(node, byId)]);
-      if (node.intro) blocked.add(node.parentId);
       const linked = new Set();
       node.body = mapTextNodes(node.body, (text) =>
         text.replace(matcher, (m) => {
@@ -284,54 +251,202 @@ function splitTitle(raw) {
   return { number, text: text.replace(PENDING, '').trim(), pending };
 }
 
-// Fallback from the spec: a leaf section that holds several distinct terms, each introduced
-// as a paragraph "**Término:** definición", becomes a topic with one concept per term.
-// In these notes most bold labels structure an argument ("**Concepto:**", "**Crítica:**",
-// "**Vial:**" for an author's view), so a label only counts as a term when the heading
-// itself names it: "Cosa y bien" -> Cosa, Bien; "Originarios y derivativos" -> both.
-// Other labelled paragraphs stay inside the term they follow. Needs two or more terms.
-function splitTerms(body, sectionTitle) {
-  if (!body) return null;
-  const titleKey = ` ${normalizeKey(sectionTitle)} `;
-  const lines = body.split('\n');
-  const TERM_LINE = /^\*\*(.+?)\*\*\s*(:?)\s*(.*)$/;
-  const hits = [];
-  lines.forEach((line, i) => {
-    const m = line.match(TERM_LINE);
-    if (!m) return;
-    let label = m[1].trim();
-    const hasColon = m[2] === ':' || label.endsWith(':');
-    if (!hasColon) return;
-    label = label.replace(/:$/, '').trim();
-    const noteMatch = label.match(/\s*\(([^()]*(?:\([^()]*\)[^()]*)*)\)\s*$/);
-    const term = (noteMatch ? label.slice(0, noteMatch.index) : label).trim();
-    const note = noteMatch ? `(${noteMatch[1].trim()})` : null;
-    if (!isTermLabel(term)) return;
-    const key = normalizeKey(plainText(term));
-    if (!titleKey.includes(` ${key} `)) return;
-    hits.push({ i, term, key, note, rest: m[3] });
-  });
-  const distinct = new Set(hits.map((h) => h.key));
-  if (hits.length < 2 || distinct.size < 2) return null;
+// ---- Fragmenting a section into a definition and its dependents ------------------------
+//
+// The notes pack several things under one heading: "**Concepto:** ...", then
+// "**Características:**" with a list, "**Elementos:**", a court case in a blockquote...
+// Each section keeps only its definition; the rest become child cards:
+//   - the definition is the text before the first bold label, or, if there is none, the
+//     first labelled paragraph (a later "**Concepto:**"/"**Definición:**" joins it too);
+//   - every other "**Label:** text" paragraph opens a child card, and the paragraphs,
+//     lists and tables after it belong to that card until the next label;
+//   - a list whose items all start with a bold term ("1. **Simples.**", "- **De goce:**")
+//     becomes one child card per item (one level deeper inside those items too);
+//   - a blockquote ("> **Caso ...**") is its own card.
+// A leaf sub-section titled "Concepto"/"Definición" is lifted into its parent, whose
+// definition it is.
 
-  const preamble = lines.slice(0, hits[0].i).join('\n').trim();
-  const terms = hits.map((h, k) => {
-    const end = k + 1 < hits.length ? hits[k + 1].i : lines.length;
-    const rest = [h.rest, ...lines.slice(h.i + 1, end)].join('\n').trim();
-    return { title: h.term, note: h.note, body: capitalize(rest) };
-  });
-  return { preamble, terms };
+const DEFINITIONAL = /^(concepto|definici[óo]n|noci[óo]n)\b/i;
+
+function sectionToSpec(section) {
+  const { number, text, pending } = splitTitle(section.title);
+  const frag = fragment(section.body);
+  let body = frag.definition;
+  const demoted = [];
+  const lifted = [];
+  const sub = section.children.map(sectionToSpec);
+  const canLift =
+    sub.length &&
+    section.children[0].children.length === 0 &&
+    DEFINITIONAL.test(normalizeKey(plainText(sub[0].title))) &&
+    sub[0].body.trim();
+  // The section's own text only counts as its definition if it is not merely a labelled
+  // aside ("**Las clasificaciones que se estudian:** ..."); then the Concepto wins.
+  if (canLift && (!body.trim() || (frag.definitionLabel && !DEFINITIONAL.test(frag.definitionLabel.title)))) {
+    if (body.trim()) {
+      demoted.push({ ...frag.definitionLabel, body: capitalize(frag.definitionRest.trim()), origin: 'label', children: frag.definitionChildren });
+      frag.children.splice(0, frag.definitionChildren.length);
+    }
+    const first = sub.shift();
+    body = first.body;
+    lifted.push(...first.children);
+  }
+  return { title: text, number, pending, body, origin: 'heading', children: [...lifted, ...demoted, ...frag.children, ...sub] };
 }
 
-function isTermLabel(label) {
-  const plain = plainText(label);
-  const key = normalizeKey(plain);
-  if (!key || GENERIC_LABELS.has(key)) return false;
-  if (/[?¿]/.test(plain)) return false;
-  if (/^ej\b/i.test(plain)) return false;
-  if (/\bart[íi]?c?u?l?o?s?\.?\s*\d/i.test(plain)) return false;
-  if (plain.split(/\s+/).length > 6) return false;
-  return true;
+function fragment(md) {
+  if (!md.trim()) return { definition: '', children: [], definitionLabel: null, definitionRest: '', definitionChildren: [] };
+  const groups = [{ label: null, tokens: [] }];
+  let current = groups[0];
+  for (const t of marked.lexer(md)) {
+    if (t.type === 'blockquote') {
+      groups.push({ quote: t });
+      continue;
+    }
+    const label = t.type === 'paragraph' ? readLabel(t.raw) : null;
+    if (label) {
+      current = { label, raw: t.raw, tokens: [{ raw: label.rest }] };
+      groups.push(current);
+      continue;
+    }
+    current.tokens.push(t);
+  }
+
+  const [pre, ...rest] = groups;
+  const def = [...pre.tokens];
+  const hasPreamble = pre.tokens.some((t) => t.raw.trim());
+  const firstIdx = rest.findIndex((g) => g.label);
+  let definitionLabel = null;
+  let labelTokens = [];
+  const takeIntoDefinition = (i) => {
+    const g = rest.splice(i, 1)[0];
+    def.push({ raw: g.raw + '\n\n' }, ...g.tokens.slice(1));
+    if (!hasPreamble) {
+      definitionLabel = { title: g.label.title, note: g.label.note };
+      labelTokens = g.tokens;
+    }
+  };
+  if (firstIdx === 0 && (!hasPreamble || DEFINITIONAL.test(plainText(rest[0].label.title)))) takeIntoDefinition(0);
+
+  const defSplit = splitLists(def, 2);
+  const labelSplit = definitionLabel ? splitLists(labelTokens, 2) : null;
+  const children = [...defSplit.children];
+  for (const g of rest) {
+    if (g.quote) {
+      children.push(quoteSpec(g.quote));
+      continue;
+    }
+    const split = splitLists(g.tokens, 2);
+    children.push({
+      title: g.label.title,
+      note: g.label.note,
+      body: capitalize(split.md.trim()),
+      origin: 'label',
+      children: split.children,
+    });
+  }
+  return {
+    definition: defSplit.md.trim(),
+    children,
+    definitionLabel,
+    definitionRest: labelSplit?.md ?? '',
+    definitionChildren: defSplit.children,
+  };
+}
+
+// "**Término (art. 565):** resto" -> { title, note, rest }. Only labels that end in ":" or
+// "?" count; bold-italic citations ("***Art. 565***: ...") and "**Ej:**" do not.
+function readLabel(raw) {
+  if (raw.startsWith('***')) return null;
+  const m = raw.match(/^\*\*(.+?)\*\*[ \t]*(:?)[ \t]*/s);
+  if (!m) return null;
+  let inner = m[1].trim();
+  const rest = raw.slice(m[0].length);
+  // "**Límite de la tradición: los derechos personalísimos.** No pueden..." also opens a card.
+  const sentence = /\.$/.test(inner) && rest.trim() && inner.length <= 90;
+  if (!(m[2] || /[:?]$/.test(inner) || sentence)) return null;
+  inner = inner.replace(/[:.]$/, '').trim();
+  if (/^ej\b/i.test(inner) || inner.startsWith('*')) return null;
+  return { ...splitNote(inner), rest };
+}
+
+function splitNote(label) {
+  const m = label.match(/\s*\(([^()]*(?:\([^()]*\)[^()]*)*)\)\s*$/);
+  if (!m || m.index === 0) return { title: label, note: null };
+  return { title: label.slice(0, m.index).trim(), note: `(${m[1].trim()})` };
+}
+
+// Cards whose remaining text is longer than this also get their plain lists split, one
+// card per item, with a title taken from the item's opening words.
+const LONG = 650;
+
+function splitLists(tokens, depth) {
+  const run = (loose) => {
+    let md = '';
+    const children = [];
+    for (const t of tokens) {
+      const items = t.type === 'list' ? t.items.map((it) => itemSpec(it, depth, loose)) : null;
+      if (items && items.length >= 2 && items.every(Boolean)) children.push(...items);
+      else md += t.raw;
+    }
+    return { md, children };
+  };
+  const strict = run(false);
+  return plainText(strict.md).length > LONG ? run(true) : strict;
+}
+
+function itemSpec(item, depth, loose) {
+  const text = dedentItem(item.raw);
+  const m = text.match(/^\*\*(?!\*)(.+?)\*\*([ \t]*[:.])?[ \t]*/s);
+  let title, note, bodyMd;
+  if (m) {
+    const inner = m[1].trim();
+    const labelled = Boolean(m[2]) || /[:.]$/.test(inner);
+    ({ title, note } = splitNote(inner.replace(/[:.]$/, '').trim()));
+    bodyMd = labelled ? capitalize(text.slice(m[0].length).trim()) : text;
+  } else {
+    if (!loose || plainText(text).length < 3) return null;
+    ({ title, bodyMd } = deriveTitle(text));
+    note = null;
+  }
+  const split = depth > 1 ? splitLists(marked.lexer(bodyMd), depth - 1) : { md: bodyMd, children: [] };
+  return { title, note, body: split.md.trim(), origin: 'item', children: split.children };
+}
+
+// Title for an item that has no bold term: the words before a colon, or the opening clause.
+function deriveTitle(text) {
+  const first = text.split('\n')[0];
+  const colon = first.search(/:\s/);
+  const plainBefore = colon > 0 ? plainText(first.slice(0, colon)) : '';
+  if (colon > 0 && plainBefore.length >= 3 && plainBefore.length <= 70 && !/\[\[/.test(first.slice(0, colon))) {
+    return { title: first.slice(0, colon).replace(/\*+/g, '').trim(), bodyMd: capitalize(text.slice(colon + 1).trim()) };
+  }
+  const plain = plainText(first).replace(/\s*\([^)]*\)?/g, '');
+  const clause = plain.split(/(?<=.{12})[.;,:]\s/)[0];
+  const words = clause.split(/\s+/);
+  const title = words.length > 8 ? `${words.slice(0, 8).join(' ')}…` : clause.replace(/[.;,:]$/, '');
+  return { title, bodyMd: text };
+}
+
+function dedentItem(raw) {
+  const lines = raw.replace(/\s+$/, '').split('\n');
+  lines[0] = lines[0].replace(/^\s*(?:\d+[.)]|[-*+])\s+/, '');
+  const indents = lines.slice(1).filter((l) => l.trim()).map((l) => l.match(/^ */)[0].length);
+  const cut = indents.length ? Math.min(...indents) : 0;
+  return [lines[0], ...lines.slice(1).map((l) => l.slice(Math.min(cut, l.match(/^ */)[0].length)))].join('\n');
+}
+
+function quoteSpec(token) {
+  const lines = token.text.trim().split('\n');
+  const head = lines[0].match(/^\*\*(.+?)\*\*\s*$/);
+  const { title, note } = splitNote(head ? head[1].trim() : 'Caso');
+  return {
+    title,
+    note,
+    body: (head ? lines.slice(1) : lines).join('\n\n').trim(),
+    origin: 'case',
+    children: [],
+  };
 }
 
 // ---- Cross-link matching ----------------------------------------------------------------
@@ -343,7 +458,7 @@ function normalizeKey(s) {
     .normalize('NFC')
     .toLowerCase()
     .replace(/\([^)]*\)/g, ' ')
-    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[*_`"“”«»]/g, '')
     .replace(/\s+/g, ' ')
     .replace(/^(el|la|los|las|un|una)\s+/, '')
     .replace(/[\s.:;,]+$/, '')
@@ -355,14 +470,15 @@ function buildTitleMatcher(nodes, warnings) {
   const keyToId = new Map();
   const eligible = new Map();
   for (const n of nodes) {
-    if (n.intro || n.id === 'root' || n.pending) continue;
+    if (n.id === 'root' || n.pending) continue;
     const key = normalizeKey(n.title);
     if (!key) continue;
     counts.set(key, (counts.get(key) ?? 0) + 1);
     keyToId.set(key, n.id);
     // One-word titles ("dominio", "tradición") are only link targets when they name a
-    // specific tema or subtema: the part titles and split-off terms would link everywhere.
-    eligible.set(key, key.includes(' ') || (n.depth >= 2 && !n.fromSplit));
+    // specific tema or subtema: part titles and one-word labels ("Objetiva") would link
+    // everywhere. Court cases are never targets.
+    eligible.set(key, n.origin !== 'case' && (key.includes(' ') || (n.depth >= 2 && n.origin === 'heading')));
   }
   const keys = [];
   for (const [key, count] of counts) {
