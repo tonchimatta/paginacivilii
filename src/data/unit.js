@@ -23,3 +23,14 @@ export function descendantsOf(id) {
   }
   return out;
 }
+
+// Each part (top-level branch) gets one pastel; everything under it reuses it.
+const TINTS = ['lavender', 'pink', 'peach', 'yellow', 'sky', 'mint'];
+const partIndex = new Map(nodesById.get(rootId).children.map((id, i) => [id, i]));
+
+export function tintOf(id) {
+  if (id === rootId) return 'ink';
+  const chain = [id, ...ancestorsOf(id)];
+  const part = chain.find((x) => partIndex.has(x));
+  return part ? TINTS[partIndex.get(part) % TINTS.length] : 'lavender';
+}

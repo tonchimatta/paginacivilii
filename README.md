@@ -58,6 +58,18 @@ sus ancestros. Se descartan como destino los títulos repetidos, los genéricos 
 "Causales"), las preguntas y los de una sola palabra que son partes enteras ("El dominio"),
 porque enlazaban en casi todas las tarjetas.
 
+## Diseño
+
+Plano y claro: tarjetas blancas con borde negro fino, bloques pastel por parte (cada una de las
+seis partes tiene su color y lo heredan sus temas y tarjetas) y una grilla tenue de fondo.
+
+- Tipografía por defecto: Inter Light. El botón "Aa" de la barra superior cambia a IBM Plex
+  Serif para el texto y Roboto Mono Bold para los títulos; la elección se recuerda en el navegador.
+- Al presionar una tarjeta, su fondo pasa a un gradiente en movimiento
+  ([shadergradient](https://github.com/ruucm/shadergradient)) con la paleta de su parte. Solo una
+  tarjeta a la vez; clic en el fondo lo apaga. three.js se carga recién la primera vez que se
+  presiona una tarjeta, para no pesar en la carga inicial.
+
 ## Interacción
 
 - Clic en un tema: abre o cierra sus ramas a la derecha. Cada apertura guarda la vista actual

@@ -39,9 +39,7 @@ export default function SpringEdge({ id, sourceX, sourceY, targetX, targetY, dat
       animate={{ opacity: exiting ? 0 : 1 }}
       transition={{ duration: exiting ? 0.2 : 0.45 }}
     >
-      <motion.path d={d} className="wire__glow" fill="none" />
       <motion.path id={id} d={d} className="wire__line react-flow__edge-path" fill="none" />
-      <motion.path d={d} className="wire__flow" fill="none" />
     </motion.g>
   );
 }

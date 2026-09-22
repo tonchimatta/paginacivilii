@@ -5,7 +5,7 @@ import { animate } from 'framer-motion';
 import { MapActions } from './actions.js';
 import { layoutTree } from './layout.js';
 import { boundsOf, interpolateViewport, viewportForBounds } from './camera.js';
-import { articles, ancestorsOf, descendantsOf, nodesById, rootId } from '../data/unit.js';
+import { articles, ancestorsOf, descendantsOf, nodesById, rootId, tintOf } from '../data/unit.js';
 import TopicNode from '../nodes/TopicNode.jsx';
 import ConceptNode from '../nodes/ConceptNode.jsx';
 import ArticleNode from '../nodes/ArticleNode.jsx';
@@ -22,7 +22,7 @@ const EMPTY = Object.freeze([]);
 
 const articleNodeId = (conceptId, key) => `art:${conceptId}:${key}`;
 
-export default function MindMap() {
+export default function MindMap({ resetRef }) {
   const rf = useReactFlow();
   const wrapperRef = useRef(null);
 
@@ -30,6 +30,7 @@ export default function MindMap() {
   const [expanded, setExpanded] = useState(() => new Set([rootId]));
   const [openArticles, setOpenArticles] = useState([]); // [{ id, conceptId, key }]
   const [pulse, setPulse] = useState(null); // { id, stamp }
+  const [activeId, setActiveId] = useState(null); // pressed card, gets the moving gradient
 
   // Visible tree: everything reachable from the root through expanded topics, plus the
   // ephemeral article nodes hanging off visible concepts. `parentOf` is the layout parent.
@@ -78,18 +79,20 @@ export default function MindMap() {
       const pulseStamp = pulse?.id === id ? pulse.stamp : null;
       if (id.startsWith('art:')) {
         const key = id.slice(id.lastIndexOf(':') + 1);
-        return { article: articles[key], exiting, pulse: pulseStamp };
+        return { article: articles[key], exiting, pulse: pulseStamp, active: activeId === id };
       }
       const node = nodesById.get(id);
       return {
         node,
+        tint: tintOf(id),
+        active: activeId === id,
         expanded: expanded.has(id),
         exiting,
         pulse: pulseStamp,
         openArticles: openByConcept.get(id) ?? EMPTY,
       };
     },
-    [expanded, openByConcept, pulse],
+    [expanded, openByConcept, pulse, activeId],
   );
 
   // Reconcile the visible set with the rendered nodes: new nodes are born at their
@@ -249,6 +252,10 @@ export default function MindMap() {
 
   const actions = useMemo(
     () => ({
+      activate(id) {
+        setActiveId(id);
+      },
+
       toggleTopic(id) {
         const node = nodesById.get(id);
         if (!node || node.type !== 'topic') return;
@@ -327,6 +334,7 @@ export default function MindMap() {
     cameraIntentRef.current = { type: 'fit', ids: null };
     setSizeVersion((v) => v + 1);
   }, []);
+  if (resetRef) resetRef.current = resetView;
 
   return (
     <MapActions.Provider value={actions}>
@@ -338,6 +346,7 @@ export default function MindMap() {
           edgeTypes={edgeTypes}
           onNodesChange={onNodesChange}
           onMoveStart={onMoveStart}
+          onPaneClick={() => setActiveId(null)}
           nodesDraggable={false}
           nodesConnectable={false}
           elementsSelectable={false}
@@ -348,13 +357,10 @@ export default function MindMap() {
           maxZoom={2}
           proOptions={{ hideAttribution: true }}
         >
-          <Background id="minor" variant={BackgroundVariant.Lines} gap={28} lineWidth={1} color="var(--grid-minor)" />
-          <Background id="major" variant={BackgroundVariant.Lines} gap={140} lineWidth={1} color="var(--grid-major)" />
+          <Background id="minor" variant={BackgroundVariant.Lines} gap={24} lineWidth={1} color="var(--grid-minor)" />
+          <Background id="major" variant={BackgroundVariant.Lines} gap={120} lineWidth={1} color="var(--grid-major)" />
           <Controls showInteractive={false} position="bottom-right" />
         </ReactFlow>
-        <button type="button" className="hud__reset" onClick={resetView}>
-          Encuadrar todo
-        </button>
       </div>
     </MapActions.Provider>
   );

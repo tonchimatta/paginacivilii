@@ -3,11 +3,11 @@ import Card from './Card.jsx';
 import { useMapActions } from '../graph/actions.js';
 
 function ArticleNode({ id, data }) {
-  const { article, exiting, pulse } = data;
+  const { article, exiting, pulse, active } = data;
   const actions = useMapActions();
 
   return (
-    <Card className="card--article" exiting={exiting} pulse={pulse}>
+    <Card id={id} className="card--article" tint="yellow" active={active} exiting={exiting} pulse={pulse}>
       <div className="article">
         <div className="article__head">
           <span className="article__code">Código Civil</span>
@@ -25,7 +25,7 @@ function ArticleNode({ id, data }) {
             </svg>
           </button>
         </div>
-        <div className="article__title">Art. {article.number}</div>
+        <div className="article__title title-font">Art. {article.number}</div>
         {article.context ? <div className="article__context">{article.context}</div> : null}
         <div className="article__body prose nodrag nowheel">
           {article.paragraphs.map((p, i) => (

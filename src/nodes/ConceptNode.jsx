@@ -45,15 +45,22 @@ const Body = memo(function Body({ html, conceptId, openArticles }) {
   );
 });
 
-function ConceptNode({ data }) {
-  const { node, exiting, pulse, openArticles } = data;
+function ConceptNode({ id, data }) {
+  const { node, exiting, pulse, openArticles, tint, active } = data;
 
   return (
-    <Card className={`card--concept${node.intro ? ' card--intro' : ''}`} exiting={exiting} pulse={pulse}>
+    <Card
+      id={id}
+      className={`card--concept${node.intro ? ' card--intro' : ''}`}
+      tint={tint}
+      active={active}
+      exiting={exiting}
+      pulse={pulse}
+    >
       <div className="concept">
         <div className="concept__head">
           <span className="badge-d" title="Definición">D</span>
-          <div className="concept__title" dangerouslySetInnerHTML={{ __html: node.titleHtml }} />
+          <div className="concept__title title-font" dangerouslySetInnerHTML={{ __html: node.titleHtml }} />
         </div>
         {node.intro ? <div className="concept__kicker">Panorama del tema</div> : null}
         {node.body ? (
