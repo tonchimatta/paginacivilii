@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+// Build-time preprocessing: notes markdown + Código Civil markdown -> one JSON tree.
+// The React app only ever reads the JSON this script writes.
+//
+// Usage:
+//   node scripts/build-data.mjs [--notes data/notes.md] [--code data/codigo-civil.md]
+//                               [--out src/generated/unit.json] [--title "Personas y Bienes"]
+
+import fs from 'node:fs';
+import path from 'node:path';
+import { parseCodigoCivil } from './lib/parse-codigo.mjs';
+import { parseNotes } from './lib/parse-notes.mjs';
+
+const args = Object.fromEntries(
+  process.argv.slice(2).reduce((acc, a, i, arr) => {
+    if (a.startsWith('--')) acc.push([a.slice(2), arr[i + 1]]);
+    return acc;
+  }, []),
+);
+
+const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+const notesPath = path.resolve(root, args.notes ?? 'data/notes.md');
+const codePath = path.resolve(root, args.code ?? 'data/codigo-civil.md');
+const outPath = path.resolve(root, args.out ?? 'src/generated/unit.json');
+const title = args.title ?? 'Personas y Bienes';
+
+const code = parseCodigoCivil(fs.readFileSync(codePath, 'utf8').normalize('NFC'));
+const unit = parseNotes(fs.readFileSync(notesPath, 'utf8').normalize('NFC'), { title, code });
+
+fs.mkdirSync(path.dirname(outPath), { recursive: true });
+fs.writeFileSync(outPath, JSON.stringify(unit, null, 1));
+
+const counts = unit.nodes.reduce((c, n) => ((c[n.type] = (c[n.type] ?? 0) + 1), c), {});
+console.log(
+  `[data] ${path.relative(root, outPath)}: ${unit.nodes.length} nodos ` +
+    `(${Object.entries(counts).map(([k, v]) => `${v} ${k}`).join(', ')}), ` +
+    `${Object.keys(unit.articles).length} artículos citados, ` +
+    `${unit.stats.articleRefs} citas, ${unit.stats.conceptRefs} referencias cruzadas`,
+);
+for (const w of unit.warnings) console.warn(`[data] aviso: ${w}`);
