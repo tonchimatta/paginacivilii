@@ -139,6 +139,7 @@ body {
   background: var(--ink);
   border: 0;
   border-radius: 10px;
+  text-decoration: none;
   cursor: pointer;
 }
 

@@ -78,12 +78,6 @@ export default function MapView() {
     setActiveKey(key);
   }, []);
 
-  // "Return to home": go to the home tab, reopening it first (as the first tab) if closed.
-  const goHome = useCallback(() => {
-    setTabs((prev) => (prev.some((t) => t.key === HOME.key) ? prev : [HOME, ...prev]));
-    setActiveKey(HOME.key);
-  }, [HOME]);
-
   const closeTab = (key) => {
     const i = tabs.findIndex((t) => t.key === key);
     const next = tabs.filter((t) => t.key !== key);
@@ -161,11 +155,11 @@ export default function MapView() {
       ))}
 
       <header className="bar">
-        <button type="button" className="bar__home" onClick={goHome} aria-label={`Volver a ${title}`} title={`Volver a ${title}`}>
+        <a className="bar__home" href="#/" aria-label="Volver al inicio" title="Volver al inicio">
           <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden>
             <path d="M3 9.5 10 3.5l7 6M5 8v8.5h3.5V12h3v4.5H15V8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round" />
           </svg>
-        </button>
+        </a>
         <a className="bar__title title-font" href="#/" title="Volver al inicio">
           {COURSE}
         </a>
