@@ -29,7 +29,7 @@ const LINKS = [
   {
     tag: '¿te interesa conocer AVZ?',
     href: 'https://docs.google.com/forms/d/e/1FAIpQLSf1YnirgALMK80H0_aFpfaoNCIvOxEmm0GCe7PlCcmgWdRr4g/viewform?pli=1',
-    label: 'Postula acá',
+    label: 'Únete',
   },
   {
     tag: 'consejería de derecho',
