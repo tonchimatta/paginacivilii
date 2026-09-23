@@ -301,9 +301,9 @@ export default function MindMap({ rootId = unitRootId, active = true, controlsRe
         setExpanded((prev) => {
           const next = new Set(prev);
           if (gone) gone.forEach((g) => next.delete(g));
+          // Only what is needed to show the target is opened: a card's own branches open
+          // when → is pressed to enter them, not when the card is reached.
           path.forEach((p) => next.add(p));
-          // Arriving at a card that has branches opens it, so what comes next is in view.
-          if (nodesById.get(target).children.length) next.add(target);
           return next;
         });
         if (gone) setOpenArticles((prev) => prev.filter((a) => !gone.has(a.conceptId)));

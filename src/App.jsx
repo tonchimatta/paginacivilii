@@ -10,6 +10,14 @@ const FONTS = {
 
 const HOME = { key: 'home', rootId };
 
+function readTitlesOnly() {
+  try {
+    return localStorage.getItem('titlesOnly') === '1';
+  } catch {
+    return false;
+  }
+}
+
 function readFont() {
   try {
     return localStorage.getItem('font') === 'serif' ? 'serif' : 'sans';
@@ -26,6 +34,7 @@ function tabLabel(tab) {
 
 export default function App() {
   const [font, setFont] = useState(readFont);
+  const [titlesOnly, setTitlesOnly] = useState(readTitlesOnly);
   // In-page tabs: the home tab shows the whole unit; each other tab one isolated branch.
   // Every tab keeps its own map (open branches, camera) while it stays open.
   const [tabs, setTabs] = useState([HOME]);
@@ -41,6 +50,16 @@ export default function App() {
       /* private mode: the choice just isn't remembered */
     }
   }, [font]);
+
+  // "Solo títulos": cards show just their title (and branch count), no definitions.
+  useEffect(() => {
+    document.documentElement.classList.toggle('titles-only', titlesOnly);
+    try {
+      localStorage.setItem('titlesOnly', titlesOnly ? '1' : '0');
+    } catch {
+      /* private mode */
+    }
+  }, [titlesOnly]);
 
   const active = () => controls.current.get(activeKey);
 
@@ -134,6 +153,14 @@ export default function App() {
             Aa
           </span>
           {FONTS[font].label}
+        </button>
+        <button
+          type="button"
+          className={`pill${titlesOnly ? ' is-on' : ''}`}
+          aria-pressed={titlesOnly}
+          onClick={() => setTitlesOnly((v) => !v)}
+        >
+          Solo títulos
         </button>
         <button type="button" className="pill" onClick={() => active()?.collapseLast()}>
           Plegar última capa

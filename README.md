@@ -122,7 +122,10 @@ seis partes tiene su color y lo heredan sus temas y tarjetas) y una grilla tenue
   terminar una rama sube al siguiente subtema, tema o parte, lo anuncia en amarillo ("Siguiente
   tema · ...") y pliega la rama terminada. ← va a la hermana anterior o, desde la primera, al
   padre. Cada flecha dice a dónde va y desaparece cuando no hay a dónde ir (← en la raíz de la
-  pestaña, → después de la última tarjeta). Al llegar a una tarjeta con ramas, se abre.
+  pestaña, → después de la última tarjeta). Las ramas de una tarjeta se abren solo al apretar →
+  para entrar en ellas, no al llegar a la tarjeta.
+- "Solo títulos" (barra superior): las tarjetas ocultan su definición y muestran solo título,
+  número y "N ramas"; el mapa se reacomoda más compacto. La elección se recuerda.
 - Barra superior: "Plegar última capa" cierra el nivel abierto más profundo (o los artículos
   abiertos, si hay); "Plegar todo" vuelve a las seis partes; "Encuadrar" muestra todo lo abierto. Cada apertura guarda la vista actual
   en una pila; cerrar la recupera.
