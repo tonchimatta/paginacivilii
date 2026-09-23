@@ -4,6 +4,8 @@ import { animate } from 'framer-motion';
 
 import { MapActions } from './actions.js';
 import { layoutTree } from './layout.js';
+import { nextOf, prevOf } from './navigation.js';
+import NavButtons from './NavButtons.jsx';
 import { boundsOf, interpolateViewport, viewportForBounds } from './camera.js';
 import { articles, ancestorsOf, descendantsOf, nodesById, rootId as unitRootId, tintOf } from '../data/unit.js';
 import TopicNode from '../nodes/TopicNode.jsx';
@@ -24,7 +26,7 @@ const articleNodeId = (conceptId, key) => `art:${conceptId}:${key}`;
 
 // `rootId` is the unit root on the home tab, or a parte/tema on a tab opened for that branch:
 // the map then shows only that node and what hangs from it.
-export default function MindMap({ rootId = unitRootId, controlsRef, onOpenMenu, onOutside }) {
+export default function MindMap({ rootId = unitRootId, active = true, controlsRef, onOpenMenu, onOutside }) {
   const rf = useReactFlow();
   const wrapperRef = useRef(null);
 
@@ -202,6 +204,8 @@ export default function MindMap({ rootId = unitRootId, controlsRef, onOpenMenu, 
       const opts =
         intent.type === 'frame'
           ? { padding: 0.06, maxZoom: 1.8 }
+          : intent.type === 'nav'
+            ? { padding: 0.22, maxZoom: 1.1 }
           : intent.type === 'focus'
             ? { padding: 0.35, maxZoom: 1.05 }
             : { padding: 0.12, maxZoom: 1 };
@@ -286,6 +290,28 @@ export default function MindMap({ rootId = unitRootId, controlsRef, onOpenMenu, 
         setActiveId(id);
       },
 
+      // ← / → buttons: move the current card, opening what is needed to show it and
+      // folding the branch just finished when the step climbs to the next subtema/tema/parte.
+      navigate(step) {
+        if (!step) return;
+        const { target, finished } = step;
+        const ancestors = ancestorsOf(target);
+        const path = target === rootId ? [] : ancestors.slice(0, ancestors.indexOf(rootId) + 1);
+        const gone = finished ? new Set([finished, ...descendantsOf(finished)]) : null;
+        setExpanded((prev) => {
+          const next = new Set(prev);
+          if (gone) gone.forEach((g) => next.delete(g));
+          path.forEach((p) => next.add(p));
+          // Arriving at a card that has branches opens it, so what comes next is in view.
+          if (nodesById.get(target).children.length) next.add(target);
+          return next;
+        });
+        if (gone) setOpenArticles((prev) => prev.filter((a) => !gone.has(a.conceptId)));
+        setActiveId(target);
+        cameraIntentRef.current = { type: 'nav', ids: [target] };
+        setSizeVersion((v) => v + 1);
+      },
+
       openMenu(id, x, y) {
         onOpenMenu?.(id, x, y);
       },
@@ -300,6 +326,7 @@ export default function MindMap({ rootId = unitRootId, controlsRef, onOpenMenu, 
           historyRef.current = last.history;
         }
         lastToggleRef.current = null;
+        setActiveId(id);
         cameraIntentRef.current = { type: 'frame', ids: [id] };
         setSizeVersion((v) => v + 1);
       },
@@ -425,6 +452,29 @@ export default function MindMap({ rootId = unitRootId, controlsRef, onOpenMenu, 
 
   if (controlsRef) controlsRef.current = { fitAll, collapseAll, collapseLast, focusNode: (id) => actions.focusNode(id) };
 
+  // The current card for the ← / → buttons: the last one pressed or reached (an open
+  // article counts as its card), or the tab's root.
+  const current = useMemo(() => {
+    const id = activeId?.startsWith('art:') ? activeId.split(':')[1] : activeId;
+    if (!id || !nodesById.has(id)) return rootId;
+    return id === rootId || ancestorsOf(id).includes(rootId) ? id : rootId;
+  }, [activeId, rootId]);
+  const forward = useMemo(() => nextOf(current, rootId), [current, rootId]);
+  const back = useMemo(() => prevOf(current, rootId), [current, rootId]);
+
+  useEffect(() => {
+    if (!active) return;
+    const onKey = (e) => {
+      if (e.target.closest?.('input, textarea, [contenteditable]') || e.metaKey || e.ctrlKey || e.altKey) return;
+      if (e.key === 'ArrowRight' && forward) actions.navigate(forward);
+      else if (e.key === 'ArrowLeft' && back) actions.navigate(back);
+      else return;
+      e.preventDefault();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [active, forward, back, actions]);
+
   return (
     <MapActions.Provider value={actions}>
       <div className="map" ref={wrapperRef}>
@@ -450,6 +500,7 @@ export default function MindMap({ rootId = unitRootId, controlsRef, onOpenMenu, 
           <Background id="major" variant={BackgroundVariant.Lines} gap={120} lineWidth={1} color="var(--grid-major)" />
           <Controls showInteractive={false} position="bottom-right" />
         </ReactFlow>
+        <NavButtons back={back} forward={forward} onNavigate={actions.navigate} />
       </div>
     </MapActions.Provider>
   );

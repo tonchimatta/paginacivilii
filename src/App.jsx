@@ -103,6 +103,7 @@ export default function App() {
           <ReactFlowProvider>
             <MindMap
               rootId={tab.rootId}
+              active={tab.key === activeKey}
               controlsRef={{
                 set current(value) {
                   controls.current.set(tab.key, value);

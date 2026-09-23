@@ -116,6 +116,13 @@ seis partes tiene su color y lo heredan sus temas y tarjetas) y una grilla tenue
   con su X. Un término enlazado que apunta fuera de la rama se abre en el esquema general.
 - Ícono de casa (arriba a la izquierda): vuelve al esquema general; si esa pestaña estaba
   cerrada, la reabre como primera pestaña.
+- Flechas ← → a los lados (o las flechas del teclado): recorren las tarjetas en el orden de
+  lectura de los apuntes, desde la tarjeta actual (la última tocada o alcanzada, marcada con su
+  color). → entra a la primera rama de la tarjeta; si no tiene, pasa a la siguiente hermana; al
+  terminar una rama sube al siguiente subtema, tema o parte, lo anuncia en amarillo ("Siguiente
+  tema · ...") y pliega la rama terminada. ← va a la hermana anterior o, desde la primera, al
+  padre. Cada flecha dice a dónde va y desaparece cuando no hay a dónde ir (← en la raíz de la
+  pestaña, → después de la última tarjeta). Al llegar a una tarjeta con ramas, se abre.
 - Barra superior: "Plegar última capa" cierra el nivel abierto más profundo (o los artículos
   abiertos, si hay); "Plegar todo" vuelve a las seis partes; "Encuadrar" muestra todo lo abierto. Cada apertura guarda la vista actual
   en una pila; cerrar la recupera.
