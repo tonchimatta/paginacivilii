@@ -1,13 +1,14 @@
 // Landing page: one card per professor's notes. Only professors with notes (`route`) open a
 // map; the rest show as "Próximamente" until their notes are added (see README).
+// Themes are the same pastels as the six parts of the maps (tint-* classes in styles.css).
 
 export const COURSE = 'Personas y Bienes';
 
 export const PROFESSORS = [
   { id: 'gandarillas-vergara', name: 'Gandarillas y Vergara', route: '#/apuntes/gandarillas-vergara', theme: 'lavender' },
-  { id: 'eyzaguirre-allende', name: 'Eyzaguirre y Allende', theme: 'peach' },
-  { id: 'cifuentes-dibarrat', name: 'Cifuentes y Dibarrat', theme: 'indigo' },
-  { id: 'pater-germain', name: 'Pater y Germain', theme: 'olive' },
+  { id: 'eyzaguirre-allende', name: 'Eyzaguirre y Allende', theme: 'pink' },
+  { id: 'cifuentes-dibarrat', name: 'Cifuentes y Dibarrat', theme: 'peach' },
+  { id: 'pater-germain', name: 'Pater y Germain', theme: 'yellow' },
   { id: 'fernandez-fontecilla', name: 'Fernández y Fontecilla', theme: 'sky' },
-  { id: 'barrientos', name: 'Barrientos', theme: 'navy' },
+  { id: 'barrientos', name: 'Barrientos', theme: 'mint' },
 ];

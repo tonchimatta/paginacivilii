@@ -31,9 +31,7 @@ export default function Landing() {
   return (
     <main className="landing">
       <header className="landing__head">
-        <div className="landing__eyebrow">Derecho Civil II</div>
         <h1 className="landing__title">{COURSE}</h1>
-        <p className="landing__lead">Elige los apuntes de un profesor.</p>
       </header>
 
       <motion.section
@@ -53,7 +51,7 @@ export default function Landing() {
           return (
             <motion.article
               key={p.id}
-              className={`pcard pcard--${p.theme}${d === 0 ? ' is-current' : ''}`}
+              className={`pcard tint-${p.theme}${d === 0 ? ' is-current' : ''}`}
               aria-hidden={d !== 0}
               initial={false}
               animate={{
@@ -70,15 +68,12 @@ export default function Landing() {
                 else if (p.route) window.location.hash = p.route;
               }}
             >
-              <div className="pcard__top">
-                <span className="pcard__mark" aria-hidden>
-                  §
-                </span>
-                <span className="pcard__step">
-                  Profesor {i + 1} de {n}
-                </span>
-              </div>
-              <h2 className="pcard__name">{p.name}</h2>
+              {/* One line per name, breaking before "y": "Gandarillas / y Vergara". */}
+              <h2 className="pcard__name">
+                {p.name.split(/ (?=y )/).map((line) => (
+                  <span key={line}>{line}</span>
+                ))}
+              </h2>
               {/* Placeholder until the portrait illustrations are added. */}
               <div className="pcard__figure" aria-label="Imagen pendiente">
                 <span>!</span>

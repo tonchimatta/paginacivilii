@@ -1089,25 +1089,12 @@ body {
   text-align: center;
 }
 
-.landing__eyebrow {
-  font-size: 13px;
-  letter-spacing: 0.02em;
-  color: var(--ink-3);
-}
-
 .landing__title {
-  margin: 6px 0 8px;
+  margin: 0;
   font-size: clamp(36px, 7vw, 64px);
   font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 1.02;
-}
-
-.landing__lead {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 300;
-  color: var(--ink-2);
 }
 
 .carousel {
@@ -1123,10 +1110,9 @@ body {
   cursor: grabbing;
 }
 
-/* Professor card (inspired by flat onboarding cards: solid colour, big name, line figure). */
+/* Professor card: same brand as the map cards (thin ink border, 22px radius, flat pastel
+   of the parts' palette), with the name as a big bold title. */
 .pcard {
-  --fg: var(--ink);
-  --figure: var(--ink);
   position: absolute;
   top: 0;
   left: calc(50% - var(--card-w) / 2);
@@ -1134,50 +1120,25 @@ body {
   flex-direction: column;
   width: var(--card-w);
   height: var(--card-h);
-  padding: 22px 22px 20px;
-  color: var(--fg);
-  background: var(--card-bg);
-  border-radius: 34px;
-  box-shadow: 0 18px 40px -22px rgba(17, 17, 17, 0.45);
+  padding: 24px 22px 20px;
+  color: var(--ink);
+  background: var(--tint);
+  border: var(--stroke) solid var(--ink);
+  border-radius: var(--radius);
   user-select: none;
   -webkit-user-select: none;
   cursor: pointer;
 }
 
-.pcard--lavender { --card-bg: #c9b8ff; --figure: #4338ca; }
-.pcard--peach { --card-bg: #ffc9a9; --figure: #f04e0f; }
-.pcard--indigo { --card-bg: #5457e3; --fg: #ffffff; --figure: #9ef0c4; }
-.pcard--olive { --card-bg: #c4ae74; --figure: #1f6b3a; }
-.pcard--sky { --card-bg: #dfecfa; --figure: #3656a8; }
-.pcard--navy { --card-bg: #2c3246; --fg: #ffffff; --figure: #8fe3b4; }
-
-.pcard__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.pcard__mark {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  font-size: 17px;
-  border: 1.6px solid currentColor;
-  border-radius: 50%;
-}
-
-.pcard__step {
-  font-size: 13px;
-  opacity: 0.8;
-}
-
 .pcard__name {
-  margin: 22px 0 0;
-  font-size: clamp(26px, 3.4vh, 32px);
-  font-weight: 400;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: clamp(34px, 4.8vh, 46px);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  text-align: left;
 }
 
 .pcard__figure {
@@ -1195,8 +1156,9 @@ body {
   aspect-ratio: 1;
   font-size: clamp(56px, 9vh, 88px);
   font-weight: 300;
-  color: var(--figure);
-  border: 2px solid var(--figure);
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.35);
+  border: var(--stroke) solid var(--ink);
   border-radius: 50%;
 }
 
@@ -1231,12 +1193,14 @@ body {
   padding: 8px 14px;
   color: inherit;
   text-decoration: none;
-  border: 1.5px solid currentColor;
+  background: var(--paper);
+  border: var(--stroke) solid var(--ink);
   border-radius: 999px;
 }
 
 .pcard__cta:hover {
-  background: rgba(255, 255, 255, 0.35);
+  background: var(--ink);
+  color: var(--paper);
 }
 
 .pcard__soon {
