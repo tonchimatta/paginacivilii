@@ -6,18 +6,19 @@ React Flow y Framer Motion, con un layout de árbol propio. Sitio estático, sin
 
 ```bash
 npm install
-npm run dev      # regenera src/generated/unit.json y levanta Vite
-npm run build    # regenera el JSON y compila a dist/
+npm run dev      # regenera src/generated/*.json y levanta Vite
+npm run build    # regenera los JSON y compila a dist/
 ```
 
 ## Rutas
 
 - `#/`: página de inicio "Personas y Bienes", con un carrusel de tarjetas de profesores
   (← →, teclado o deslizando). Datos en `src/data/professors.js`.
-- `#/apuntes/gandarillas-vergara`: el mapa de los apuntes de Gandarillas y Vergara. En la
-  barra del mapa, "Personas y Bienes" vuelve al inicio.
+- `#/apuntes/<id>`: el mapa de los apuntes de un profesor (`gandarillas-vergara`,
+  `eyzaguirre-allende`). En la barra del mapa, "Personas y Bienes" vuelve al inicio. Cada mapa
+  se descarga aparte, recién cuando se abre.
 
-Por ahora solo Gandarillas y Vergara tiene apuntes; Eyzaguirre y Allende, Cifuentes y Dibarrat,
+Por ahora tienen apuntes Gandarillas y Vergara, y Eyzaguirre y Allende; Cifuentes y Dibarrat,
 Pater y Germain, Fernández y Fontecilla, y Barrientos aparecen como "Próximamente". Las
 ilustraciones de cada profesor van donde está el "!" de cada tarjeta.
 
@@ -25,19 +26,44 @@ ilustraciones de cada profesor van donde está el "!" de cada tarjeta.
 
 | Archivo | Qué es |
 |---|---|
-| `data/notes.md` | Apuntes (antes `SOLEMNE CIVIL II.md`) |
+| `data/gandarillas-vergara.md` | Apuntes de Gandarillas y Vergara (antes `SOLEMNE CIVIL II.md`) |
+| `data/eyzaguirre-allende.md` | Apuntes de Eyzaguirre y Allende, ya ordenados (ver abajo) |
+| `data/raw/eyzaguirre.md` | Los mismos apuntes tal como llegaron (PDF convertido a markdown) |
 | `data/codigo-civil.md` | Código Civil (antes `CC - Código Civil.md`) |
-| `scripts/build-data.mjs` | Preprocesador: markdown -> `src/generated/unit.json` |
-| `src/generated/unit.json` | Árbol ya parseado; la app solo lee esto |
+| `scripts/build-data.mjs` | Preprocesador: cada apunte -> `src/generated/<id>.json` |
+| `scripts/prepare-eyzaguirre.mjs` | Limpieza única del PDF convertido de Eyzaguirre y Allende |
+| `src/generated/*.json` | Árboles ya parseados (no se versionan); la app solo lee esto |
 
 Los archivos originales se movieron a `data/` con nombres ASCII: el nombre del Código venía en
 Unicode descompuesto (NFD) y no coincidía con la ruta escrita a mano.
 
-Para otra unidad basta con apuntar el script a otros apuntes, sin tocar componentes:
+Para sumar un profesor: agregar sus apuntes en `data/`, una línea en `UNITS` de
+`scripts/build-data.mjs` y de `src/data/unit.js`, y `route` en `src/data/professors.js`. Sin
+tocar componentes.
 
-```bash
-node scripts/build-data.mjs --notes data/otra-unidad.md --title "Eyzaguirre y Allende"
-```
+## Apuntes de Eyzaguirre y Allende
+
+Llegaron como un PDF convertido a markdown, con los niveles de título desordenados.
+`scripts/prepare-eyzaguirre.mjs` hizo la limpieza mecánica: sacó portada, índice y encabezados
+de página; unió párrafos, citas y tablas cortadas por un salto de página; pasó las notas al pie
+al texto, entre paréntesis (las que solo copiaban el artículo citado se eliminaron, porque el
+artículo se abre al tocarlo); quitó subrayados y resaltados; y convirtió "art. 565 cc" en enlaces.
+Después, a mano, en `data/eyzaguirre-allende.md`:
+
+- La jerarquía sigue las mismas seis partes que Gandarillas y Vergara: I. Bienes, II. El
+  dominio, III. La copropiedad, IV. Modos de adquirir el dominio, V. La tradición y VI. La
+  posesión. Ocupación y accesión pasaron a la parte IV (en el PDF venían después de la
+  inscripción conservatoria) y la copropiedad salió de "Limitaciones del dominio" a su propia parte.
+- Temas numerados de corrido (1 a 47), subtemas 1.1 y letras a), como en Gandarillas.
+- Se armaron a mano tres tablas que el PDF desarmó en columnas (universalidades, doctrina romanista
+  y germánica, posesión regular e irregular) y las listas cuyo anidado se perdió.
+- Para que cada tarjeta tenga una sola idea: las preguntas que abren un párrafo en secciones
+  largas ("¿Qué pasa con la partición?") y las viñetas que abren con un término en negrita
+  dentro de listas mezcladas son etiquetas, o sea tarjetas propias. Los "P. ej." de una lista
+  se quedan en la tarjeta del ítem anterior, en vez de ser tarjetas sueltas.
+
+El texto no se reescribió: solo se movieron límites de negrita, se unieron líneas cortadas y se
+agregaron títulos de subtema donde una sección cambiaba de tema (p. ej. "Tradición bajo condición").
 
 ## Cómo se parsean los apuntes (y en qué se aparta del supuesto inicial)
 

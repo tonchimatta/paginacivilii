@@ -474,7 +474,7 @@ function splitLists(tokens, depth) {
     let md = '';
     const children = [];
     for (const t of tokens) {
-      const items = t.type === 'list' ? t.items.map((it) => itemSpec(it, depth, loose)) : null;
+      const items = t.type === 'list' ? listSpecs(t.items, depth, loose) : null;
       if (items && items.length >= 2 && items.every(Boolean)) children.push(...items);
       else md += t.raw;
     }
@@ -482,6 +482,27 @@ function splitLists(tokens, depth) {
   };
   const strict = run(false);
   return plainText(strict.md).length > LONG ? run(true) : strict;
+}
+
+// "P. ej. ..." items illustrate the item before them: when a list is split, each one goes
+// into the previous item's card instead of making a card of its own. (Gandarillas y Vergara
+// writes "Ej: ..." and is unaffected.)
+const EXAMPLE = /^p\. ?ej\b/i;
+
+function listSpecs(items, depth, loose) {
+  const specs = [];
+  for (const it of items) {
+    const text = dedentItem(it.raw);
+    if (loose && EXAMPLE.test(plainText(text))) {
+      // A list that opens with an example stays as text.
+      const prev = specs[specs.length - 1];
+      if (!prev) return null;
+      prev.body = `${prev.body}\n\n- ${text.replace(/\n/g, '\n  ')}`.trim();
+      continue;
+    }
+    specs.push(itemSpec(it, depth, loose));
+  }
+  return specs;
 }
 
 function itemSpec(item, depth, loose) {

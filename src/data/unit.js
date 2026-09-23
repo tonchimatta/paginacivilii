@@ -1,11 +1,27 @@
-// The only module that knows which unit is loaded. To point the app at other notes, run
-// `node scripts/build-data.mjs --notes <file> --title <name>`; no component changes needed.
-import unit from '../generated/unit.json';
+// The only module that knows which unit (professor's notes) is loaded. App calls setUnit()
+// before mounting the map; the exports below are live bindings, so every component reads
+// the current unit. The JSONs are built by scripts/build-data.mjs.
 
-export const title = unit.title;
-export const rootId = unit.rootId;
-export const articles = unit.articles;
-export const nodesById = new Map(unit.nodes.map((n) => [n.id, n]));
+// Each unit is its own chunk, fetched when its map is opened.
+export const UNITS = {
+  'gandarillas-vergara': () => import('../generated/gandarillas-vergara.json'),
+  'eyzaguirre-allende': () => import('../generated/eyzaguirre-allende.json'),
+};
+
+export let title = '';
+export let rootId = 'root';
+export let articles = {};
+export let nodesById = new Map();
+let partIndex = new Map();
+
+export function setUnit(unit) {
+  title = unit.title;
+  rootId = unit.rootId;
+  articles = unit.articles;
+  nodesById = new Map(unit.nodes.map((n) => [n.id, n]));
+  // Each part (top-level branch) gets one pastel; everything under it reuses it.
+  partIndex = new Map(nodesById.get(rootId).children.map((id, i) => [id, i]));
+}
 
 export function ancestorsOf(id) {
   const out = [];
@@ -24,9 +40,7 @@ export function descendantsOf(id) {
   return out;
 }
 
-// Each part (top-level branch) gets one pastel; everything under it reuses it.
 const TINTS = ['lavender', 'pink', 'peach', 'yellow', 'sky', 'mint'];
-const partIndex = new Map(nodesById.get(rootId).children.map((id, i) => [id, i]));
 
 export function tintOf(id) {
   if (id === rootId) return 'ink';

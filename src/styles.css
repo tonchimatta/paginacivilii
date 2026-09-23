@@ -1238,3 +1238,14 @@ body {
   text-align: center;
   color: var(--ink-2);
 }
+
+/* While a professor's notes chunk is being fetched. */
+.loading {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 500;
+}
