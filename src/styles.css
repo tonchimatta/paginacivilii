@@ -1239,6 +1239,135 @@ body {
   color: var(--ink-2);
 }
 
+/* ---------- Footer ---------- */
+
+.site-footer {
+  flex: none;
+  width: 100vw;
+  margin: clamp(12px, 4vh, 32px) calc(50% - 50vw) -32px;
+  padding: 40px clamp(20px, 6vw, 64px) 28px;
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 860px) {
+  .site-footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+
+.site-footer__block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.site-footer__tag {
+  align-self: flex-start;
+  padding: 3px 10px;
+  font-family: var(--font-label);
+  font-size: 11px;
+  letter-spacing: var(--label-tracking);
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+}
+
+.site-footer__text {
+  margin: 0;
+  font-family: var(--font-title);
+  font-weight: var(--title-weight);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.site-footer__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  font-family: var(--font-title);
+  font-weight: var(--title-weight);
+  font-size: 15px;
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.site-footer__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-footer__link svg {
+  flex: none;
+  transition: translate 0.15s;
+}
+
+.site-footer__link:hover svg {
+  translate: 3px 0;
+}
+
+.site-footer__wordmark {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: clamp(24px, 5vh, 44px) 0 clamp(12px, 3vh, 24px);
+}
+
+.site-footer__wordmark img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.site-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1080px;
+  margin: 0 auto;
+  font-family: var(--font-label);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.site-footer__ig {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  color: var(--paper);
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.site-footer__ig:hover {
+  color: var(--ink);
+  background: var(--paper);
+  border-color: var(--paper);
+}
+
 /* While a professor's notes chunk is being fetched. */
 .loading {
   position: fixed;

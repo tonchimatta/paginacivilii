@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { COURSE, PROFESSORS } from '../data/professors.js';
+import Footer from './Footer.jsx';
 
 const SWIPE_PX = 50;
 
@@ -115,6 +116,8 @@ export default function Landing() {
           </svg>
         </button>
       </div>
+
+      <Footer />
     </main>
   );
 }
