@@ -10,14 +10,21 @@ está descrito desde el lado de quien escribe el markdown. El modelo es
 # I. Las cosas y los bienes            ← parte: tarjeta de color (6 pasteles, uno por parte)
 ## 1. Objeto del Derecho de Bienes     ← tema (numeración de corrido en todo el archivo)
 ### 1.1 Qué estudia                     ← subtema
-#### a) Elementos                       ← apartado
+#### a) Elementos                       ← nivel 4
+##### i) Sujeto                          ← nivel 5
+###### (1) Persona natural              ← nivel 6
 ```
+
+- Se usan tantos niveles como tenga el apunte (hasta 6, el máximo de markdown). Todos son
+  tarjetas "tema"; más abajo siguen las etiquetas y listas.
+- Las partes y su cantidad salen de cada apunte; los nombres de arriba son solo el ejemplo
+  de Gandarillas.
 
 - La raíz del mapa es sintética: su título es el nombre del profesor (`title` en `UNITS`).
   No pongas un `#` con el nombre del curso.
 - Todo encabezado es una tarjeta "tema" (bloque de color, tipo y número), tenga texto o no.
 - El número que muestra la tarjeta es el que está al comienzo del título (`I.`, `12.`,
-  `12.3`, `b)`): por eso se numera en el markdown (`renumber.py`).
+  `12.3`, `b)`, `ii)`, `(3)`): por eso se numera en el markdown (`renumber.py`).
 - `[Pendiente]` al inicio del título (después del número) marca un tema sin desarrollar.
 - Texto antes del primer encabezado se ignora (el build avisa).
 - Subtema hoja titulado "Concepto...", "Definición..." o "Noción..." se funde en su padre y

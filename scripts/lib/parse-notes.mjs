@@ -35,7 +35,9 @@ const GENERIC_LABELS = new Set(
   ].map((s) => s.normalize('NFC')),
 );
 
-const NUMBERING = /^((?:[IVXLC]+\.)|(?:\d+(?:\.\d+)*\.?)|(?:[a-z]\)))\s+/;
+// Heading numbers: "IV." parte, "12." tema, "12.3" subtema, "b)" nivel 4, "ii)" nivel 5,
+// "(3)" nivel 6.
+const NUMBERING = /^((?:[IVXLC]+\.)|(?:\d+(?:\.\d+)*\.?)|(?:[a-z]+\))|(?:\(\d+\)))\s+/;
 const PENDING = /\[\s*pendiente\s*\]\s*/i;
 
 const WIKI_LINK = /\[\[([^\]|\\]+?)(?:\\?\|([^\]]+))?\]\]/g;
@@ -249,7 +251,7 @@ function splitTitle(raw) {
   const pending = PENDING.test(text);
   text = text.replace(PENDING, '');
   const m = text.match(NUMBERING);
-  const number = m ? m[1].replace(/[.)]$/, '') : null;
+  const number = m ? (m[1].startsWith('(') ? m[1] : m[1].replace(/[.)]$/, '')) : null;
   if (m) text = text.slice(m[0].length);
   return { number, text: text.replace(PENDING, '').trim(), pending };
 }

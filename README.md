@@ -67,7 +67,7 @@ agregaron títulos de subtema donde una sección cambiaba de tema (p. ej. "Tradi
 
 ## Cómo se parsean los apuntes (y en qué se aparta del supuesto inicial)
 
-**Jerarquía.** Los apuntes tienen seis H1 (partes I a VI), H2 = tema, H3 = subtema y a veces H4.
+**Jerarquía.** Cada apunte trae sus propias divisiones. En Gandarillas y Vergara: seis H1 (partes I a VI), H2 = tema, H3 = subtema y a veces H4; el parser acepta hasta H6 (numerados `i)` y `(1)` en los niveles 5 y 6).
 No hay un H1 único de unidad, así que la raíz es sintética (`--title`). Cada encabezado es una
 tarjeta.
 

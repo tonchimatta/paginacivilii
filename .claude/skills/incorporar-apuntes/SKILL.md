@@ -8,8 +8,9 @@ description: Incorpora los apuntes de un nuevo profesor de Personas y Bienes (De
 El sitio muestra un mapa mental por profesor. Cada mapa sale de un markdown en
 `data/<id>.md` que `scripts/build-data.mjs` (con `scripts/lib/parse-notes.mjs`) convierte en
 `src/generated/<id>.json`. **El parser no se toca para un profesor nuevo**: el trabajo es
-dejar el markdown en el formato que el parser ya entiende. El formato de referencia son los
-apuntes de Gandarillas y Vergara (`data/gandarillas-vergara.md`), que la usuaria aprobó;
+dejar el markdown en el formato que el parser ya entiende. El formato de referencia (cómo se
+escriben etiquetas, listas, citas y numeración; no qué partes lleva) son los apuntes de
+Gandarillas y Vergara (`data/gandarillas-vergara.md`), que la usuaria aprobó;
 Eyzaguirre y Allende (`data/eyzaguirre-allende.md`) es el ejemplo de apuntes que llegaron
 como PDF convertido y hubo que limpiar.
 
@@ -23,7 +24,7 @@ Scripts auxiliares en `scripts/` de esta skill (todos reciben la ruta del markdo
 | `outline.py <md> [--context N]` | Esquema de encabezados, con N líneas de contexto |
 | `section.py <md> "título" [ancho]` | Una sección, una línea por párrafo, con número de línea |
 | `patch.py <md> <parche.txt>` | Reemplazos exactos (`<<<` viejo `===` nuevo `>>>`); falla si algo no calza |
-| `renumber.py <md>` | Numera partes (I.), temas (1. de corrido), subtemas (1.1), apartados (a)) |
+| `renumber.py <md>` | Numera los 6 niveles: I. / 1. (de corrido) / 1.1 / a) / i) / (1) |
 | `labels.py <md>` | En listas mezcladas, cada viñeta `- **Término:** ...` pasa a etiqueta |
 | `card-stats.mjs <id>...` | Largo de tarjetas y títulos sospechosos del JSON generado |
 | `check-map.mjs <id> "<Nombre>" <carpeta>` | Prueba en navegador desde el inicio, con capturas |
@@ -37,8 +38,12 @@ Scripts auxiliares en `scripts/` de esta skill (todos reciben la ruta del markdo
 - **Una idea por tarjeta.** Cada encabezado guarda solo su definición; lo que depende de ella
   (características, elementos, clasificaciones, casos) va en tarjetas hijas. Mejor más
   fragmentado que tarjetas largas, pero sin tarjetas sin sentido ("¿Cuáles son?", "P. ej. ...").
-- **Misma marca en todos los profesores.** Mismo esqueleto de partes cuando el contenido lo
-  permite, misma numeración, mismas convenciones de citas.
+- **Las divisiones salen de cada apunte.** Las partes, temas y subtemas siguen la organización
+  del propio apunte (su índice, sus títulos, cómo el profesor ordena la materia), no el
+  esqueleto de otro profesor. Lo que se comparte entre profesores es la forma: numeración,
+  convenciones de etiquetas y citas, y una idea por tarjeta.
+- **Tantos niveles como el apunte necesite.** Si la materia se subdivide en cinco o seis
+  niveles, se usan cinco o seis niveles de encabezado; no se aplana para caber en cuatro.
 - **Los otros mapas no cambian.** Si tocas el parser, el JSON de los demás profesores tiene
   que salir idéntico (ver Verificación).
 - **Las decisiones de clasificación se le cuentan a la usuaria.** Tomas una decisión
@@ -122,31 +127,39 @@ grep -n '\*\*' data/<id>.md | awk -F'\\*\\*' 'NF%2==0'          # negritas sin c
 
 Arma el árbol a mano sobre `data/<id>.md`, con parches (`patch.py`) guardados en el scratchpad.
 
-1. **Partes (`#`).** Usa el mismo esqueleto que los profesores ya incorporados cuando el
-   contenido calce:
-   `I. Bienes / Las cosas y los bienes`, `II. El dominio`, `III. La copropiedad`,
-   `IV. Modos de adquirir el dominio`, `V. La tradición`, `VI. La posesión`.
-   Si un profesor trata algo que no está (prescripción, acciones protectoras...), agrega
-   partes al final en el orden del curso. Seis partes = seis colores; desde la séptima se
-   repiten.
-   - La copropiedad va como parte propia aunque el apunte la trate dentro de "Limitaciones
-     del dominio".
-   - Ocupación y accesión van en Modos de adquirir, aunque el apunte las ponga después de la
-     tradición; la inscripción en el Conservador va dentro de La tradición.
-   - Mover secciones enteras está bien; reordenar párrafos dentro de una sección, no.
-2. **Temas (`##`)** numerados de corrido en todo el documento (1, 2... hasta el final, no se
-   reinicia por parte). Cada clasificación de los bienes es un tema directo de la parte I.
-3. **Subtemas (`###`)** 1.1, 1.2; **apartados (`####`)** a), b). No uses nivel 5 o más:
-   baja un nivel el contenido o conviértelo en etiqueta. Un `####` debe colgar de un `###`
-   (si cuelga directo de un `##`, súbelo a `###`).
-4. Títulos: en minúscula salvo nombres propios ("Características del derecho de dominio", no
+1. **Lee la organización del propio apunte** antes de decidir niveles, en este orden de
+   confianza:
+   - el índice o tabla de contenidos, si trae uno (en un PDF convertido, la sangría o el largo
+     de los puntos suspensivos delata el nivel de cada entrada);
+   - lo que el apunte anuncia ("Las clasificaciones que se estudian son...", "Esta materia se
+     divide en...");
+   - los títulos y su formato (en un PDF convertido el nivel `#` no sirve, pero sí el estilo:
+     negrita subrayada, cursiva, numeración propia I. / 1. / a));
+   - los cambios de profesor o de unidad que el apunte marca.
+   El resultado puede tener tres, seis o diez partes: las que tenga el apunte.
+2. **Partes (`#`)**: las grandes unidades del apunte, en su orden. Cada parte toma un color
+   (hay seis pasteles; desde la séptima se repiten). Si el apunte no tiene divisiones de ese
+   nivel, las partes pueden ser sus temas principales.
+3. **Temas (`##`)** numerados de corrido en todo el documento (1, 2... hasta el final, no se
+   reinicia por parte), como en los apuntes ya incorporados.
+4. **Niveles siguientes**, tantos como use el apunte: `###` 1.1, `####` a), `#####` i),
+   `######` (1). Cada nivel cuelga del inmediatamente superior (un `####` bajo un `##` se
+   sube a `###`). Markdown no tiene nivel 7: más abajo, la estructura sigue con etiquetas
+   `**Término:**` y listas con término en negrita, que el parser también convierte en tarjetas
+   anidadas.
+5. **Mover o no mover.** Respeta el orden del apunte. Mueve una sección entera solo si en el
+   apunte está claramente fuera de lugar (un encabezado que el PDF puso en el nivel
+   equivocado, un tema repetido). Reordenar párrafos dentro de una sección, nunca. Si la
+   organización del apunte te parece discutible (p. ej. un tema que en otros apuntes es una
+   parte propia), respétala y menciónalo en la entrega como pregunta.
+6. Títulos: en minúscula salvo nombres propios ("Características del derecho de dominio", no
    "Características del Derecho de Dominio"); sin dos puntos finales; sin marcadores.
-5. Borra encabezados que no son contenido ("Profesor Allende", "Evaluaciones") y encabezados
+7. Borra encabezados que no son contenido ("Profesor Allende", "Evaluaciones") y encabezados
    falsos que el PDF inventó: un ítem de lista promovido ("ii. Legado de carruaje") vuelve a
    ser viñeta o etiqueta; una frase partida en dos ("¿Qué pasa si uno de tres herederos..." /
    "**decide vender su cuota parte?**") se une.
-6. Al final: `python3 renumber.py data/<id>.md`. Inserta encabezados sin número y renumera.
-7. Ojo con "Concepto": un subtema **hoja** cuyo título empieza con Concepto, Definición o
+8. Al final: `python3 renumber.py data/<id>.md`. Inserta encabezados sin número y renumera.
+9. Ojo con "Concepto": un subtema **hoja** cuyo título empieza con Concepto, Definición o
    Noción se funde en su padre (su texto pasa a ser la definición del padre) y su número
    desaparece. Si es tema directo de una parte, la parte se queda con ese texto. Está bien
    para textos cortos (Gandarillas lo hace en La copropiedad y La tradición); si el texto es
@@ -251,5 +264,6 @@ Cuidado:
 - Commit en la rama de desarrollo y push a la rama y a `main` (GitHub Pages publica desde
   `main` con Actions; tarda 1 a 2 minutos).
 - Mensaje a la usuaria en español neutro, sin emojis ni rayas: qué quedó, cómo se verificó y
-  la lista de decisiones de clasificación (partes, secciones movidas, tablas rearmadas, criterio
-  de fragmentación), más cualquier pregunta abierta que cambie el resultado.
+  la lista de decisiones de clasificación (cómo se leyeron las divisiones del apunte, secciones
+  movidas, tablas rearmadas, criterio de fragmentación), más cualquier pregunta abierta que
+  cambie el resultado.
