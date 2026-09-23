@@ -3,6 +3,7 @@
 // Themes are the same pastels as the six parts of the maps (tint-* classes in styles.css).
 
 export const COURSE = 'Personas y Bienes';
+export const SITE_TITLE = 'mapas civil II AVZ';
 
 export const PROFESSORS = [
   { id: 'gandarillas-vergara', name: 'Gandarillas y Vergara', route: '#/apuntes/gandarillas-vergara', theme: 'lavender' },

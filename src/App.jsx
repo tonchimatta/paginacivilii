@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Landing from './landing/Landing.jsx';
 import MapView from './MapView.jsx';
-import { COURSE, PROFESSORS } from './data/professors.js';
+import { PROFESSORS, SITE_TITLE } from './data/professors.js';
 import { UNITS, setUnit } from './data/unit.js';
 
 // Hash routes, so reloads and the browser's back button work on GitHub Pages:
@@ -26,7 +26,7 @@ export default function App() {
 
   useEffect(() => {
     const name = PROFESSORS.find((p) => p.id === unitId)?.name;
-    document.title = name ? `${name} · ${COURSE}` : COURSE;
+    document.title = name ? `${name} · ${SITE_TITLE}` : SITE_TITLE;
   }, [unitId]);
 
   useEffect(() => {
