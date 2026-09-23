@@ -3,7 +3,6 @@ import { ReactFlowProvider } from 'reactflow';
 import MindMap from './graph/MindMap.jsx';
 import Finder from './search/Finder.jsx';
 import { title, nodesById, rootId, maps, mapOf, tintOf } from './data/unit.js';
-import { COURSE } from './data/professors.js';
 import avanzarLogo from './assets/avanzar-uc-logo.png';
 
 const FONTS = {
@@ -38,7 +37,7 @@ function tabLabel(tab) {
 }
 
 // The map of one professor's notes: top bar, in-page tabs, one mind map per tab.
-export default function MapView() {
+export default function MapView({ course, homeRoute }) {
   const [font, setFont] = useState(readFont);
   const [titlesOnly, setTitlesOnly] = useState(readTitlesOnly);
   // In-page tabs: the home tab shows the whole unit; each other tab one isolated branch.
@@ -155,13 +154,13 @@ export default function MapView() {
       ))}
 
       <header className="bar">
-        <a className="bar__home" href="#/" aria-label="Volver al inicio" title="Volver al inicio">
+        <a className="bar__home" href={homeRoute} aria-label="Volver al inicio" title="Volver al inicio">
           <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden>
             <path d="M3 9.5 10 3.5l7 6M5 8v8.5h3.5V12h3v4.5H15V8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round" />
           </svg>
         </a>
-        <a className="bar__title title-font" href="#/" title="Volver al inicio">
-          {COURSE}
+        <a className="bar__title title-font" href={homeRoute} title="Volver al inicio">
+          {course.title}
         </a>
         <span className="bar__meta">
           {title} · {nodesById.size} tarjetas
@@ -233,7 +232,7 @@ export default function MapView() {
 
       <footer className="map-foot">
         <span className="map-foot__label">Proyecto de CT Derecho</span>
-        <a className="map-foot__logo" href="#/" aria-label="Volver al inicio" title="Volver al inicio">
+        <a className="map-foot__logo" href={homeRoute} aria-label="Volver al inicio" title="Volver al inicio">
           <img src={avanzarLogo} alt="Avanzar UC" />
         </a>
       </footer>

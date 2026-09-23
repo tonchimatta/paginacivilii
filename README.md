@@ -1,8 +1,9 @@
-# Personas y Bienes · Mapas de apuntes
+# Mapas de apuntes
 
-Página de inicio con los profesores del curso y, para cada uno con apuntes, un mapa mental de
-Derecho Civil II ("Personas y Bienes"), hecho con React + Vite,
-React Flow y Framer Motion, con un layout de árbol propio. Sitio estático, sin backend.
+Página de inicio con los profesores de un curso y, para cada uno con apuntes, un mapa mental
+hecho con React + Vite, React Flow y Framer Motion, con un layout de árbol propio. El sitio
+aloja más de un curso (ver "Cursos"); cada uno tiene su propia página de inicio y sus propios
+mapas. Sitio estático, sin backend.
 
 ```bash
 npm install
@@ -10,21 +11,35 @@ npm run dev      # regenera src/generated/*.json y levanta Vite
 npm run build    # regenera los JSON y compila a dist/
 ```
 
+## Cursos
+
+- **Personas y Bienes** (Derecho Civil II), en `#/`: el curso original. Profesores en
+  `src/data/professors.js`.
+- **Derecho Romano II**, en `#/romano-ii`: profesores en `src/data/derecho-romano-ii.js`. Por
+  ahora ninguno tiene apuntes cargados (las tarjetas muestran "Próximamente"); se incorporan
+  con el mismo procedimiento que un profesor de Personas y Bienes (ver "Rutas" y "Para sumar
+  un profesor" más abajo).
+
+Cada curso es una entrada de `src/data/courses.js` (`id`, `path`, `title`, `siteTitle`,
+`professors`); un enlace bajo el título de cada página de inicio lleva al otro curso.
+
 ## Rutas
 
-- `#/`: página de inicio "Personas y Bienes", con un carrusel de tarjetas de profesores
-  (← →, teclado o deslizando). Datos en `src/data/professors.js`.
-- `#/apuntes/<id>`: el mapa de los apuntes de un profesor (`gandarillas-vergara`,
-  `eyzaguirre-allende`). En la barra del mapa, "Personas y Bienes" vuelve al inicio. Cada mapa
-  se descarga aparte, recién cuando se abre.
+- `#/`: página de inicio del curso por omisión (Personas y Bienes), con un carrusel de
+  tarjetas de profesores (← →, teclado o deslizando).
+- `#/<curso>`: página de inicio de otro curso (por ahora, `#/romano-ii`).
+- `#/apuntes/<id>`: el mapa de los apuntes de un profesor de Personas y Bienes
+  (`gandarillas-vergara`, `eyzaguirre-allende`...). En la barra del mapa, el título del curso
+  vuelve al inicio. Cada mapa se descarga aparte, recién cuando se abre.
+- `#/<curso>/apuntes/<id>`: lo mismo, para un profesor de otro curso.
 
 La página de Fernández y Fontecilla junta dos apuntes como dos mapas separados, cada uno en su
 pestaña fija ("Fernández · Bienes" y "Fontecilla · Personas"); los términos de uno enlazan al
 otro y al tocarlos se cambia de pestaña (`maps` en `scripts/build-data.mjs`).
 
-Por ahora tienen apuntes Gandarillas y Vergara, Eyzaguirre y Allende, Pater y Germain, Cifuentes y Dibarrat,
-Fernández y Fontecilla, y Barrientos. Las
-ilustraciones de cada profesor van donde está el "!" de cada tarjeta.
+En Personas y Bienes tienen apuntes Gandarillas y Vergara, Eyzaguirre y Allende, Pater y
+Germain, Cifuentes y Dibarrat, Fernández y Fontecilla, y Barrientos. Las ilustraciones de cada
+profesor van donde está el "!" de cada tarjeta.
 
 ## Datos
 
@@ -44,9 +59,12 @@ ilustraciones de cada profesor van donde está el "!" de cada tarjeta.
 Los archivos originales se movieron a `data/` con nombres ASCII: el nombre del Código venía en
 Unicode descompuesto (NFD) y no coincidía con la ruta escrita a mano.
 
-Para sumar un profesor: agregar sus apuntes en `data/`, una línea en `UNITS` de
-`scripts/build-data.mjs` y de `src/data/unit.js`, y `route` en `src/data/professors.js`. Sin
-tocar componentes.
+Para sumar un profesor de Personas y Bienes: agregar sus apuntes en `data/`, una línea en
+`UNITS` de `scripts/build-data.mjs` y de `src/data/unit.js`, y `route` en
+`src/data/professors.js`. Sin tocar componentes. Para un profesor de otro curso (p. ej.
+Derecho Romano II) es lo mismo, pero el `route` se agrega en el archivo de profesores de ese
+curso (`src/data/derecho-romano-ii.js`) con el prefijo de su `path` en `src/data/courses.js`
+(`'#/romano-ii/apuntes/<id>'`).
 
 ## Apuntes de Eyzaguirre y Allende
 

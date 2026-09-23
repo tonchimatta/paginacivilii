@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { COURSE, PROFESSORS } from '../data/professors.js';
+import { COURSES, homeRoute } from '../data/courses.js';
 import Footer from './Footer.jsx';
 
 const SWIPE_PX = 50;
@@ -15,7 +15,9 @@ function offsetOf(i, index, n) {
 
 // Home page: the course title and a carousel of professors' notes. The centred card is in
 // front, its neighbours peek from behind; ← / → (buttons, keyboard or a swipe) rotate it.
-export default function Landing() {
+export default function Landing({ course }) {
+  const { title, professors: PROFESSORS } = course;
+  const otherCourse = COURSES.find((c) => c.id !== course.id);
   const n = PROFESSORS.length;
   const [index, setIndex] = useState(0);
   const go = useCallback((step) => setIndex((i) => (i + step + n) % n), [n]);
@@ -32,7 +34,15 @@ export default function Landing() {
   return (
     <main className="landing">
       <header className="landing__head">
-        <h1 className="landing__title">{COURSE}</h1>
+        <h1 className="landing__title">{title}</h1>
+        {otherCourse ? (
+          <a className="landing__switch" href={homeRoute(otherCourse)}>
+            {otherCourse.title}
+            <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden>
+              <path d="M3 8h9.5M8.5 4l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </a>
+        ) : null}
       </header>
 
       <motion.section
@@ -117,7 +127,7 @@ export default function Landing() {
         </button>
       </div>
 
-      <Footer />
+      <Footer course={course} />
     </main>
   );
 }

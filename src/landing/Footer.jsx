@@ -38,7 +38,7 @@ const LINKS = [
 // Footer of the landing page: what the site is (Avanzar UC project), where to follow it and
 // how to get involved, closed by the Avanzar UC wordmark, big and white, over the site's own
 // ink so it reads the same way it does on the brand's own dark surfaces.
-export default function Footer() {
+export default function Footer({ course }) {
   return (
     <footer className="site-footer">
       <p className="site-footer__lede">Proyecto de Avanzar UC, Consejería territorial 2025-2026</p>
@@ -57,7 +57,7 @@ export default function Footer() {
       </div>
 
       <div className="site-footer__bottom">
-        <span>Personas y Bienes · Mapas de apuntes</span>
+        <span>{course.title} · Mapas de apuntes</span>
         <a
           className="site-footer__ig"
           href="https://www.instagram.com/simon.ct.derecho"
