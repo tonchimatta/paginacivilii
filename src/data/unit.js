@@ -7,6 +7,7 @@ export const UNITS = {
   'gandarillas-vergara': () => import('../generated/gandarillas-vergara.json'),
   'eyzaguirre-allende': () => import('../generated/eyzaguirre-allende.json'),
   'pater-germain': () => import('../generated/pater-germain.json'),
+  'cifuentes-dibarrat': () => import('../generated/cifuentes-dibarrat.json'),
 };
 
 export let title = '';

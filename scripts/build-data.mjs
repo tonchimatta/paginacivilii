@@ -16,6 +16,7 @@ const UNITS = [
   { id: 'gandarillas-vergara', notes: 'data/gandarillas-vergara.md', title: 'Gandarillas y Vergara' },
   { id: 'eyzaguirre-allende', notes: 'data/eyzaguirre-allende.md', title: 'Eyzaguirre y Allende' },
   { id: 'pater-germain', notes: 'data/pater-germain.md', title: 'Pater y Germain' },
+  { id: 'cifuentes-dibarrat', notes: 'data/cifuentes-dibarrat.md', title: 'Cifuentes y Dibarrat' },
 ];
 
 const args = Object.fromEntries(
