@@ -22,17 +22,14 @@ function InstagramIcon() {
 
 const LINKS = [
   {
-    tag: 'conoce más',
     href: 'https://www.instagram.com/avanzaruc',
     label: '@avanzaruc',
   },
   {
-    tag: '¿te interesa conocer AVZ?',
     href: 'https://docs.google.com/forms/d/e/1FAIpQLSf1YnirgALMK80H0_aFpfaoNCIvOxEmm0GCe7PlCcmgWdRr4g/viewform?pli=1',
     label: 'Únete',
   },
   {
-    tag: 'consejería de derecho',
     href: 'https://www.instagram.com/simon.ct.derecho',
     label: '@simon.ct.derecho',
   },
@@ -46,15 +43,12 @@ export default function Footer() {
     <footer className="site-footer">
       <p className="site-footer__lede">Proyecto de Avanzar UC, Consejería territorial 2025-2026</p>
 
-      <div className="site-footer__grid">
+      <div className="site-footer__links">
         {LINKS.map((l) => (
-          <div className="site-footer__block" key={l.href}>
-            <span className="site-footer__tag">{l.tag}</span>
-            <a className="site-footer__link" href={l.href} target="_blank" rel="noopener noreferrer">
-              {l.label}
-              <Arrow />
-            </a>
-          </div>
+          <a className="site-footer__link" href={l.href} target="_blank" rel="noopener noreferrer" key={l.href}>
+            {l.label}
+            <Arrow />
+          </a>
         ))}
       </div>
 
