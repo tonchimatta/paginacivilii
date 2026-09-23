@@ -4,7 +4,7 @@
 //
 // Usage:
 //   node scripts/build-data.mjs [--notes data/notes.md] [--code data/codigo-civil.md]
-//                               [--out src/generated/unit.json] [--title "Personas y Bienes"]
+//                               [--out src/generated/unit.json] [--title "Gandarillas y Vergara"]
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -22,7 +22,7 @@ const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 const notesPath = path.resolve(root, args.notes ?? 'data/notes.md');
 const codePath = path.resolve(root, args.code ?? 'data/codigo-civil.md');
 const outPath = path.resolve(root, args.out ?? 'src/generated/unit.json');
-const title = args.title ?? 'Personas y Bienes';
+const title = args.title ?? 'Gandarillas y Vergara';
 
 const code = parseCodigoCivil(fs.readFileSync(codePath, 'utf8').normalize('NFC'));
 const unit = parseNotes(fs.readFileSync(notesPath, 'utf8').normalize('NFC'), { title, code });

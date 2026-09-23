@@ -4,7 +4,7 @@ import Body from './Body.jsx';
 import Chevron from './Chevron.jsx';
 import { useMapActions } from '../graph/actions.js';
 
-const KIND_LABEL = { unidad: 'Unidad', parte: 'Parte', tema: 'Tema', subtema: 'Subtema' };
+const KIND_LABEL = { unidad: 'Apuntes', parte: 'Parte', tema: 'Tema', subtema: 'Subtema' };
 const MENU_KINDS = new Set(['parte', 'tema']);
 
 // Every heading of the notes (unidad, parte, tema, subtema) uses this card, with or without

@@ -1,6 +1,7 @@
-# Civil II · Mapa interactivo
+# Personas y Bienes · Mapas de apuntes
 
-Mapa mental de los apuntes de Derecho Civil II ("Personas y Bienes"), hecho con React + Vite,
+Página de inicio con los profesores del curso y, para cada uno con apuntes, un mapa mental de
+Derecho Civil II ("Personas y Bienes"), hecho con React + Vite,
 React Flow y Framer Motion, con un layout de árbol propio. Sitio estático, sin backend.
 
 ```bash
@@ -8,6 +9,17 @@ npm install
 npm run dev      # regenera src/generated/unit.json y levanta Vite
 npm run build    # regenera el JSON y compila a dist/
 ```
+
+## Rutas
+
+- `#/`: página de inicio "Personas y Bienes", con un carrusel de tarjetas de profesores
+  (← →, teclado o deslizando). Datos en `src/data/professors.js`.
+- `#/apuntes/gandarillas-vergara`: el mapa de los apuntes de Gandarillas y Vergara. En la
+  barra del mapa, "Personas y Bienes" vuelve al inicio.
+
+Por ahora solo Gandarillas y Vergara tiene apuntes; Eyzaguirre y Allende, Cifuentes y Dibarrat,
+Pater y Germain, Fernández y Fontecilla, y Barrientos aparecen como "Próximamente". Las
+ilustraciones de cada profesor van donde está el "!" de cada tarjeta.
 
 ## Datos
 
@@ -24,7 +36,7 @@ Unicode descompuesto (NFD) y no coincidía con la ruta escrita a mano.
 Para otra unidad basta con apuntar el script a otros apuntes, sin tocar componentes:
 
 ```bash
-node scripts/build-data.mjs --notes data/otra-unidad.md --title "Obligaciones"
+node scripts/build-data.mjs --notes data/otra-unidad.md --title "Eyzaguirre y Allende"
 ```
 
 ## Cómo se parsean los apuntes (y en qué se aparta del supuesto inicial)
