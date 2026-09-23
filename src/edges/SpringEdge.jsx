@@ -4,7 +4,9 @@ import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 // Bezier wire whose ends stay pinned to the handles while its control points trail behind
 // on an underdamped spring. When the layout moves the nodes, the wire bends, overshoots a
 // little and settles: the "elastic" feel, without letting node positions drift.
-const WIRE_SPRING = { stiffness: 140, damping: 11, mass: 0.9 };
+// Firm and well damped: a small elastic lag, settled about when the cards are (a looser
+// spring kept the wires wobbling for 2.5 s after the cards had stopped, which read as lag).
+const WIRE_SPRING = { stiffness: 380, damping: 30, mass: 0.8, restDelta: 0.5, restSpeed: 5 };
 
 export default function SpringEdge({ id, sourceX, sourceY, targetX, targetY, data }) {
   const variant = data?.variant ?? 'tree';

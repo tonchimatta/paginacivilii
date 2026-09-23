@@ -16,8 +16,8 @@ import SpringEdge from '../edges/SpringEdge.jsx';
 const nodeTypes = { topic: TopicNode, concept: ConceptNode, article: ArticleNode };
 const edgeTypes = { spring: SpringEdge };
 
-const NODE_SPRING = { type: 'spring', stiffness: 120, damping: 17, mass: 1 };
-const CAMERA_TWEEN = { duration: 0.8, ease: [0.22, 1, 0.36, 1] };
+const NODE_SPRING = { type: 'spring', stiffness: 210, damping: 26, mass: 1, restDelta: 0.001 };
+const CAMERA_TWEEN = { duration: 0.6, ease: [0.22, 1, 0.36, 1] };
 const EXIT_MS = 260;
 const PULSE_MS = 1800;
 const EMPTY = Object.freeze([]);
