@@ -45,7 +45,10 @@ const PLAIN_ART = /\b(arts?\.|art[íi]culos?)(\s+)(\d+)(º|°)?(\s+(?:bis|ter))?
 // Something right after the number that says the article is from another statute.
 const FOREIGN_LAW = /^[^.;\n]{0,45}?(?:\bCPR\b|\bCPC\b|\bCP\b|Reglamento|\bDL\b|D\.L\.|\bDFL\b|\bLey\b|C[óo]digo (?!Civil)|Proyecto|Constituci[óo]n|Convenci[óo]n|Tratado)/u;
 
-export function parseNotes(src, { title, code }) {
+// `maps`: the notes hold several maps (one per professor's notes on the same page): each
+// top-level heading is the root of its own map, and parts start one level down.
+export function parseNotes(src, { title, code, maps = false }) {
+  const offset = maps ? 1 : 0;
   const warnings = [];
   const sections = splitSections(src, warnings);
 
@@ -89,7 +92,7 @@ export function parseNotes(src, { title, code }) {
   });
   usedIds.add('root');
 
-  const KIND_BY_DEPTH = ['unidad', 'parte', 'tema', 'subtema', 'subtema'];
+  const KIND_BY_DEPTH = [...(maps ? ['unidad'] : []), 'unidad', 'parte', 'tema', 'subtema', 'subtema'];
   const KIND_BY_ORIGIN = { label: 'apartado', item: 'apartado', case: 'caso' };
 
   // A node carries only its definition (`markdown`); everything that depends on it is a child.
@@ -182,7 +185,16 @@ export function parseNotes(src, { title, code }) {
   for (const key of missing) warnings.push(`artículo citado que no existe en el Código Civil parseado: ${key}`);
 
   // ---- Cross-links --------------------------------------------------------------------
-  const { matcher, keyToId } = buildTitleMatcher(nodes, warnings);
+  // Between two maps only titles that name something on their own link: headings or labels
+  // of 2+ words that are not generic ("Naturaleza jurídica", "Las acciones").
+  const mapOf = (id) => {
+    let n = byId.get(id);
+    while (n && n.depth > 1) n = byId.get(n.parentId);
+    return n?.id;
+  };
+  const CROSS_GENERIC = /^(naturaleza jurídica|acciones|concepto y .*|requisitos|efectos|clasificación|características|utilidad)$/;
+  const crossMapOk = (t) => normalizeKey(t.title).includes(' ') && !CROSS_GENERIC.test(normalizeKey(t.title)) && !GENERIC_LABELS.has(normalizeKey(t.title));
+  const { matcher, keyToId } = buildTitleMatcher(nodes, warnings, offset);
   let conceptRefs = 0;
   if (matcher) {
     for (const node of nodes) {
@@ -193,6 +205,7 @@ export function parseNotes(src, { title, code }) {
         text.replace(matcher, (m) => {
           const target = keyToId.get(normalizeKey(m));
           if (!target || blocked.has(target) || linked.has(target)) return m;
+          if (maps && mapOf(target) !== mapOf(node.id) && !crossMapOk(byId.get(target))) return m;
           linked.add(target);
           conceptRefs++;
           node.refs.push({ type: 'concept-ref', targetNodeId: target });
@@ -207,6 +220,7 @@ export function parseNotes(src, { title, code }) {
   return {
     title,
     rootId: root.id,
+    ...(maps ? { maps: [...root.children] } : {}),
     nodes,
     articles,
     warnings,
@@ -635,12 +649,12 @@ function normalizeKey(s) {
     .trim();
 }
 
-function buildTitleMatcher(nodes, warnings) {
+function buildTitleMatcher(nodes, warnings, offset = 0) {
   const counts = new Map();
   const keyToId = new Map();
   const eligible = new Map();
   for (const n of nodes) {
-    if (n.id === 'root' || n.pending) continue;
+    if (n.id === 'root' || n.pending || n.depth < 1 + offset) continue;
     const key = normalizeKey(n.title);
     if (!key) continue;
     counts.set(key, (counts.get(key) ?? 0) + 1);
@@ -648,7 +662,7 @@ function buildTitleMatcher(nodes, warnings) {
     // One-word titles ("dominio", "tradición") are only link targets when they name a
     // specific tema or subtema: part titles and one-word labels ("Objetiva") would link
     // everywhere. Court cases are never targets.
-    eligible.set(key, n.origin !== 'case' && (key.includes(' ') || (n.depth >= 2 && n.origin === 'heading')));
+    eligible.set(key, n.origin !== 'case' && (key.includes(' ') || (n.depth - offset >= 2 && n.origin === 'heading')));
   }
   const keys = [];
   for (const [key, count] of counts) {

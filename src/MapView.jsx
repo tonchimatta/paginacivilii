@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ReactFlowProvider } from 'reactflow';
 import MindMap from './graph/MindMap.jsx';
-import { title, nodesById, rootId, tintOf } from './data/unit.js';
+import { title, nodesById, rootId, maps, mapOf, tintOf } from './data/unit.js';
 import { COURSE } from './data/professors.js';
 
 const FONTS = {
@@ -9,7 +9,9 @@ const FONTS = {
   serif: { label: 'Plex Serif + Mono', next: 'sans' },
 };
 
-const HOME = { key: 'home', rootId };
+// Home tabs: one per map of the unit (a single one, unless the page joins several
+// professors' notes). They open together and are reopened by the home icon.
+const homeTabs = () => maps.map((id, i) => ({ key: i ? `map:${id}` : 'home', rootId: id }));
 
 function readTitlesOnly() {
   try {
@@ -39,7 +41,9 @@ export default function MapView() {
   const [titlesOnly, setTitlesOnly] = useState(readTitlesOnly);
   // In-page tabs: the home tab shows the whole unit; each other tab one isolated branch.
   // Every tab keeps its own map (open branches, camera) while it stays open.
-  const [tabs, setTabs] = useState([HOME]);
+  const [homes] = useState(homeTabs);
+  const HOME = homes[0];
+  const [tabs, setTabs] = useState(homes);
   const [activeKey, setActiveKey] = useState(HOME.key);
   const [menu, setMenu] = useState(null); // { nodeId, x, y }
   const controls = useRef(new Map()); // tab key -> { fitAll, collapseAll, collapseLast, focusNode }
@@ -75,14 +79,14 @@ export default function MapView() {
   const goHome = useCallback(() => {
     setTabs((prev) => (prev.some((t) => t.key === HOME.key) ? prev : [HOME, ...prev]));
     setActiveKey(HOME.key);
-  }, []);
+  }, [HOME]);
 
   const closeTab = (key) => {
     const i = tabs.findIndex((t) => t.key === key);
     const next = tabs.filter((t) => t.key !== key);
     controls.current.delete(key);
     if (!next.length) {
-      setTabs([HOME]);
+      setTabs(homes);
       setActiveKey(HOME.key);
       return;
     }
@@ -90,14 +94,17 @@ export default function MapView() {
     if (key === activeKey) setActiveKey(next[Math.max(0, i - 1)].key);
   };
 
-  // A cross-reference from a branch tab that points outside the branch opens on home.
+  // A cross-reference that points outside the tab's tree opens on the home tab of the map
+  // that holds it (the other map, when the page has two).
   const focusOnHome = useCallback(
     (nodeId) => {
-      goHome();
+      const home = homes.find((h) => h.rootId === mapOf(nodeId)) ?? HOME;
+      setTabs((prev) => (prev.some((t) => t.key === home.key) ? prev : [home, ...prev]));
+      setActiveKey(home.key);
       // The home map may be mounting right now; give it a frame to register its controls.
-      requestAnimationFrame(() => requestAnimationFrame(() => controls.current.get(HOME.key)?.focusNode(nodeId)));
+      requestAnimationFrame(() => requestAnimationFrame(() => controls.current.get(home.key)?.focusNode(nodeId)));
     },
-    [goHome],
+    [homes, HOME],
   );
 
   const openMenu = useCallback((nodeId, x, y) => setMenu({ nodeId, x, y }), []);

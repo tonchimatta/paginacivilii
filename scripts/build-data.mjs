@@ -11,13 +11,23 @@ import path from 'node:path';
 import { parseCodigoCivil } from './lib/parse-codigo.mjs';
 import { parseNotes } from './lib/parse-notes.mjs';
 
-// One entry per professor with notes; `id` must match src/data/professors.js.
+// One entry per professor with notes; `id` must match src/data/professors.js. An entry with
+// `maps` joins several notes files: each one becomes a map of its own (its headings go one
+// level down, under a heading with the map's title) and cross-links run between them.
 const UNITS = [
   { id: 'gandarillas-vergara', notes: 'data/gandarillas-vergara.md', title: 'Gandarillas y Vergara' },
   { id: 'eyzaguirre-allende', notes: 'data/eyzaguirre-allende.md', title: 'Eyzaguirre y Allende' },
   { id: 'pater-germain', notes: 'data/pater-germain.md', title: 'Pater y Germain' },
   { id: 'cifuentes-dibarrat', notes: 'data/cifuentes-dibarrat.md', title: 'Cifuentes y Dibarrat' },
-  { id: 'fernandez-fontecilla', notes: 'data/fernandez-fontecilla.md', title: 'Fernández y Fontecilla' },
+  // Two professors' notes on one page: two separate maps, with cross-links between them.
+  {
+    id: 'fernandez-fontecilla',
+    title: 'Fernández y Fontecilla',
+    maps: [
+      { notes: 'data/fernandez.md', title: 'Fernández · Bienes' },
+      { notes: 'data/fontecilla.md', title: 'Fontecilla · Personas' },
+    ],
+  },
 ];
 
 const args = Object.fromEntries(
@@ -36,9 +46,12 @@ const jobs = args.notes
   : UNITS.map((u) => ({ ...u, out: `src/generated/${u.id}.json` }));
 
 for (const job of jobs) {
-  const notesPath = path.resolve(root, job.notes);
+  const read = (file) => fs.readFileSync(path.resolve(root, file), 'utf8').normalize('NFC');
+  const src = job.maps
+    ? job.maps.map((m) => `# ${m.title}\n\n${read(m.notes).replace(/^(#{1,5}) /gm, '#$1 ')}`).join('\n\n')
+    : read(job.notes);
   const outPath = path.resolve(root, job.out);
-  const unit = parseNotes(fs.readFileSync(notesPath, 'utf8').normalize('NFC'), { title: job.title, code });
+  const unit = parseNotes(src, { title: job.title, code, maps: Boolean(job.maps) });
 
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, JSON.stringify(unit, null, 1));

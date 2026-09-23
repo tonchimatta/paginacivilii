@@ -18,6 +18,10 @@ npm run build    # regenera los JSON y compila a dist/
   `eyzaguirre-allende`). En la barra del mapa, "Personas y Bienes" vuelve al inicio. Cada mapa
   se descarga aparte, recién cuando se abre.
 
+La página de Fernández y Fontecilla junta dos apuntes como dos mapas separados, cada uno en su
+pestaña fija ("Fernández · Bienes" y "Fontecilla · Personas"); los términos de uno enlazan al
+otro y al tocarlos se cambia de pestaña (`maps` en `scripts/build-data.mjs`).
+
 Por ahora tienen apuntes Gandarillas y Vergara, Eyzaguirre y Allende, Pater y Germain, Cifuentes y Dibarrat,
 y Fernández y Fontecilla; Barrientos aparece como "Próximamente". Las
 ilustraciones de cada profesor van donde está el "!" de cada tarjeta.
@@ -29,6 +33,7 @@ ilustraciones de cada profesor van donde está el "!" de cada tarjeta.
 | `data/gandarillas-vergara.md` | Apuntes de Gandarillas y Vergara (antes `SOLEMNE CIVIL II.md`) |
 | `data/eyzaguirre-allende.md` | Apuntes de Eyzaguirre y Allende, ya ordenados (ver abajo) |
 | `data/raw/eyzaguirre.md` | Los mismos apuntes tal como llegaron (PDF convertido a markdown) |
+| `data/fernandez.md`, `data/fontecilla.md` | Fernández (Bienes) y Fontecilla (Personas): dos mapas en la misma página |
 | `data/codigo-civil.md` | Código Civil (antes `CC - Código Civil.md`) |
 | `scripts/build-data.mjs` | Preprocesador: cada apunte -> `src/generated/<id>.json` |
 | `scripts/prepare-eyzaguirre.mjs` | Limpieza única del PDF convertido de Eyzaguirre y Allende |

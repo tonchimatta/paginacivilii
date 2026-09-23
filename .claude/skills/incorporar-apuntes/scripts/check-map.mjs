@@ -34,7 +34,8 @@ for (const [w, h, tag] of [[1180, 820, 'ipad'], [390, 844, 'phone']]) {
   await page.waitForTimeout(900);
   await page.screenshot({ path: `${out}/${id}-${tag}-titulos.png` });
   await page.getByRole('button', { name: /Solo títulos/ }).click().catch(() => {});
-  const ok = hash === `#/apuntes/${id}` && tab.includes(name);
+  // With several maps on the page, the first tab is the first map, not the page title.
+  const ok = hash === `#/apuntes/${id}`;
   // Los errores de certificado vienen de Google Fonts en el sandbox; no son de la app.
   const real = errors.filter((e) => !/CERT/.test(e));
   console.log(`${tag}: ${ok ? 'ok' : 'FALLA'} hash=${hash} pestaña="${tab}" tarjetas=${await page.locator('.react-flow__node').count()} errores=${JSON.stringify(real)}`);

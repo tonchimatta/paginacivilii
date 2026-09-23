@@ -245,7 +245,12 @@ imprime. Los artículos de otra norma citados sin nombrarla (el Reglamento del C
    ahí; sin `route` la tarjeta dice "Próximamente").
 4. `README.md`: tabla de datos, rutas, y una sección corta con lo particular de estos apuntes
    (qué se limpió, qué se movió, qué tablas se rearmaron).
-5. `src/generated/` no se versiona; el deploy regenera los JSON (`prebuild`).
+5. **Dos apuntes en la misma página** (dos profesores en una tarjeta del inicio, p. ej.
+   Fernández y Fontecilla): en `UNITS` de `build-data.mjs` usa `maps: [{ notes, title }, ...]`
+   en vez de `notes`. Cada archivo queda como un mapa propio, con su numeración, en una pestaña
+   fija; las referencias cruzadas corren entre ambos (solo títulos de 2 o más palabras que no
+   sean genéricos) y al tocar una del otro mapa se cambia de pestaña.
+6. `src/generated/` no se versiona; el deploy regenera los JSON (`prebuild`).
 
 ### 8. Verificación
 
