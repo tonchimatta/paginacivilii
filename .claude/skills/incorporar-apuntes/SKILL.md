@@ -11,8 +11,8 @@ El sitio muestra un mapa mental por profesor. Cada mapa sale de un markdown en
 dejar el markdown en el formato que el parser ya entiende. El formato de referencia (cómo se
 escriben etiquetas, listas, citas y numeración; no qué partes lleva) son los apuntes de
 Gandarillas y Vergara (`data/gandarillas-vergara.md`), que la usuaria aprobó;
-Eyzaguirre y Allende (`data/eyzaguirre-allende.md`) es el ejemplo de apuntes que llegaron
-como PDF convertido y hubo que limpiar.
+`scripts/prepare-eyzaguirre.mjs` es el ejemplo de limpieza de apuntes que llegaron como PDF
+convertido (la versión anterior de Eyzaguirre, ya reemplazada).
 
 Lee `formato.md` (en esta carpeta) antes de editar: explica qué hace el parser con cada
 construcción markdown y cómo se ve eso en el mapa.
@@ -215,8 +215,8 @@ imprime. Los artículos de otra norma citados sin nombrarla (el Reglamento del C
 - Estilo de Gandarillas (preferido si reescribes el formato de una cita):
   `***art. [[Código Civil#^art-577|577]]***` en el texto y, para citar el texto legal,
   `***Art. [[Código Civil#^art-565|565]]***: *"Los bienes consisten..."*`.
-  Estilo de Eyzaguirre (se respeta como vino): `**Art. [[Código Civil#^art-565|565]] CC** “...”`.
-  Los dos funcionan.
+  Si los apuntes traen otro estilo (`**Art. [[Código Civil#^art-565|565]] CC** “...”`), se
+  respeta como vino: los dos funcionan.
 - Normas que no son del Código (CPR, COT, Reg. CBR, leyes): texto plano, sin enlace
   (`***art. 19 Nº 24 CPR***`). El parser además ignora "art. N" seguido de CPR, Ley, DL, etc.
 - Una cita en texto plano sin link ("según el artículo 570") solo se enlaza si ese número
@@ -232,7 +232,7 @@ imprime. Los artículos de otra norma citados sin nombrarla (el Reglamento del C
   `**Hechos.**`, `**La pregunta.**`, `**La regla.**`, `**Decisión.**`...).
 - `==texto==` se muestra resaltado. `[Pendiente]` al comienzo de un título marca un tema sin
   desarrollar.
-- Ejemplos: `- Ej: ...` (Gandarillas) o `- P. ej. ...` (Eyzaguirre) como sub-viñeta del
+- Ejemplos: `- Ej: ...` (Gandarillas) o `- P. ej. ...` como sub-viñeta del
   ítem que ilustran. Los "P. ej." de una lista partida se quedan en la tarjeta del ítem
   anterior.
 

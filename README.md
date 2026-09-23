@@ -31,12 +31,12 @@ ilustraciones de cada profesor van donde está el "!" de cada tarjeta.
 | Archivo | Qué es |
 |---|---|
 | `data/gandarillas-vergara.md` | Apuntes de Gandarillas y Vergara (antes `SOLEMNE CIVIL II.md`) |
-| `data/eyzaguirre-allende.md` | Apuntes de Eyzaguirre y Allende, ya ordenados (ver abajo) |
-| `data/raw/eyzaguirre.md` | Los mismos apuntes tal como llegaron (PDF convertido a markdown) |
+| `data/eyzaguirre-allende.md` | Apuntes de Eyzaguirre y Allende (solemne), ya ordenados (ver abajo) |
+| `data/raw/eyzaguirre.md` | Los mismos apuntes tal como llegaron |
 | `data/fernandez.md`, `data/fontecilla.md` | Fernández (Bienes) y Fontecilla (Personas): dos mapas en la misma página |
 | `data/codigo-civil.md` | Código Civil (antes `CC - Código Civil.md`) |
 | `scripts/build-data.mjs` | Preprocesador: cada apunte -> `src/generated/<id>.json` |
-| `scripts/prepare-eyzaguirre.mjs` | Limpieza única del PDF convertido de Eyzaguirre y Allende |
+| `scripts/prepare-eyzaguirre.mjs` | Limpieza de un PDF convertido (lo usó la versión anterior de Eyzaguirre; queda de plantilla) |
 | `src/generated/*.json` | Árboles ya parseados (no se versionan); la app solo lee esto |
 
 Los archivos originales se movieron a `data/` con nombres ASCII: el nombre del Código venía en
@@ -48,27 +48,17 @@ tocar componentes.
 
 ## Apuntes de Eyzaguirre y Allende
 
-Llegaron como un PDF convertido a markdown, con los niveles de título desordenados.
-`scripts/prepare-eyzaguirre.mjs` hizo la limpieza mecánica: sacó portada, índice y encabezados
-de página; unió párrafos, citas y tablas cortadas por un salto de página; pasó las notas al pie
-al texto, entre paréntesis (las que solo copiaban el artículo citado se eliminaron, porque el
-artículo se abre al tocarlo); quitó subrayados y resaltados; y convirtió "art. 565 cc" en enlaces.
-Después, a mano, en `data/eyzaguirre-allende.md`:
+Reemplazan a una versión anterior (un PDF convertido). Los nuevos llegaron en markdown limpio y
+cubren solo Los bienes: una parte, dos temas (concepto de bien y cosa; las doce clasificaciones).
+Cambios sobre el original:
 
-- La jerarquía sigue las mismas seis partes que Gandarillas y Vergara: I. Bienes, II. El
-  dominio, III. La copropiedad, IV. Modos de adquirir el dominio, V. La tradición y VI. La
-  posesión. Ocupación y accesión pasaron a la parte IV (en el PDF venían después de la
-  inscripción conservatoria) y la copropiedad salió de "Limitaciones del dominio" a su propia parte.
-- Temas numerados de corrido (1 a 47), subtemas 1.1 y letras a), como en Gandarillas.
-- Se armaron a mano tres tablas que el PDF desarmó en columnas (universalidades, doctrina romanista
-  y germánica, posesión regular e irregular) y las listas cuyo anidado se perdió.
-- Para que cada tarjeta tenga una sola idea: las preguntas que abren un párrafo en secciones
-  largas ("¿Qué pasa con la partición?") y las viñetas que abren con un término en negrita
-  dentro de listas mezcladas son etiquetas, o sea tarjetas propias. Los "P. ej." de una lista
-  se quedan en la tarjeta del ítem anterior, en vez de ser tarjetas sueltas.
-
-El texto no se reescribió: solo se movieron límites de negrita, se unieron líneas cortadas y se
-agregaron títulos de subtema donde una sección cambiaba de tema (p. ej. "Tradición bajo condición").
+- Se quitaron el encabezado y la nota inicial, y "LOS BIENES" pasó a "Los bienes".
+- Las citas `***art. 565 CC***` se enlazaron con `link-articles.py` (92; quedan en texto las
+  de la Constitución).
+- Las letras de las viñetas ("a) Corporales") se quitaron para que el título de la tarjeta sea
+  el término, y los "Ej:" de las listas pasaron a "P. ej." para quedarse con su ítem.
+- Algunas etiquetas se reescribieron con dos puntos ("**Inmuebles:**", "**Muebles:**") para que
+  abran su propia tarjeta.
 
 ## Cómo se parsean los apuntes (y en qué se aparta del supuesto inicial)
 
