@@ -31,6 +31,8 @@ const UNITS = [
       { notes: 'data/fontecilla.md', title: 'Fontecilla · Personas' },
     ],
   },
+  // Derecho Romano II (src/data/derecho-romano-ii.js), not Personas y Bienes.
+  { id: 'correa-bascunan-pater', notes: 'data/correa-bascunan-pater.md', title: 'Correa Bascuñán (pater)' },
 ];
 
 const args = Object.fromEntries(

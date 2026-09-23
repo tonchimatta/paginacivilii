@@ -10,6 +10,7 @@ export const UNITS = {
   'cifuentes-dibarrat': () => import('../generated/cifuentes-dibarrat.json'),
   barrientos: () => import('../generated/barrientos.json'),
   'fernandez-fontecilla': () => import('../generated/fernandez-fontecilla.json'), // 2 mapas
+  'correa-bascunan-pater': () => import('../generated/correa-bascunan-pater.json'), // Derecho Romano II
 };
 
 export let title = '';

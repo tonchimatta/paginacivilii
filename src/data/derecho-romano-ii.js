@@ -10,7 +10,7 @@ export const SITE_TITLE = 'mapas romano II AVZ';
 export const PROFESSORS = [
   { id: 'schiele', name: 'Schiele', theme: 'lavender' },
   { id: 'amunategui', name: 'Amunátegui', theme: 'pink' },
-  { id: 'correa-bascunan-pater', name: 'Correa Bascuñán (pater)', theme: 'peach' },
+  { id: 'correa-bascunan-pater', name: 'Correa Bascuñán (pater)', route: '#/romano-ii/apuntes/correa-bascunan-pater', theme: 'peach' },
   { id: 'correa-manriquez', name: 'Correa Manríquez', theme: 'yellow' },
   { id: 'wegman', name: 'Wegman', theme: 'sky' },
   { id: 'carvajal', name: 'Carvajal', theme: 'mint' },

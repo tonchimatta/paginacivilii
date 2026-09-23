@@ -16,9 +16,9 @@ npm run build    # regenera los JSON y compila a dist/
 - **Personas y Bienes** (Derecho Civil II), en `#/`: el curso original. Profesores en
   `src/data/professors.js`.
 - **Derecho Romano II**, en `#/romano-ii`: profesores en `src/data/derecho-romano-ii.js`. Por
-  ahora ninguno tiene apuntes cargados (las tarjetas muestran "Próximamente"); se incorporan
-  con el mismo procedimiento que un profesor de Personas y Bienes (ver "Rutas" y "Para sumar
-  un profesor" más abajo).
+  ahora solo Correa Bascuñán (pater) tiene apuntes cargados; el resto muestra "Próximamente"
+  hasta que se incorporen, con el mismo procedimiento que un profesor de Personas y Bienes (ver
+  "Rutas" y "Para sumar un profesor" más abajo).
 
 Cada curso es una entrada de `src/data/courses.js` (`id`, `path`, `title`, `siteTitle`,
 `professors`); un enlace bajo el título de cada página de inicio lleva al otro curso.
@@ -52,6 +52,8 @@ profesor van donde está el "!" de cada tarjeta.
 | `data/barrientos.md` | Apuntes de Barrientos (patrimonio y derechos reales y personales) |
 | `data/fernandez.md`, `data/fontecilla.md` | Fernández (Bienes) y Fontecilla (Personas): dos mapas en la misma página |
 | `data/codigo-civil.md` | Código Civil (antes `CC - Código Civil.md`) |
+| `data/correa-bascunan-pater.md` | Derecho Romano II, apuntes de Correa Bascuñán (pater); ver abajo |
+| `data/raw/correa-bascunan-pater.md` | Los mismos apuntes tal como llegaron |
 | `scripts/build-data.mjs` | Preprocesador: cada apunte -> `src/generated/<id>.json` |
 | `scripts/prepare-eyzaguirre.mjs` | Limpieza de un PDF convertido (lo usó la versión anterior de Eyzaguirre; queda de plantilla) |
 | `src/generated/*.json` | Árboles ya parseados (no se versionan); la app solo lee esto |
@@ -65,6 +67,39 @@ Para sumar un profesor de Personas y Bienes: agregar sus apuntes en `data/`, una
 Derecho Romano II) es lo mismo, pero el `route` se agrega en el archivo de profesores de ese
 curso (`src/data/derecho-romano-ii.js`) con el prefijo de su `path` en `src/data/courses.js`
 (`'#/romano-ii/apuntes/<id>'`).
+
+## Apuntes de Correa Bascuñán (pater)
+
+Únicos apuntes de Derecho Romano II por ahora. Llegaron como un documento exportado de Google
+Docs (párrafos separados por línea en blanco, encabezados en negrita+cursiva sin niveles
+consistentes, viñetas decorativas ❖ ➔ ➢ ●, fechas de clase sueltas como "07/08/2026"), sin
+ninguna cita al Código Civil (es otra materia). Cambios sobre el original:
+
+- Se quitó la portada (control de lectura) y las ~17 fechas de clase sueltas.
+- Los encabezados en `**_Texto_**` pasaron a texto plano; las viñetas decorativas se quitaron
+  de encabezados y listas.
+- El apunte solo trae `#`/`##` explícitos para sus tres partes (Bienes, Obligaciones, Fuentes
+  de las obligaciones); todos los demás niveles (temas, subtemas) se armaron a mano siguiendo
+  el orden y el peso de cada sección, no el nivel de encabezado que traía el original (que no
+  era confiable). Bienes y la posesión quedan en un solo tema ("El dominio y la posesión")
+  porque el apunte alterna entre ambos temas sin una división clara.
+- Un párrafo de fecha partía un ítem de la sección "Diferencia entre derecho real y derecho
+  personal" en dos: la lista que seguía a la fecha se movió junto al resto de esa sección en
+  vez de quedar colgando de la última subsección abierta.
+- Algunos títulos partidos por el conversor se rearmaron ("Longis temporis praescriptio",
+  "Acción negatoria") y una definición de "Novación" que quedó repartida en dos encabezados se
+  unió en un solo párrafo.
+- "Usufructo" y "Uso" (y el resto de las servidumbres personales: Habitación, Trabajo de los
+  esclavos, Trabajo de los animales, Enfiteusis, Superficie) eran viñetas dentro de una lista;
+  se promovieron a subtemas propios porque el apunte trae sub-secciones completas para
+  Usufructo (Derechos del usufructuario, Situación del propietario, Cautio usufructuaria) y
+  para Uso (Facultades) que de otro modo quedaban mal anidadas.
+- Un ejercicio de repaso ("Caso I", con las respuestas de un control) queda tal cual, al final
+  de Bienes, bajo su propio tema ("Caso de repaso").
+- Tres párrafos sin etiqueta que inflaban sus tarjetas por sobre 2500 caracteres (en Mutuo y en
+  Ejecución de la obligación) se separaron con una etiqueta o un subtema nuevo. Queda una
+  tarjeta larga ("Constitución de servidumbres", con Usufructo civil/clásico/postclásico
+  anidado a tres niveles de lista) que no se fragmentó para no reestructurar de más.
 
 ## Apuntes de Eyzaguirre y Allende
 
