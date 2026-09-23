@@ -1434,7 +1434,7 @@ Al hablar de invención o hallazgo de una cosa _res derelictae_ suele tratarse d
 
 **Aprehensión material:** Debo tomar materialmente la cosa, tomar posesión con el ánimo de tomar posesión de la cosa. La ocupación no
 
-#### Sobre el hallazgo de los tesoros
+#### a) Sobre el hallazgo de los tesoros
 
 **Art. [[Código Civil#^art-625|625]] CC** “El descubrimiento de un tesoro es una especie de invención o hallazgo.
 
@@ -1473,7 +1473,7 @@ Pensado para favorecer a los jesuitas que, antes de ser expulsados, enterraron t
 
 Entonces, puede pedirse al dueño de un terreno que le permite entrar a retirar algo que le pertenece, pero se debe señalar precisamente dónde está, rendir garantía de ser el dueño y de pagar las indemnizaciones correspondientes. ¿Por qué es relevante? Si es que no se logra acreditar el dominio de esas cosas, se considera que hay un tesoro, y si se encuentra en predio ajeno con autorización, se divide a la mitad el tesoro. Aunque también, de no acreditar el dominio, puede investigar Bienes Nacionales.
 
-#### Captura bélica
+#### b) Captura bélica
 
 Es el despojo de bienes del vencido en provecho del vencedor, es decir, se va a guerra y, además de ganarla, el vencedor saquea la ciudad. En la capturar bélica se distingue entre:
 
