@@ -18,8 +18,8 @@ npm run build    # regenera los JSON y compila a dist/
   `eyzaguirre-allende`). En la barra del mapa, "Personas y Bienes" vuelve al inicio. Cada mapa
   se descarga aparte, recién cuando se abre.
 
-Por ahora tienen apuntes Gandarillas y Vergara, y Eyzaguirre y Allende; Cifuentes y Dibarrat,
-Pater y Germain, Fernández y Fontecilla, y Barrientos aparecen como "Próximamente". Las
+Por ahora tienen apuntes Gandarillas y Vergara, Eyzaguirre y Allende, y Pater y Germain; Cifuentes y Dibarrat,
+Fernández y Fontecilla, y Barrientos aparecen como "Próximamente". Las
 ilustraciones de cada profesor van donde está el "!" de cada tarjeta.
 
 ## Datos

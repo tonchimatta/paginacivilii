@@ -8,7 +8,7 @@ export const PROFESSORS = [
   { id: 'gandarillas-vergara', name: 'Gandarillas y Vergara', route: '#/apuntes/gandarillas-vergara', theme: 'lavender' },
   { id: 'eyzaguirre-allende', name: 'Eyzaguirre y Allende', route: '#/apuntes/eyzaguirre-allende', theme: 'pink' },
   { id: 'cifuentes-dibarrat', name: 'Cifuentes y Dibarrat', theme: 'peach' },
-  { id: 'pater-germain', name: 'Pater y Germain', theme: 'yellow' },
+  { id: 'pater-germain', name: 'Pater y Germain', route: '#/apuntes/pater-germain', theme: 'yellow' },
   { id: 'fernandez-fontecilla', name: 'Fernández y Fontecilla', theme: 'sky' },
   { id: 'barrientos', name: 'Barrientos', theme: 'mint' },
 ];
