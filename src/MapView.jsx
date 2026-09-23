@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ReactFlowProvider } from 'reactflow';
 import MindMap from './graph/MindMap.jsx';
+import Finder from './search/Finder.jsx';
 import { title, nodesById, rootId, maps, mapOf, tintOf } from './data/unit.js';
 import { COURSE } from './data/professors.js';
 
@@ -46,6 +47,7 @@ export default function MapView() {
   const [tabs, setTabs] = useState(homes);
   const [activeKey, setActiveKey] = useState(HOME.key);
   const [menu, setMenu] = useState(null); // { nodeId, x, y }
+  const [finderOpen, setFinderOpen] = useState(false);
   const controls = useRef(new Map()); // tab key -> { fitAll, collapseAll, collapseLast, focusNode }
 
   useEffect(() => {
@@ -107,6 +109,19 @@ export default function MapView() {
     [homes, HOME],
   );
 
+  // Cmd/Ctrl+F opens the card finder instead of the browser's (the map isn't page text).
+  useEffect(() => {
+    const onKey = (e) => {
+      if ((e.metaKey || e.ctrlKey) && !e.altKey && e.key.toLowerCase() === 'f') {
+        e.preventDefault();
+        setMenu(null);
+        setFinderOpen(true);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
   const openMenu = useCallback((nodeId, x, y) => setMenu({ nodeId, x, y }), []);
 
   useEffect(() => {
@@ -157,6 +172,13 @@ export default function MapView() {
           {title} · {nodesById.size} tarjetas
         </span>
         <span className="bar__spacer" />
+        <button type="button" className="pill bar__search" onClick={() => setFinderOpen(true)} aria-label="Buscar tarjetas" title="Buscar tarjetas (⌘F / Ctrl+F)">
+          <svg viewBox="0 0 20 20" width="15" height="15" aria-hidden>
+            <circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" strokeWidth="1.6" />
+            <path d="m13 13 4.5 4.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          </svg>
+          <span className="bar__search-label">Buscar</span>
+        </button>
         <span className="bar__hint">
           <span className="bar__key bar__key--concept">término</span> salta a su tarjeta ·{' '}
           <span className="bar__key bar__key--art">art.</span> abre el Código
@@ -213,6 +235,8 @@ export default function MapView() {
           </div>
         ))}
       </nav>
+
+      <Finder open={finderOpen} onClose={() => setFinderOpen(false)} onPick={(id) => active()?.focusNode(id)} />
 
       {menu ? (
         <div
