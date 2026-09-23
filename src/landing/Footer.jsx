@@ -44,11 +44,9 @@ const LINKS = [
 export default function Footer() {
   return (
     <footer className="site-footer">
+      <p className="site-footer__lede">Proyecto de Avanzar UC, Consejería territorial 2025-2026</p>
+
       <div className="site-footer__grid">
-        <div className="site-footer__block">
-          <span className="site-footer__tag">proyecto</span>
-          <p className="site-footer__text">Proyecto de Avanzar UC, Consejería territorial 2025-2026</p>
-        </div>
         {LINKS.map((l) => (
           <div className="site-footer__block" key={l.href}>
             <span className="site-footer__tag">{l.tag}</span>
