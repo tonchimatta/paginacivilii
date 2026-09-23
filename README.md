@@ -33,6 +33,7 @@ ilustraciones de cada profesor van donde está el "!" de cada tarjeta.
 | `data/gandarillas-vergara.md` | Apuntes de Gandarillas y Vergara (antes `SOLEMNE CIVIL II.md`) |
 | `data/eyzaguirre-allende.md` | Apuntes de Eyzaguirre y Allende (solemne), ya ordenados (ver abajo) |
 | `data/raw/eyzaguirre.md` | Los mismos apuntes tal como llegaron |
+| `data/cifuentes-dibarrat.md`, `data/cifuentes-dibarrat-personas.md` | Cifuentes y Dibarrat: Bienes y Personas, dos mapas en la misma página |
 | `data/fernandez.md`, `data/fontecilla.md` | Fernández (Bienes) y Fontecilla (Personas): dos mapas en la misma página |
 | `data/codigo-civil.md` | Código Civil (antes `CC - Código Civil.md`) |
 | `scripts/build-data.mjs` | Preprocesador: cada apunte -> `src/generated/<id>.json` |

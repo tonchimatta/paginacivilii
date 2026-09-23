@@ -18,7 +18,9 @@ const UNITS = [
   { id: 'gandarillas-vergara', notes: 'data/gandarillas-vergara.md', title: 'Gandarillas y Vergara' },
   { id: 'eyzaguirre-allende', notes: 'data/eyzaguirre-allende.md', title: 'Eyzaguirre y Allende' },
   { id: 'pater-germain', notes: 'data/pater-germain.md', title: 'Pater y Germain' },
-  { id: 'cifuentes-dibarrat', notes: 'data/cifuentes-dibarrat.md', title: 'Cifuentes y Dibarrat' },
+  { id: 'cifuentes-dibarrat', title: 'Cifuentes y Dibarrat', maps: [
+      { notes: 'data/cifuentes-dibarrat.md', title: 'Cifuentes y Dibarrat · Bienes' },
+      { notes: 'data/cifuentes-dibarrat-personas.md', title: 'Cifuentes y Dibarrat · Personas' } ] },
   // Two professors' notes on one page: two separate maps, with cross-links between them.
   {
     id: 'fernandez-fontecilla',

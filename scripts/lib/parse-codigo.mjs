@@ -11,6 +11,9 @@ const HEADING_ART = /^#{1,6}\s+Artículo\s+(.+?)\.?\s*$/;
 const INLINE_ART = /^Artículo\s+(\d+(?:\s+(?:bis|ter|quáter|quater|quinquies))?(?:-\d+)?|final)\s*\.-?\s*(.*)$/i;
 const STRUCTURE = /^#{1,6}\s+(Libro|Título|Párrafo)\s*:?\s*(.*)$/i;
 
+// Some inserted articles are written "Art. 548-1. ..." instead of "Artículo".
+const INLINE_ART_DASH = /^Art\.\s+(\d+-\d+)\s*\.-?\s*(.*)$/;
+
 export function articleKey(raw) {
   return String(raw)
     .toLowerCase()
@@ -62,7 +65,7 @@ export function parseCodigoCivil(src) {
       current = { key: articleKey(h[1]), number: h[1].trim(), lines: [] };
       continue;
     }
-    const inl = line.match(INLINE_ART);
+    const inl = line.match(INLINE_ART) ?? line.match(INLINE_ART_DASH);
     if (inl) {
       flush();
       current = { key: articleKey(inl[1]), number: inl[1].trim(), lines: [inl[2]] };
