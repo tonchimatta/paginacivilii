@@ -17,6 +17,7 @@ const UNITS = [
   { id: 'eyzaguirre-allende', notes: 'data/eyzaguirre-allende.md', title: 'Eyzaguirre y Allende' },
   { id: 'pater-germain', notes: 'data/pater-germain.md', title: 'Pater y Germain' },
   { id: 'cifuentes-dibarrat', notes: 'data/cifuentes-dibarrat.md', title: 'Cifuentes y Dibarrat' },
+  { id: 'fernandez-fontecilla', notes: 'data/fernandez-fontecilla.md', title: 'Fernández y Fontecilla' },
 ];
 
 const args = Object.fromEntries(

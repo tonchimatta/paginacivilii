@@ -25,6 +25,7 @@ Scripts auxiliares en `scripts/` de esta skill (todos reciben la ruta del markdo
 | `section.py <md> "título" [ancho]` | Una sección, una línea por párrafo, con número de línea |
 | `patch.py <md> <parche.txt>` | Reemplazos exactos (`<<<` viejo `===` nuevo `>>>`); falla si algo no calza |
 | `renumber.py <md>` | Numera los 6 niveles: I. / 1. (de corrido) / 1.1 / a) / i) / (1) |
+| `link-articles.py <in> <out> [--skip TXT]` | Quita el front matter y enlaza las citas al Código Civil (no las de CPC, COT, CPR, leyes, reglamentos) |
 | `labels.py <md>` | En listas mezcladas, cada viñeta `- **Término:** ...` pasa a etiqueta |
 | `card-stats.mjs <id>...` | Largo de tarjetas y títulos sospechosos del JSON generado |
 | `check-map.mjs <id> "<Nombre>" <carpeta>` | Prueba en navegador desde el inicio, con capturas |
@@ -200,6 +201,13 @@ Cuidado:
   saques ni los conviertas en tarjetas por tu cuenta**: pregúntale a la usuaria.
 
 ### 5. Citas de artículos
+
+Si el apunte trae citas en texto plano ("art. 565", "arts. 580-581"), úsalo primero:
+`python3 link-articles.py data/raw/<id>.md data/<id>.md`, y revisa la lista "sin enlazar" que
+imprime. Los artículos de otra norma citados sin nombrarla (el Reglamento del CBR citado como
+"art. 52") se protegen con `--skip "(art. 52)"`. Con apuntes ya limpios, los pasos son solo:
+`link-articles.py`, `renumber.py`, conectar a la app (paso 7) y verificar (paso 8).
+
 
 - Todo artículo del Código Civil citado debe ser wiki-link: `[[Código Civil#^art-565|565]]`
   (dentro de tablas, `[[Código Civil#^art-565\|565]]`). Al tocarlo se abre una tarjeta con
