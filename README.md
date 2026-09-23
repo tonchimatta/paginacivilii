@@ -23,7 +23,7 @@ pestaña fija ("Fernández · Bienes" y "Fontecilla · Personas"); los términos
 otro y al tocarlos se cambia de pestaña (`maps` en `scripts/build-data.mjs`).
 
 Por ahora tienen apuntes Gandarillas y Vergara, Eyzaguirre y Allende, Pater y Germain, Cifuentes y Dibarrat,
-y Fernández y Fontecilla; Barrientos aparece como "Próximamente". Las
+Fernández y Fontecilla, y Barrientos. Las
 ilustraciones de cada profesor van donde está el "!" de cada tarjeta.
 
 ## Datos
@@ -34,6 +34,7 @@ ilustraciones de cada profesor van donde está el "!" de cada tarjeta.
 | `data/eyzaguirre-allende.md` | Apuntes de Eyzaguirre y Allende (solemne), ya ordenados (ver abajo) |
 | `data/raw/eyzaguirre.md` | Los mismos apuntes tal como llegaron |
 | `data/cifuentes-dibarrat.md`, `data/cifuentes-dibarrat-personas.md` | Cifuentes y Dibarrat: Bienes y Personas, dos mapas en la misma página |
+| `data/barrientos.md` | Apuntes de Barrientos (patrimonio y derechos reales y personales) |
 | `data/fernandez.md`, `data/fontecilla.md` | Fernández (Bienes) y Fontecilla (Personas): dos mapas en la misma página |
 | `data/codigo-civil.md` | Código Civil (antes `CC - Código Civil.md`) |
 | `scripts/build-data.mjs` | Preprocesador: cada apunte -> `src/generated/<id>.json` |

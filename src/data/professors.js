@@ -10,5 +10,5 @@ export const PROFESSORS = [
   { id: 'cifuentes-dibarrat', name: 'Cifuentes y Dibarrat', route: '#/apuntes/cifuentes-dibarrat', theme: 'peach' },
   { id: 'pater-germain', name: 'Pater y Germain', route: '#/apuntes/pater-germain', theme: 'yellow' },
   { id: 'fernandez-fontecilla', name: 'Fernández y Fontecilla', route: '#/apuntes/fernandez-fontecilla', theme: 'sky' },
-  { id: 'barrientos', name: 'Barrientos', theme: 'mint' },
+  { id: 'barrientos', name: 'Barrientos', route: '#/apuntes/barrientos', theme: 'mint' },
 ];

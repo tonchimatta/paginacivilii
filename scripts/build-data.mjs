@@ -21,6 +21,7 @@ const UNITS = [
   { id: 'cifuentes-dibarrat', title: 'Cifuentes y Dibarrat', maps: [
       { notes: 'data/cifuentes-dibarrat.md', title: 'Cifuentes y Dibarrat · Bienes' },
       { notes: 'data/cifuentes-dibarrat-personas.md', title: 'Cifuentes y Dibarrat · Personas' } ] },
+  { id: 'barrientos', notes: 'data/barrientos.md', title: 'Barrientos' },
   // Two professors' notes on one page: two separate maps, with cross-links between them.
   {
     id: 'fernandez-fontecilla',

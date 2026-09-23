@@ -8,6 +8,7 @@ export const UNITS = {
   'eyzaguirre-allende': () => import('../generated/eyzaguirre-allende.json'),
   'pater-germain': () => import('../generated/pater-germain.json'),
   'cifuentes-dibarrat': () => import('../generated/cifuentes-dibarrat.json'),
+  barrientos: () => import('../generated/barrientos.json'),
   'fernandez-fontecilla': () => import('../generated/fernandez-fontecilla.json'), // 2 mapas
 };
 
