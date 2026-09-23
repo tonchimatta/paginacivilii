@@ -1,4 +1,4 @@
-import avanzarLogo from './assets/avanzar-uc-logo.png';
+import avanzarLogo from '../assets/avanzar-uc-logo.png';
 
 const ARROW_PATH = 'M3 8h9.5M8.5 4l4 4-4 4';
 

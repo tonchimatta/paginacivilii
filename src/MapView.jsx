@@ -4,6 +4,7 @@ import MindMap from './graph/MindMap.jsx';
 import Finder from './search/Finder.jsx';
 import { title, nodesById, rootId, maps, mapOf, tintOf } from './data/unit.js';
 import { COURSE } from './data/professors.js';
+import avanzarLogo from './assets/avanzar-uc-logo.png';
 
 const FONTS = {
   sans: { label: 'Inter', next: 'serif' },
@@ -235,6 +236,13 @@ export default function MapView() {
           </div>
         ))}
       </nav>
+
+      <footer className="map-foot">
+        <span className="map-foot__label">Proyecto de CT Derecho</span>
+        <a className="map-foot__logo" href="#/" aria-label="Volver al inicio" title="Volver al inicio">
+          <img src={avanzarLogo} alt="Avanzar UC" />
+        </a>
+      </footer>
 
       <Finder open={finderOpen} onClose={() => setFinderOpen(false)} onPick={(id) => active()?.focusNode(id)} />
 

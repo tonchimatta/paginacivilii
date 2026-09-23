@@ -11,6 +11,7 @@
   --stroke: 1.5px;
   --radius: 22px;
   --radius-sm: 14px;
+  --map-foot-h: 24px;
 
   --lavender: #c7c8ff;
   --pink: #f8cfe4;
@@ -81,7 +82,7 @@ body {
    (React Flow sets visibility: visible on every node, which would show through). */
 .pane {
   position: absolute;
-  inset: 92px 0 0 0;
+  inset: 92px 0 var(--map-foot-h) 0;
   z-index: 0;
   opacity: 0;
   pointer-events: none;
@@ -231,6 +232,45 @@ body {
 .tab__close:hover {
   background: var(--ink);
   color: var(--paper);
+}
+
+/* ---------- Map footer: a thin strip, only on the map pages ---------- */
+
+.map-foot {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: var(--map-foot-h);
+  padding: 0 12px;
+  background: var(--ink);
+}
+
+.map-foot__label {
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: var(--label-tracking);
+  color: rgba(255, 255, 255, 0.65);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.map-foot__logo {
+  display: flex;
+  flex: none;
+  align-items: center;
+  height: 60%;
+}
+
+.map-foot__logo img {
+  display: block;
+  height: 100%;
+  width: auto;
 }
 
 /* ---------- Long-press menu ---------- */
